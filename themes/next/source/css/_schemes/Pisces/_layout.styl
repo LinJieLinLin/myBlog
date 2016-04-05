@@ -1,7 +1,7 @@
 .header {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+  width: auto;
 
   +tablet() {
     width: auto;
@@ -16,11 +16,13 @@
   top: 0;
   overflow: hidden;
   padding: 0;
-  width: 240px;
+  width: $sidebar-desktop;
+  margin-right: 1%;
+  margin-left: 1%;
   background: white;
 
   +desktop-large() {
-    .container & { width: 240px; }
+    .container & { width: $sidebar-desktop; }
   }
   +tablet() {
     position: relative;
@@ -29,6 +31,7 @@
   +mobile() {
     position: relative;
     width: auto;
+    margin-left: 0;
   }
 }
 
@@ -57,6 +60,8 @@
   float: right;
   box-sizing: border-box;
   padding: $content-desktop-padding;
+  margin-right: 1%;
+  margin-left: 1%;
   width: $content-desktop;
   background: white;
   min-height: 700px;
@@ -69,6 +74,7 @@
     width: 100%;
     padding: 20px;
     min-height: auto;
+    margin-right: 0;
   }
 }
 
@@ -77,6 +83,7 @@
   float: left;
   margin-top: 300px;
   width: $sidebar-desktop;
+  margin-left: 1%;
   background: white;
   box-shadow: none;
 
@@ -85,6 +92,7 @@
   }
   +mobile() {
     display: none;
+    margin-left: 0;
   }
 }
 

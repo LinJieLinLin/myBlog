@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Place your favicon.ico to /source directory.
-favicon: /favicon.ico
+favicon: favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -27,11 +27,13 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: 
-  #categories: /categories
-  about: about
-  archives: archives
+  # categories: categories
   tags: tags
+  archives: archives
+  angular_doc: http://linjielinlin.github.io/angular1.3.5Doc
+  about: https://github.com/LinJieLinLin
   commonweal: 404.html
+
 
 
 # Enable/Disable menu icons.
@@ -43,10 +45,11 @@ menu_icons:
   enable: true
   # Icon Mapping.
   home: home
-  about: user
   categories: th
   tags: tags
   archives: archive
+  angular_doc: heart
+  about: user
   commonweal: heartbeat
 
 
@@ -69,8 +72,8 @@ scheme: Pisces
 
 
 # Social links
-# social:
-  #GitHub:
+social:
+  GitHub: https://github.com/LinJieLinLin
   #Others:
 
 # Social Icons
