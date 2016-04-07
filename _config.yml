@@ -66,6 +66,7 @@ pagination_dir: page
 #theme: landscape
 theme: next
 
+duoshuo_shortname: linjielinlin
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
