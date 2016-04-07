@@ -70,6 +70,8 @@ theme: next
 duoshuo_shortname: linjielinlin
 # JiaThis 分享服务
 jiathis: true
+# 百度统计
+baidu_analytics: 9e4cdb7773844ea8c659c70fbbcb71a6
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
