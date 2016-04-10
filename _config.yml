@@ -72,6 +72,8 @@ duoshuo_shortname: linjielinlin
 jiathis: true
 # 百度统计
 baidu_analytics: 9e4cdb7773844ea8c659c70fbbcb71a6
+# Swiftype Search Key 
+swiftype_key: NDdzorzE5PhDCYTPznNb
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
