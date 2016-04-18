@@ -73,3 +73,12 @@ top:50%;transform: translate(0 , -50%);
 + 论坛类：forum, bbs, topic, post
 + 方向类：up, down, left, right
 + 其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading
+# 手机wap
+## 去掉input buttom默认样式
+```input[type=button]{
+  -webkit-appearance:none;
+  outline:none
+}
+```
+## 去掉点击默认样式
+-webkit-tap-highlight-color:transparent;
