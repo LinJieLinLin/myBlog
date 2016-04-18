@@ -6,6 +6,7 @@ tags:
 ---
 {% cq %} 与CSS相关的一些学习记录 {% endcq %}
 <!--more-->
+
 # 将元素垂直居中
 1. CSS3 transform:
 ```
@@ -30,6 +31,7 @@ top:50%;transform: translate(0 , -50%);
     width:70%;
 }
 ```
+
 # Display: 属性
 + none：隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间
 + inline：指定对象为内联元素。
@@ -53,6 +55,7 @@ top:50%;transform: translate(0 , -50%);
 + inline-flexbox：将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）
 + flex：将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
 + inline-flex：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
+
 # HTML标签
 + 布局类：header, footer, container, main, content, aside, page, section
 + 包裹类：wrap, inner
@@ -73,6 +76,7 @@ top:50%;transform: translate(0 , -50%);
 + 论坛类：forum, bbs, topic, post
 + 方向类：up, down, left, right
 + 其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading
+
 # 手机wap
 ## 去掉input buttom默认样式
 ```input[type=button]{
@@ -81,4 +85,5 @@ top:50%;transform: translate(0 , -50%);
 }
 ```
 ## 去掉点击默认样式
--webkit-tap-highlight-color:transparent;
+```-webkit-tap-highlight-color:transparent;
+```

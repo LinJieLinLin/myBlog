@@ -16,10 +16,24 @@ $ hexo new "My New Post"
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
+## 
+```---
+title: title
+//date: 2016-04-4 00:03:54
+tags: 
+- tags1
+- tags2
+---
+{% cq %} describe {% endcq %}
+<!--more-->
+
+# first section
+```
+
 ### Run server
 
 ``` bash
-$ hexo server
+$ hexo s
 ```
 
 More info: [Server](https://hexo.io/docs/server.html)
@@ -27,7 +41,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 ### Generate static files
 
 ``` bash
-$ hexo generate
+$ hexo g
 ```
 
 More info: [Generating](https://hexo.io/docs/generating.html)
@@ -35,7 +49,13 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 ### Deploy to remote sites
 
 ``` bash
-$ hexo deploy
+$ hexo d
+```
+
+### build
+``` hexo c
+    hexo g
+    hexo d
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
