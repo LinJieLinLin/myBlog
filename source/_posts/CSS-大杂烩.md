@@ -56,6 +56,12 @@ top:50%;transform: translate(0 , -50%);
 + flex：将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
 + inline-flex：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
 
+# visibility 属性
++ visible 默认值。元素是可见的。
++ hidden 元素是不可见的。
++ collapse 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。
++ inherit 规定应该从父元素继承 visibility 属性的值。
+
 # HTML标签
 + 布局类：header, footer, container, main, content, aside, page, section
 + 包裹类：wrap, inner
@@ -79,11 +85,13 @@ top:50%;transform: translate(0 , -50%);
 
 # 手机wap
 ## 去掉input buttom默认样式
-```input[type=button]{
+```
+input[type=button]{
   -webkit-appearance:none;
   outline:none
 }
 ```
 ## 去掉点击默认样式
-```-webkit-tap-highlight-color:transparent;
+```
+-webkit-tap-highlight-color:transparent;
 ```
