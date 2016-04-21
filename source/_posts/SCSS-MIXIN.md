@@ -6,6 +6,17 @@ tags:
 ---
 {% cq %} scss mixin 相关收集 {% endcq %}
 <!--more-->
+# 设置border
+```
+@mixin border ($p:all,$c:gray,$style:solid,$width:1px) {
+    @if $p == all {
+        border: $width $style $c;
+    } @else {
+        border-#{$p}: $width $style $c;
+    }
+}
+```
+
 # 清除浮动
 ```
 @mixin c-f($old:false) {
