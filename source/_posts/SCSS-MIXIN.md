@@ -82,24 +82,42 @@ tags:
     }
 }
 ```
-# 设置btn背景加hover时变亮
+# 设置btn背景加hover,active时变亮变暗
 ```
 /**
- * [iBtnBgColor 设置btn背景加hover时变亮]
- * @param  {[type]} $color:gray [颜色]
- * @param  {[type]} $p:2        [增亮/变暗百分比]
- * @param  {[type]} $type:1     [>=1增亮<1变暗]
+ * [iBtnBgColor 设置btn背景加hover,active时变亮变暗]
+ * @param  {[type]} $color:gray     [初始颜色]
+ * @param  {[type]} $hover:2        [hover颜色或百分比]
+ * @param  {[type]} $active:10      [active颜色或百分比]
+ * @param  {[type]} $type:1         [=0使用传入的颜色，>1变亮，<1变暗]
+ * @param  {[type]} $time:1         [动画时间 eg:0.3s]
+ * @param  {[type]} $animation:1    [动画属性 eg: ease]
  * @return {[type]}             [description]
  */
 
-@mixin iBtnBgColor($color:gray, $p:2, $type:1) {
+@mixin iBtnBgColor($color:gray, $hover:2, $active:10, $type:1, $time:0.3s, $animation:ease) {
     background-color: $color;
     &:hover {
-        @if $type>0 {
-            background-color: lighten($color, $p)
+        @if $type==0 {
+            background-color: $hover
         }
-        @else {
-            background-color: darken($color, $p)
+        @if $type>0 {
+            background-color: lighten($color, $hover)
+        }
+        @if $type<0 {
+            background-color: darken($color, $hover)
+        }
+        transition: all $time $animation;
+    }
+    &:active {
+        @if $type==0 {
+            background-color: $active
+        }
+        @if $type>0 {
+            background-color: lighten($color, $active)
+        }
+        @if $type<0 {
+            background-color: darken($color, $active)
         }
     }
 }
