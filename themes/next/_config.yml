@@ -31,6 +31,7 @@ menu:
   tags: tags
   archives: archives
   angular_doc: http://linjielinlin.github.io/angularDoc
+  angular_directives: http://ng-d.github.io/directives
   about: https://github.com/LinJieLinLin
   commonweal: 404.html
 
@@ -49,6 +50,7 @@ menu_icons:
   tags: tags
   archives: archive
   angular_doc: heart
+  angular_directives: heart
   about: user
   commonweal: heartbeat
 
