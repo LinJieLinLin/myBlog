@@ -8,10 +8,12 @@ tags:
 <!--more-->
 # angular
 ## 获取scope元素
-```var a = angular.element('body[ng-controller="yourCtrl"]').scope()
+```
+var a = angular.element('body[ng-controller="yourCtrl"]').scope()
 ```
 ## 广播通信
-```<!--父级-->
+```
+<!--父级-->
 <div ng-controller="ParentCtrl"> 
     <!--自己-->              
     <div ng-controller="SelfCtrl">              
@@ -64,4 +66,18 @@ app.controller('BroCtrl', function($scope){
     });  
 });
 ```
-
+## 模拟href
+```
+$scope.eventTest = function($event) {
+    if ($event.target.href === window.location.href) {
+        //阻止事件冒泡
+        $event.preventDefault();
+        $timeout(function() {
+            $event.target.href = 'your href';
+            $timeout(function() {
+                $event.target.click();
+            });
+        },0);
+    }
+};
+```
