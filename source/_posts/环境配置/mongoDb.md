@@ -1,8 +1,9 @@
 ---
 title: mongodb
-date: 2011-11-11 11:11:11
+<!-- date: 2011-11-11 11:11:11 -->
 tags: 
 - DB
+- 配置
 ---
 {% cq %} mongodb相关 {% endcq %}
 <!--more-->
