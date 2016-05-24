@@ -126,6 +126,15 @@ $(document).ready(function () {
         scrollTop: offset
       }, 500);
   });
+  $('.shang').on('click',function(e){
+    e.preventDefault();
+    var shang = $('.shang .c');
+    if (shang.hasClass('active')) {
+        // shang.removeClass('active');
+    } else {
+        shang.addClass('active');
+    }
+  });
 
   // Expand sidebar on post detail page by default, when post has a toc.
   NexT.motion.middleWares.sidebar = function () {

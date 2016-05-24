@@ -184,15 +184,29 @@
       {% endif %}
     </div>
 
-    <footer class="post-footer">
+    <footer class="post-footer"> 
+      {% if not is_index %}
+      <div class="shang" title="打赏一下呗！">
+          <div class="c">
+              <div>赏</div>
+          </div>
+          <div class="d">
+              <div><img src="/myBlog/images/支付宝打赏.png" alt="支付宝">
+                  <div>支付宝</div>
+              </div>
+              <div><img src="/myBlog/images/微信打赏.png" alt="微信">
+                  <div>微信</div>
+              </div>
+          </div>
+      </div>
+      {% endif %}     
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
             <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
           {% endfor %}
         </div>
-      {% endif %}
-
+      {% endif %}      
       {% if not is_index and (post.prev or post.next) and not navlessPost %}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
