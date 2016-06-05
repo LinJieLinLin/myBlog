@@ -1,0 +1,94 @@
+.post-nav {
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 10px;
+  white-space: nowrap;
+  border-top: 1px solid $gainsboro;
+}
+
+.post-nav-item {
+  display: inline-block;
+  width: 50%;
+  white-space: normal;
+
+  a {
+    position: relative;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 14px;
+    color: $link-color;
+    border-bottom: none;
+
+    &:hover {
+      color: $link-hover-color;
+      border-bottom: none;
+    }
+
+    &:active { top: 2px; }
+
+    i { font-size: 12px; }
+  }
+
+}
+
+.post-nav-next {}
+
+.post-nav-prev { text-align: right; }
+.shang .c,.shang .c.active {
+    -moz-transition: All 1s ease-in-out;
+    -o-transition: All 1s ease-in-out;
+    transition: All 1s ease-in-out;
+}
+.shang,.shang .c {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color: #fff
+}
+
+.shang {
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 28px #D7D8EA;
+    overflow: hidden
+}
+.shang .c {
+    display: block;
+    position: absolute
+}
+
+.shang .c>div,.shang .d>div {
+    display: inline-block
+}
+
+.shang .c.active {
+    height: 0;
+    opacity: 0;
+}
+
+.shang .c>div {
+    height: 75%;
+    width: 150px;
+    margin-top: 25px;
+    cursor: pointer;
+    border-radius: 100%;
+    line-height: 150px;
+    font: 100px 'Microsoft Yahei';
+    font-weight: 700;
+    text-shadow: 0 2px 1px #F1CDEA;
+    color: #E6E112;
+    overflow:hidden;
+    background-color: rgba(37,32,32,.09)
+}
+
+.shang .d {
+    height: auto;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+.shang .fancybox img {
+    width: 150px;
+    height: 150px;
+    margin: 5px 20px
+}
