@@ -146,6 +146,8 @@ tags:
     }
     @else {
         &:after {
+            content: "";
+            display: block;
             clear: both;
         }
     }
