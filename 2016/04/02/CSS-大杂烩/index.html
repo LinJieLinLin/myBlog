@@ -1,0 +1,736 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/myBlog/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/myBlog/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/myBlog/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/myBlog/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="与CSS相关的一些学习记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS">
+<meta property="og:url" content="http://linjielinlin.github.io/2016/04/02/CSS-大杂烩/index.html">
+<meta property="og:site_name" content="LinJieLinLin">
+<meta property="og:description" content="与CSS相关的一些学习记录">
+<meta property="og:updated_time" content="2016-06-05T09:49:53.574Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS">
+<meta name="twitter:description" content="与CSS相关的一些学习记录">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> CSS | LinJieLinLin </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?9e4cdb7773844ea8c659c70fbbcb71a6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/myBlog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LinJieLinLin</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我的BLOG</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/myBlog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/myBlog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/myBlog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-angular_doc">
+          <a href="http://linjielinlin.github.io/angularDoc" rel="section">
+            
+              <i class="menu-item-icon fa fa-heart fa-fw"></i> <br />
+            
+            Angular文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-angular_directives">
+          <a href="http://ng-d.github.io/directives" rel="section">
+            
+              <i class="menu-item-icon fa fa-heart fa-fw"></i> <br />
+            
+            我的Angular插件
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://github.com/LinJieLinLin" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/myBlog/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            我的404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'NDdzorzE5PhDCYTPznNb','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-02T00:03:54+00:00" content="2016-04-02">
+              2016-04-02
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/myBlog/2016/04/02/CSS-大杂烩/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/02/CSS-大杂烩/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>与CSS相关的一些学习记录 </p>
+</blockquote>
+<a id="more"></a>
+<h1 id="将元素垂直居中"><a href="#将元素垂直居中" class="headerlink" title="将元素垂直居中"></a>将元素垂直居中</h1><ol>
+<li><p>CSS3 transform:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.c&#123;</span><br><span class="line">top:50%;transform: translate(0 , -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把容器当作表格单元:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;display:table;&#125;;.child&#123;display:table-cell;vertical-align:middle;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这个方法使用了一个 position:absolute，有固定宽度和高度的 div。这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#content &#123;</span><br><span class="line">    position:absolute;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    margin:auto;</span><br><span class="line">    height:240px;</span><br><span class="line">    width:70%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="Display-属性"><a href="#Display-属性" class="headerlink" title="Display: 属性"></a>Display: 属性</h1><ul>
+<li>none：隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间</li>
+<li>inline：指定对象为内联元素。</li>
+<li>block：指定对象为块元素。</li>
+<li>list-item：指定对象为列表项目。</li>
+<li>inline-block：指定对象为内联块元素。（CSS2）</li>
+<li>table：指定对象作为块元素级的表格。类同于html标签<code>&lt;table&gt;</code>（CSS2）</li>
+<li>inline-table：指定对象作为内联元素级的表格。类同于html标签<code>&lt;table&gt;</code>（CSS2）</li>
+<li>table-caption：指定对象作为表格标题。类同于html标签<code>&lt;caption&gt;</code>（CSS2）</li>
+<li>table-cell：指定对象作为表格单元格。类同于html标签<code>&lt;td&gt;</code>（CSS2）</li>
+<li>table-row：指定对象作为表格行。类同于html标签<code>&lt;tr&gt;</code>（CSS2）</li>
+<li>table-row-group：指定对象作为表格行组。类同于html标签<code>&lt;tbody&gt;</code>（CSS2）</li>
+<li>table-column：指定对象作为表格列。类同于html标签<code>&lt;col&gt;</code>（CSS2）</li>
+<li>table-column-group：指定对象作为表格列组显示。类同于html标签<code>&lt;colgroup&gt;</code>（CSS2）</li>
+<li>table-header-group：指定对象作为表格标题组。类同于html标签<code>&lt;thead&gt;</code>（CSS2）</li>
+<li>table-footer-group：指定对象作为表格脚注组。类同于html标签<code>&lt;tfoot&gt;</code>（CSS2）</li>
+<li>run-in：根据上下文决定对象是内联对象还是块级对象。（CSS3）</li>
+<li>box：将对象作为弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
+<li>inline-box：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
+<li>flexbox：将对象作为弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</li>
+<li>inline-flexbox：将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</li>
+<li>flex：将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</li>
+<li>inline-flex：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</li>
+</ul>
+<h1 id="visibility-属性"><a href="#visibility-属性" class="headerlink" title="visibility 属性"></a>visibility 属性</h1><ul>
+<li>visible 默认值。元素是可见的。</li>
+<li>hidden 元素是不可见的。</li>
+<li>collapse 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 “hidden”。</li>
+<li>inherit 规定应该从父元素继承 visibility 属性的值。</li>
+</ul>
+<h1 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h1><ul>
+<li>布局类：header, footer, container, main, content, aside, page, section</li>
+<li>包裹类：wrap, inner</li>
+<li>区块类：region, block, box</li>
+<li>结构类：hd, bd, ft, top, bottom, left, right, middle, col, row, grid, span</li>
+<li>列表类：list, item, field</li>
+<li>主次类：primary, secondary, sub, minor</li>
+<li>大小类：s, m, l, xl, large, small</li>
+<li>状态类：active, current, checked, hover, fail, success, warn, error, on, off</li>
+<li>导航类：nav, prev, next, breadcrumb, forward, back, indicator, paging, first, last</li>
+<li>交互类：tips, alert, modal, pop, panel, tabs, accordion, slide, scroll, overlay,</li>
+<li>星级类：rate, star</li>
+<li>分割类：group, seperate, divider</li>
+<li>等分类：full, half, third, quarter</li>
+<li>表格类：table, tr, td, cell, row</li>
+<li>图片类：img, thumbnail, original, album, gallery</li>
+<li>语言类：cn, en</li>
+<li>论坛类：forum, bbs, topic, post</li>
+<li>方向类：up, down, left, right</li>
+<li>其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading</li>
+</ul>
+<h1 id="手机wap"><a href="#手机wap" class="headerlink" title="手机wap"></a>手机wap</h1><h2 id="去掉input-buttom默认样式"><a href="#去掉input-buttom默认样式" class="headerlink" title="去掉input buttom默认样式"></a>去掉input buttom默认样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">input[type=button]&#123;</span><br><span class="line">  -webkit-appearance:none;</span><br><span class="line">  outline:none</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="去掉点击默认样式"><a href="#去掉点击默认样式" class="headerlink" title="去掉点击默认样式"></a>去掉点击默认样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-tap-highlight-color:transparent;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer"> 
+      
+      <div class="shang" title="打赏一下呗！">
+          <div class="c">
+              <div>赏</div>
+          </div>
+          <div class="d">
+              <div><img src="/myBlog/images/支付宝打赏.png" alt="支付宝">
+                  <div>支付宝</div>
+              </div>
+              <div><img src="/myBlog/images/微信打赏.png" alt="微信">
+                  <div>微信</div>
+              </div>
+          </div>
+      </div>
+           
+      
+        <div class="post-tags">
+          
+            <a href="/myBlog/tags/CSS/" rel="tag">#CSS</a>
+          
+        </div>
+            
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/myBlog/2016/04/01/MD-语法/" rel="next" title="MD语法">
+                <i class="fa fa-chevron-left"></i> MD语法
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/myBlog/2016/04/03/Git-大杂烩/" rel="prev" title="GIT">
+                GIT <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/02/CSS-大杂烩/"
+           data-title="CSS" data-url="http://linjielinlin.github.io/myBlog/2016/04/02/CSS-大杂烩/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <a href="https://github.com/LinJieLinLin" class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/myBlog/images/avatar.jpg"
+               alt="LinJieLinLin" />
+          <p class="site-author-name" itemprop="name">LinJieLinLin</p>
+          <p class="site-description motion-element" itemprop="description">LinJieLinLin,前端,博客</p>
+        </a>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/myBlog/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/myBlog/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/LinJieLinLin" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将元素垂直居中"><span class="nav-number">1.</span> <span class="nav-text">将元素垂直居中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Display-属性"><span class="nav-number">2.</span> <span class="nav-text">Display: 属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#visibility-属性"><span class="nav-number">3.</span> <span class="nav-text">visibility 属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML标签"><span class="nav-number">4.</span> <span class="nav-text">HTML标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#手机wap"><span class="nav-number">5.</span> <span class="nav-text">手机wap</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉input-buttom默认样式"><span class="nav-number">5.1.</span> <span class="nav-text">去掉input buttom默认样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉点击默认样式"><span class="nav-number">5.2.</span> <span class="nav-text">去掉点击默认样式</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <a class="author" itemprop="copyrightHolder" href="https://github.com/LinJieLinLin">LinJieLinLin</a>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/myBlog/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/myBlog/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/myBlog/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/myBlog/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/myBlog/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/myBlog/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/myBlog/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/myBlog/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/myBlog/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/myBlog/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/myBlog/js/src/scrollspy.js?v=0.5.0"></script>
+<script type="text/javascript" src="/myBlog/vendors/jquery-scrollintoview/jquery.scrollintoview.min.js?v=0.5.0"></script>
+<script type="text/javascript" src="/myBlog/js/src/post-details.js?v=0.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/myBlog/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"linjielinlin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
