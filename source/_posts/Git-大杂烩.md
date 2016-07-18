@@ -24,9 +24,14 @@ git config --global credential.helper store
 [credential]
 helper = store
 ```
-##回滚到上一次pull成功的版本
+# 回滚
+## 回滚到上一次pull成功的版本
 ```
 git reset --hard FETCH_HEAD
+```
+## 回滚到服务器版本
+```
+git reset --hard origin/分支名
 ```
 
 # cherry-pick把另一个本地分支的commit修改应用到当前分支。  (还是[tortoisegit](https://tortoisegit.org/)比较方便 )
