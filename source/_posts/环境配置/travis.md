@@ -1,6 +1,6 @@
 ---
 title: 使用 Travis CI 自动更新 GitHub Pages
-<!-- date: 2011-11-11 11:11:11 -->
+date: 2016-07-07 07:07:09
 tags: 
 - 配置
 ---
