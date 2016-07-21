@@ -109,5 +109,16 @@ state→  this.state.
     }]
   }
 ```
+## 对齐
+```
+在HTML-CSS-JS Pretty中设置
+在HTML-CSS-JS Prettify设置中，
+在
+"js": {
+    "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc","jsx"],
+    "e4x",true
+    ...
+    allowed_file_extensions后面加上"jsx"，修改e4x为true.
+```
 
 
