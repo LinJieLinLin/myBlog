@@ -44,3 +44,70 @@ tags:
 * 按Ctrl，依次点击或选取，可需要编辑的多个位置
 * 按Ctrl+Shift+上下键，可替换行
 
+# 配置react
+## 安装插件
+```
+PC上ctrl+shift+p（MacCmd+shift+p）
+jsx
+babel
+reactjs
+jsxhint
+node:
+npm install -g jsxhint
+```
+## 语法高亮
+```
+babel
+```
+## 代码提示
+```
+reactJs
+//支持的代码片段如下
+cdm→  componentDidMount: fn() { ... }
+cdup→  componentDidUpdate: fn(pp, ps) { ... }
+cs→  var cx = React.addons.classSet;
+cwm→  componentWillMount: fn() { ... }
+cwr→  componentWillReceiveProps: fn(np) { ... }
+cwu→  componentWillUpdate: fn(np, ns) { ... }
+cwun→  componentWillUnmount: fn() { ... }
+cx→  cx({ ... })
+fdn→  React.findDOMNode(...)
+fup→  forceUpdate(...)
+gdp→  getDefaultProps: fn() { return {...} } 
+gis→  getInitialState: fn() { return {...} } 
+ism→  isMounted()
+props→  this.props.
+pt→  propTypes { ... }
+rcc→  component skeleton
+refs→  this.refs.
+ren→  render: fn() { return ... }
+scu→  shouldComponentUpdate: fn(np, ns) { ... }
+sst→  this.setState({ ... })
+state→  this.state.
+```
+## JSX中使用Emmet
+### 在KeyBinding – Users中插入下面这段代码：
+```
+{
+    "keys": ["tab"],
+    "command": "expand_abbreviation_by_tab", 
+    "context": [{
+        "operand": "source.js", 
+        "operator": "equal", 
+        "match_all": true, 
+        "key": "selector"
+    },{
+        "key": "preceding_text", 
+        "operator": "regex_contains", 
+        "operand": "(\\b(a\\b|div|span|p\\b|button)(\\.\\w*|>\\w*)?)", 
+        "match_all": true
+    },{
+        "key": "selection_empty", 
+        "operator": "equal", 
+        "operand": true, 
+        "match_all": true
+    }]
+  }
+```
+
+
