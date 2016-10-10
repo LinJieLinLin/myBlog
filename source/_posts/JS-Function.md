@@ -1,5 +1,5 @@
 ---
-title: JS
+title: JS-function
 date: 2016-10-01 00:03:54
 tags: 
 - JS

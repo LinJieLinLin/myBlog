@@ -37,6 +37,16 @@ document.addEventListener(visibilityChange, function() {
 // 初始化
 document.title = document[state];
 ```
+
+# 为每个元素添加outline for chrome
+```
+[].forEach.call($$("*"),function(a){
+
+  a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)
+
+})
+```
+
 # angular
 ## 获取scope元素
 ```
