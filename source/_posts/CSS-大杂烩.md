@@ -31,6 +31,10 @@ top:50%;transform: translate(0 , -50%);
     width:70%;
 }
 ```
+4. 触屏下ie或edge点击显示:hover伪类(添加在html标签中)
+```
+aria-haspopup="true"
+```
 
 # Display: 属性
 + none：隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间
