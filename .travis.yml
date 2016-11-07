@@ -13,7 +13,7 @@ script:
 
 after_script:
   - cd public
-  - mv verdors lib
+  - mv vendors lib
   - git init
   - git config user.name "LinJieLinLin"
   - git config user.email "993353454@qq.com"
