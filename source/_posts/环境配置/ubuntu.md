@@ -1,0 +1,90 @@
+---
+title: ubuntu16.04
+date: 2016-12-01 01:01:01
+tags: 
+- 配置
+---
+{% cq %} ubuntu相关 {% endcq %}
+<!--more-->
+
+# 软件
+## 翻
+
+* install shadowsocks-qt5
+
+```
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+```
+
+* install polipo(将socks5转为http)
+
+``` 
+sudo apt-get install polipo
+vim /etc/polipo/config
+SET:
+logSyslog = true
+logFile = /var/log/polipo/polipo.log
+
+proxyAddress = "0.0.0.0"
+# socks5 ip:port
+socksParentProxy = "127.0.0.1:1080"
+socksProxyType = socks5
+proxyPort = 7777
+
+chunkHighMark = 50331648
+objectHighMark = 16384
+serverMaxSlots = 64
+serverSlots = 16
+serverSlots1 = 32
+```
+
+## node相关
+* install nvm
+
+```
+NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 6.9.1
+```
+* install nrm
+
+```
+npm --registry https://registry.npm.taobao.org install nrm
+```
+
+* 使用cnpm源
+
+```
+nrm ls
+nrm use cnpm
+```
+
+## 主题
+* unity-tweak-tool
+
+```
+sudo apt-get install unity-tweak-tool 
+```
+* Flatabulous主题
+
+```
+sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install flatabulous-theme
+```
+
+* 图标
+
+```
+sudo add-apt-repository ppa:noobslab/icons
+sudo apt-get update
+sudo apt-get install ultra-flat-icons
+```
+
+> 进入unity-tweak-tool修改主题为Flatabulous，图标为ultra-flat
+
+
+
+
+
+
