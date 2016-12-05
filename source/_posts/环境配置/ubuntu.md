@@ -23,6 +23,7 @@ sudo apt-get install shadowsocks-qt5
 ``` 
 sudo apt-get install polipo
 vim /etc/polipo/config
+
 SET:
 logSyslog = true
 logFile = /var/log/polipo/polipo.log
@@ -38,7 +39,28 @@ objectHighMark = 16384
 serverMaxSlots = 64
 serverSlots = 16
 serverSlots1 = 32
+END SET
+
+sudo /etc/init.d/polipo restart
 ```
+* 查看代理状态
+
+```
+export http_proxy="http://127.0.0.1:7777/"
+curl ip.gs
+```
+* npm设置代理
+
+```
+npm config set proxy=http://127.0.0.1:7777
+```
+
+* shell全局代理：
+
+```
+export http_proxy="http://127.0.0.1:7777/"
+```
+
 
 ## node相关
 * install nvm
@@ -82,7 +104,6 @@ sudo apt-get install ultra-flat-icons
 ```
 
 > 进入unity-tweak-tool修改主题为Flatabulous，图标为ultra-flat
-
 
 
 
