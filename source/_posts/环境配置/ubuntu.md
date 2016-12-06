@@ -105,7 +105,12 @@ sudo apt-get install ultra-flat-icons
 
 > 进入unity-tweak-tool修改主题为Flatabulous，图标为ultra-flat
 
+## 去掉登陆密环提示
 
+```
+seahorse 
+# 选中删除即可
+```
 
 
 
