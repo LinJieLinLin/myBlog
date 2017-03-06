@@ -10,7 +10,7 @@ tags:
 # 软件
 ## 翻
 
-* install shadowsocks-qt5
+* install (shadowsocks-qt5)[https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97]
 
 ```
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
@@ -22,7 +22,7 @@ sudo apt-get install shadowsocks-qt5
 
 ``` 
 sudo apt-get install polipo
-vim /etc/polipo/config
+sudo vim /etc/polipo/config
 
 SET:
 logSyslog = true
@@ -71,7 +71,7 @@ NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 6.9.1
 * install nrm
 
 ```
-npm --registry https://registry.npm.taobao.org install nrm
+npm --registry https://registry.npm.taobao.org install nrm -g
 ```
 
 * 使用cnpm源
@@ -109,7 +109,7 @@ sudo apt-get install ultra-flat-icons
 
 ```
 seahorse 
-# 选中删除即可
+# 选中修改密码，输入旧密码后不输密码即可
 ```
 
 
