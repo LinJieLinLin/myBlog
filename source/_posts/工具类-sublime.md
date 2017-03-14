@@ -29,6 +29,9 @@ tags:
 1. Vue Syntax Highlight
 1. Vuejs Snippets
 
+# ubuntu 输入中文
+[百度经验](http://jingyan.baidu.com/article/f3ad7d0ff8731609c3345b3b.html)
+
 # sublimetext快捷键
 ```
 Ctrl+Shift+P：打开命令面板
