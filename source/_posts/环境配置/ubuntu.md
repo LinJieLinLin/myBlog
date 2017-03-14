@@ -112,5 +112,28 @@ seahorse
 # 选中修改密码，输入旧密码后不输密码即可
 ```
 
+## git-ssh
+```
+cd ~/.ssh
+ssh-keygen -t rsa -C "993353454@qq.com"
+//输入文件名eg: a
+ssh-add a
+ssh -T git@github.com
+```
+
+### 多个ssh key
+```
+vim ~/.ssh/config
+Host eg.github.com  
+    HostName a.github.com  
+    User linj  
+    IdentityFile ~/.ssh/a  
+
+Host bbbb.github.com  
+    HostName b.github.com  
+    User linjielinlin  
+    IdentityFile ~/.ssh/b
+```
+
 
 
