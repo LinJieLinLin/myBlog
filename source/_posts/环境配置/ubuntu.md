@@ -133,7 +133,15 @@ Host bbbb.github.com
     HostName b.github.com  
     User linjielinlin  
     IdentityFile ~/.ssh/b
+esc wq
+
+// 列出ssh key
+ssh-add -l
+// 清空ssh-key
+ssh-add -D
 ```
+
+
 
 
 
