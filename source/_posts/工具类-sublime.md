@@ -6,6 +6,29 @@ tags:
 ---
 {% cq %} sublimetext快捷键 {% endcq %}
 <!--more-->
+
+# 我的插件
+1. Babel
+1. ColorPicker 颜色选择
+1. ConvertToUTF8 解决中文乱码问题
+1. HTML-CSS-JS Prettify 格式化代码
+1. Terminal 打开linux shell
+1. Side​Bar​Enhancements 扩展工具栏
+1. SublimeLinter 代码检测的工具
+1. BracketHighlighter 显示成对标签
+1. HTML5
+1. git
+1. jquery
+1. angularJS
+1. scss
+1. DocBlockr 注释
+1. Markdown Preview
+1. Material Theme 主题
+1. GoSublime
+1. Auto​File​Name 文件路径
+1. Vue Syntax Highlight
+1. Vuejs Snippets
+
 # sublimetext快捷键
 ```
 Ctrl+Shift+P：打开命令面板
