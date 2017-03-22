@@ -30,6 +30,9 @@ tags:
 1. Vuejs Snippets
 
 # ubuntu 输入中文
+```
+sudo apt-get install libgtk2.0-dev
+```
 [百度经验](http://jingyan.baidu.com/article/f3ad7d0ff8731609c3345b3b.html)
 
 # sublimetext快捷键

@@ -66,7 +66,13 @@ export http_proxy="http://127.0.0.1:7777/"
 * install nvm
 
 ```
-NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 6.9.1
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+vim ~/.profile
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+wq
+source ~/.profile
+NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install stable
 ```
 * install nrm
 
@@ -79,8 +85,13 @@ npm --registry https://registry.npm.taobao.org install nrm -g
 ```
 nrm ls
 nrm use cnpm
+npm install -g bower gulp http-server
 ```
 
+## 五笔拼音
+```
+sudo apt-get install fcitx-table-wbpy
+```
 ## 主题
 * unity-tweak-tool
 
