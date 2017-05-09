@@ -11,6 +11,12 @@ tags:
 git update-index --assume-unchanged fileName
 git update-index --no-assume-unchanged fileName
 ```
+## 格式化与空白
+>交时自动地把行结束符CRLF转换成LF，而在检出代码时把LF转换成CRLF。
+
+```
+git config --global core.autocrlf true
+```
 
 # 记住http方式克隆仓库的密码
 ## 命令行
