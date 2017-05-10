@@ -18,7 +18,7 @@ mongodb --dbpath (数据库存放文件夹)
 ```
 mongod.exe --logpath "D:\KFenv\mongoDB3.2\mongodb.log(log文件，指定路径即可)" --logappend --dbpath "D:\KFenv\mongoDB3.2\db（数据库存放文件夹，运行前要先创建该文件夹）" --port 27017 --serviceName "myMongodb" --serviceDisplayName "myMongodb" --install
 ```
-## 创建用户
+## 添加已存在的用户
 ```
 db.addUser("userName","Pwd") 
 //设置用户为允许连接的用户  
@@ -26,9 +26,118 @@ db.auth("userName","Pwd")
 //创建表    
 db.createCollection("TableName")                                     
 ```
+
+
+# [ubnutu 64 mongodb install](https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/)
+
+```
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+# 要翻墙
+$ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+MongoDB 默认的数据目录是 /data/db/ ，就直接使用默认的。
+#创建数据存储目录
+$ sudo mkdir -p /data/db    
+#赋予目录权限
+$ sudo chmod 755 /data/*    
+```
+## 配置MongoDB
+
+### 指定配置启动 
+首先要创建配置文件，默认的配置文件路径是：/etc/mongod.conf。
+一个简单的配置文件如下：
+
+```
+verbose = true
+# 数据存放目录
+dbpath = /data/db
+# 日志目录
+logpath = /var/log/mongodb/mongodb.log
+logappend = true
+port = 27017
+```
+
+### 指定配置文件的命令如下：
+```
+$ mongod -f /etc/mongod.conf
+```
+
+### 控制脚本在：/etc/init.d/mongod
+
+```
+安装开机服务
+sudo update-rc.d mongod defaults 95
+```
+
+>如果想要切换用户运行MongoDB的话，需要设置 /var/lib/mongodb 、 /var/log/mongodb两个目录的权限
+
+
+## 启动
+```
+#启动服务端
+$ mongod   
+#启动客户端 
+$ mongo    
+```
+
+## 服务启动、停止、重启
+```
+$ sudo service mongodb start
+$ sudo service mongodb stop
+$ sudo service mongodb restart
+```
+
+# 常用命令
+## 创建管理员
+```
+db.createUser(
+   {
+     user: "admin",
+     pwd: "123456",
+     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+   }
+)
+
+```
+##创建普通用户
+```
+db.createUser(
+   {
+     user: "test",
+     pwd: "123456",
+     roles: [ { role: "readWrite", db: "test" } ]
+   }
+)
+```
+## 开启权限验证
+```
+添加到mongo.conf里
+auth = true
+```
 ## 登录
 ```
 mongo admin -u root -p 123456
 ```
-
-
