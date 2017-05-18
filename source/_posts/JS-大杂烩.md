@@ -6,6 +6,15 @@ tags:
 ---
 {% cq %} 与JS相关的一些学习记录 {% endcq %}
 <!--more-->
+# [测试浏览器支持的localStorage大小](https://arty.name/localstorage.html)
+## 获取当前存储大小
+```
+if(window.localStorage){
+    var hasUse =unescape(encodeURIComponent(JSON.stringify(localStorage))).length;
+    alert(hasUse);
+}
+```
+
 # 原生
 ## 标签页激活状态visibilitychange
 ```
@@ -107,7 +116,7 @@ app.controller('BroCtrl', function($scope){
     });  
 });
 ```
-## 模拟href
+## 模拟href（异步新页面打开不支持）
 ```
 $scope.eventTest = function($event) {
     if ($event.target.href === window.location.href) {
