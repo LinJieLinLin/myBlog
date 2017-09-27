@@ -44,7 +44,24 @@ git reset --hard origin/分支名
 ```
 git cherry-pick <commit id>
 ```
+
 # 基本命令
+## 设置代理http
+```
+git config --global http.proxy 'socks5://127.0.0.1:1080'
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+```
+## 设置代理 (linux) ssh
+```
+~/.ssh/config 文件后面添加几行，没有可以新建一个
+Host github.com
+ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+```
+## 取消代理 
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
 ## 新建代码库
 ```
 # 在当前目录新建一个Git代码库
