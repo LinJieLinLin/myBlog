@@ -1,4 +1,2 @@
 [build]
-  command = "hexo generate"
-  mv = "mv public myBlog"
-  setlib = "cd myBlog \n mv vendors lib"
+  command = "hexo generate \n mv public myBlog \n cd myBlog \n mv vendors lib"
