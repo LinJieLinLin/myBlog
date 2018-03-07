@@ -1,3 +1,2 @@
 [build]
-  command = "hexo generate"
-  command = "mv public myBlog"
+  command = "hexo generate \n mv public myBlog"
