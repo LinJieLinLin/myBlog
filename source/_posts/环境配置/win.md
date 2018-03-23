@@ -6,6 +6,8 @@ tags:
 ---
 {% cq %} win命令行相关 {% endcq %}
 <!--more-->
+# 设置代理
+`set http_proxy=http://127.0.0.1:7777`
 # 不显示CMD窗口
 `CreateObject("WScript.Shell").Run "CMD脚本",0`
 # 查看端口占用
