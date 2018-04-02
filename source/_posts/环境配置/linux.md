@@ -87,3 +87,4 @@ ${var:+word}    如果变量 var 被定义，那么返回 word，但不改变 va
 df -h  
 df --help
 ```
+### wget

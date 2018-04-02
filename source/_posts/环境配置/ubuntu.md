@@ -170,6 +170,13 @@ sudo chown -R root:root 文件/文件夹
 ```
 ln -s 源目录 目标目录（绝对路径）
 ```
+## 新建用户
+```
+adduser linj
+# 输入密码，然后一路回车，按y
+# 添加root权限
+vim /etc/sudoers
+```
 
 
 
