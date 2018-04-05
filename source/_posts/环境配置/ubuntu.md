@@ -178,5 +178,8 @@ adduser linj
 vim /etc/sudoers
 ```
 
+# 配置链接
+## [ubuntu-nginx-ssl](https://www.codecasts.com/blog/post/secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)
+
 
 
