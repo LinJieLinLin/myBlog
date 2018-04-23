@@ -177,3 +177,9 @@ adduser linj
 # 添加root权限
 vim /etc/sudoers
 ```
+## 显示磁盘空间
+```
+df -hl
+# 查看当前目录文件大小
+du -h --max-depth=1
+```
