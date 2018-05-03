@@ -87,7 +87,7 @@ ${var:+word}    如果变量 var 被定义，那么返回 word，但不改变 va
 df -h  
 df --help
 ```
-### 查看商品占用
+### 查看端口占用
 ```
 netstat -anp|grep 80 
 ```

@@ -80,7 +80,6 @@ db.createCollection("TableName")
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 # 要翻墙
 $ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
-```
 MongoDB 默认的数据目录是 /data/db/ ，就直接使用默认的。
 #创建数据存储目录
 $ sudo mkdir -p /data/db    
