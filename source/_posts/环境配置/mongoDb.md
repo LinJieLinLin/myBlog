@@ -1,12 +1,58 @@
 ---
 title: mongodb
-date: 2016-07-07 07:07:08
 tags: 
 - DB
 - 配置
 ---
 {% cq %} mongodb相关 {% endcq %}
 <!--more-->
+
+# 常用命令
+## 创建管理员
+```
+db.createUser(
+   {
+     user: "admin",
+     pwd: "123456",
+     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+   }
+)
+
+```
+##创建普通用户
+```
+db.createUser(
+   {
+     user: "test",
+     pwd: "123456",
+     roles: [ { role: "readWrite", db: "test" } ]
+   }
+)
+```
+## 开启权限验证
+```
+# win 添加到/mongod.conf里
+auth = true
+# ubuntu添加到/etc/mongod.conf里
+security:
+  authorization: enabled
+```
+## 登录
+```
+# mongo 数据库名 -u 用户名 -p 密码
+mongo admin -u root -p 123456
+```
+## 备份数据库
+```
+# mongodump -h ip+端口 -d 数据库名 -u 用户名 -p 密码 -o 备件目录
+mongodump -h 127.0.0.1:27017 -d nodebb -u linj -p 123456 -o /home/linj/backup
+```
+## 还原数据库
+```
+# mongorestore -h 127.0.0.1:27017 -d nodebb -u linj -p 123456 恢复位置/nodebb --drop(删除其它数据后导入)
+mongorestore -h 127.0.0.1:27017 -d nodebb -u linj -p 123456 /home/linj/backup/nodebb
+```
+
 #  win下安装:下载64位版本，一路NEXT
 ## 命令行运行(bin目录下)
 ```
@@ -34,29 +80,6 @@ db.createCollection("TableName")
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 # 要翻墙
 $ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
-
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 MongoDB 默认的数据目录是 /data/db/ ，就直接使用默认的。
 #创建数据存储目录
@@ -110,34 +133,7 @@ $ sudo service mongodb stop
 $ sudo service mongodb restart
 ```
 
-# 常用命令
-## 创建管理员
+## 开机启动
 ```
-db.createUser(
-   {
-     user: "admin",
-     pwd: "123456",
-     roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
-   }
-)
-
-```
-##创建普通用户
-```
-db.createUser(
-   {
-     user: "test",
-     pwd: "123456",
-     roles: [ { role: "readWrite", db: "test" } ]
-   }
-)
-```
-## 开启权限验证
-```
-添加到mongo.conf里
-auth = true
-```
-## 登录
-```
-mongo admin -u root -p 123456
+sudo systemctl enable mongod
 ```
