@@ -1,4 +1,5 @@
 <div class="copyright" >
+  <a href="http://www.miitbeian.gov.cn/">粤ICP备17131911号</a> 
   {% set current = date(Date.now(), "YYYY") %}
   &copy; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
   <span itemprop="copyrightYear">{{ current }}</span>

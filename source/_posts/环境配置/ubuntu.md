@@ -301,3 +301,9 @@ vim /etc/sudoers
 01   *   *   *   *     root run-parts /etc/cron.hourly
 ```
 
+## 显示磁盘空间
+```
+df -hl
+# 查看当前目录文件大小
+du -h --max-depth=1
+```
