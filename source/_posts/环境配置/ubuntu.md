@@ -156,26 +156,22 @@ ssh-add -l
 ssh-add -D
 ```
 
+## ssh远程
+```
+sudo apt install openssh-server
+sudo rm -r /etc/ssh/ssh*key
+sudo dpkg-reconfigure openssh-server
+# 客户端生成ssh
+ssh-keygen -t rsa -P ''
+# 将客户端公钥id_rsa.pub复制到服务端
+scp ~/.ssh/id_rsa.pub user@192.168.1.140:~
+# 将上传到服务端的公钥添加到~/.ssh/authorzied_keys之中
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
 ## 添加软件图标到启动器
 ```
 $ Exec=bash 软件路径
-```
-
-## 更改文件/文件夹所有者
-```
-sudo chown -R root:root 文件/文件夹
-```
-
-## 建立软连接
-```
-ln -s 源目录 目标目录（绝对路径）
-```
-## 新建用户
-```
-adduser linj
-# 输入密码，然后一路回车，按y
-# 添加root权限
-vim /etc/sudoers
 ```
 
 # 配置链接
@@ -299,11 +295,4 @@ vim /etc/sudoers
 命令：
 
 01   *   *   *   *     root run-parts /etc/cron.hourly
-```
-
-## 显示磁盘空间
-```
-df -hl
-# 查看当前目录文件大小
-du -h --max-depth=1
 ```

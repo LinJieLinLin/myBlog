@@ -82,13 +82,34 @@ ${var:?message} 如果变量 var 为空或已被删除(unset)，那么将消息 
 ${var:+word}    如果变量 var 被定义，那么返回 word，但不改变 var 的值。
 ```
 # 常用命令
-### 查看磁盘情况
-```
-df -h  
-df --help
-```
 ### 查看端口占用
 ```
 netstat -anp|grep 80 
 ```
 ### wget
+### 更改文件/文件夹所有者
+```
+sudo chown -R root:root 文件/文件夹
+```
+
+### 建立软连接
+```
+ln -s 源目录 目标目录（绝对路径）
+```
+### 修改密码
+```
+passwd usrname
+```
+### 新建用户
+```
+adduser linj
+# 输入密码，然后一路回车，按y
+# 添加root权限
+vim /etc/sudoers
+```
+### 显示磁盘空间
+```
+df -hl
+# 查看当前目录文件大小
+du -h --max-depth=1
+```
