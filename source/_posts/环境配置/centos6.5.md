@@ -1,8 +1,8 @@
 ---
 title: centos6.5
-date: 2011-11-11 11:11:11
+date: 2016-07-07 07:07:11
 tags: 
-- MD
+- 配置
 ---
 {% cq %} centos6.5 {% endcq %}
 <!--more-->

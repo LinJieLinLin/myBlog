@@ -1,5 +1,6 @@
 ---
 title: appium-androidUi测试
+date: 2016-07-07 07:07:11
 tags: 
 - 测试
 ---
