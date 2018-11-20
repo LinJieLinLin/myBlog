@@ -107,6 +107,13 @@ adduser linj
 # 添加root权限
 vim /etc/sudoers
 ```
+### 改变用户/组 
+```
+# -R 为递归操作
+chown -R username dirname/filename
+# -R 为递归操作
+chgrp -R groupname dirname
+```
 ### 显示磁盘空间
 ```
 df -hl
