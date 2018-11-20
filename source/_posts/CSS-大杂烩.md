@@ -99,3 +99,17 @@ input[type=button]{
 ```
 -webkit-tap-highlight-color:transparent;
 ```
+# tap效果(使用tap_item类时点击生效)
+```
+[class*='btn_'],
+[class*='tap_'] {
+  transition: 400ms;
+}
+[class*='btn_']:active,
+[class*='tap_']:active {
+  transition: 0ms;
+}
+[class*='tap_'].tap_item:active {
+  background-color: #d9d9d9;
+}
+```
