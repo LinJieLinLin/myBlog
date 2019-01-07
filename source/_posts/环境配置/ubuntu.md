@@ -1,16 +1,21 @@
 ---
 title: ubuntu16.04
 date: 2016-12-01 01:01:01
-tags: 
-- 配置
+tags:
+  - 配置
 ---
-{% cq %} ubuntu相关 {% endcq %}
+
+{% cq %} ubuntu 相关 {% endcq %}
+
 <!--more-->
 
+# [linux](https://lj4.top/myBlog/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/linux/)
+
 # 软件
+
 ## 翻
 
-* install [shadowsocks-qt5](https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
+- install [shadowsocks-qt5](https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 
 ```
 sudo add-apt-repository ppa:hzwhuang/ss-qt5
@@ -18,9 +23,9 @@ sudo apt-get update
 sudo apt-get install shadowsocks-qt5
 ```
 
-* install polipo(将socks5转为http)
+- install polipo(将 socks5 转为 http)
 
-``` 
+```
 sudo apt-get install polipo
 sudo vim /etc/polipo/config
 
@@ -43,27 +48,29 @@ END SET
 
 sudo /etc/init.d/polipo restart
 ```
-* 查看代理状态
+
+- 查看代理状态
 
 ```
 export http_proxy="http://127.0.0.1:7777/"
 curl ip.gs
 ```
-* npm设置代理
+
+- npm 设置代理
 
 ```
 npm config set proxy=http://127.0.0.1:7777
 ```
 
-* shell全局代理：
+- shell 全局代理：
 
 ```
 export http_proxy="http://127.0.0.1:7777/"
 ```
 
+## node 相关
 
-## node相关
-* install nvm
+- install nvm
 
 ```
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
@@ -74,13 +81,14 @@ wq
 source ~/.profile
 NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install stable
 ```
-* install nrm
+
+- install nrm
 
 ```
 npm --registry https://registry.npm.taobao.org install nrm -g
 ```
 
-* 使用cnpm源
+- 使用 cnpm 源
 
 ```
 nrm ls
@@ -89,16 +97,20 @@ npm install -g bower gulp http-server
 ```
 
 ## 五笔拼音
+
 ```
 sudo apt-get install fcitx-table-wbpy
 ```
+
 ## 主题
-* unity-tweak-tool
+
+- unity-tweak-tool
 
 ```
-sudo apt-get install unity-tweak-tool 
+sudo apt-get install unity-tweak-tool
 ```
-* Flatabulous主题
+
+- Flatabulous 主题
 
 ```
 sudo add-apt-repository ppa:noobslab/themes
@@ -106,7 +118,7 @@ sudo apt-get update
 sudo apt-get install flatabulous-theme
 ```
 
-* 图标
+- 图标
 
 ```
 sudo add-apt-repository ppa:noobslab/icons
@@ -114,16 +126,17 @@ sudo apt-get update
 sudo apt-get install ultra-flat-icons
 ```
 
-> 进入unity-tweak-tool修改主题为Flatabulous，图标为ultra-flat
+> 进入 unity-tweak-tool 修改主题为 Flatabulous，图标为 ultra-flat
 
 ## 去掉登陆密环提示
 
 ```
-seahorse 
+seahorse
 # 选中修改密码，输入旧密码后不输密码即可
 ```
 
 ## git-ssh
+
 ```
 cd ~/.ssh
 ssh-keygen -t rsa -C "993353454@qq.com"
@@ -136,17 +149,18 @@ eval `ssh-agent -s`
 ssh -T git@github.com
 ```
 
-### 多个ssh key
+### 多个 ssh key
+
 ```
 vim ~/.ssh/config
-Host eg.github.com  
-    HostName a.github.com  
-    User linj  
-    IdentityFile ~/.ssh/a  
+Host eg.github.com
+    HostName a.github.com
+    User linj
+    IdentityFile ~/.ssh/a
 
-Host bbbb.github.com  
-    HostName b.github.com  
-    User linjielinlin  
+Host bbbb.github.com
+    HostName b.github.com
+    User linjielinlin
     IdentityFile ~/.ssh/b
 esc wq
 
@@ -156,7 +170,8 @@ ssh-add -l
 ssh-add -D
 ```
 
-## ssh远程
+## ssh 远程
+
 ```
 sudo apt install openssh-server
 sudo rm -r /etc/ssh/ssh*key
@@ -170,15 +185,19 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
 ## 添加软件图标到启动器
+
 ```
 $ Exec=bash 软件路径
 ```
 
 # 配置链接
+
 ## [ubuntu-nginx-ssl](https://www.codecasts.com/blog/post/secure-nginx-with-let-s-encrypt-on-ubuntu-16-04)
 
 # 定时任务
+
 ## crontab
+
 ```
 运行命令crontab -e打开crontab的任务添加命令
 实例1：每1分钟执行一次command
@@ -186,7 +205,7 @@ $ Exec=bash 软件路径
 
 * * * * * command
 
- 
+
 
 实例2：每小时的第3和第15分钟执行
 
@@ -194,7 +213,7 @@ $ Exec=bash 软件路径
 
 3,15 * * * * command
 
- 
+
 
 实例3：在上午8点到11点的第3和第15分钟执行
 
@@ -202,7 +221,7 @@ $ Exec=bash 软件路径
 
 3,15 8-11 * * * command
 
- 
+
 
 实例4：每隔两天的上午8点到11点的第3和第15分钟执行
 
@@ -210,7 +229,7 @@ $ Exec=bash 软件路径
 
 3,15 8-11 */2 * * command
 
- 
+
 
 实例5：每个星期一的上午8点到11点的第3和第15分钟执行
 
@@ -218,23 +237,23 @@ $ Exec=bash 软件路径
 
 3,15 8-11 * * 1 command
 
- 
 
-实例6：每晚的21:30重启smb 
+
+实例6：每晚的21:30重启smb
 
 命令：
 
 30 21 * * * /etc/init.d/smb restart
 
- 
 
-实例7：每月1、10、22日的4 : 45重启smb 
+
+实例7：每月1、10、22日的4 : 45重启smb
 
 命令：
 
 45 4 1,10,22 * * /etc/init.d/smb restart
 
- 
+
 
 实例8：每周六、周日的1 : 10重启smb
 
@@ -242,49 +261,49 @@ $ Exec=bash 软件路径
 
 10 1 * * 6,0 /etc/init.d/smb restart
 
- 
 
-实例9：每天18 : 00至23 : 00之间每隔30分钟重启smb 
+
+实例9：每天18 : 00至23 : 00之间每隔30分钟重启smb
 
 命令：
 
 0,30 18-23 * * * /etc/init.d/smb restart
 
- 
 
-实例10：每星期六的晚上11 : 00 pm重启smb 
+
+实例10：每星期六的晚上11 : 00 pm重启smb
 
 命令：
 
 0 23 * * 6 /etc/init.d/smb restart
 
- 
 
-实例11：每一小时重启smb 
+
+实例11：每一小时重启smb
 
 命令：
 
 * */1 * * * /etc/init.d/smb restart
 
- 
 
-实例12：晚上11点到早上7点之间，每隔一小时重启smb 
+
+实例12：晚上11点到早上7点之间，每隔一小时重启smb
 
 命令：
 
 * 23-7/1 * * * /etc/init.d/smb restart
 
- 
 
-实例13：每月的4号与每周一到周三的11点重启smb 
+
+实例13：每月的4号与每周一到周三的11点重启smb
 
 命令：
 
 0 11 4 * mon-wed /etc/init.d/smb restart
 
- 
 
-实例14：一月一号的4点重启smb 
+
+实例14：一月一号的4点重启smb
 
 命令：
 
