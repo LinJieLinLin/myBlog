@@ -53,7 +53,7 @@ docker run -d \
 ## [jenkins](https://github.com/jenkinsci/docker/blob/master/README.md)
 
 ```
-docker run --name jenkins -d -v jenkins_home:/var/jenkins_home -p 3002:8080 -p 50000:50000 jenkins
+docker run --name jenkins -d -e JAVA_OPTS="-Duser.timezone=Asia/Shanghai" -v jenkins_home:/var/jenkins_home -v /etc/localtime:/etc/localtime -p 3002:8080 -p 50000:50000 jenkins/jenkins
 ```
 
 ## [gitlab](https://www.jianshu.com/p/24959481340e)
@@ -64,6 +64,7 @@ sudo docker run --detach \
     --publish 443:443 --publish 3003:80 --publish 23:22 \
     --name gitlab \
     --restart always \
+    -v /etc/localtime:/etc/localtime \
     --volume /gitlab/config:/etc/gitlab \
     --volume /gitlab/logs:/var/log/gitlab \
     --volume /gitlab/data:/var/opt/gitlab \
@@ -90,4 +91,14 @@ docker update --restart=always xxx
 --add-host= lj.io:127.0.0.1
 ```
 
-#
+## 修改容器时区
+
+```
+-v /etc/localtime:/etc/localtime
+```
+
+## 进入容器 shell
+
+```
+docker exec -it [name] /bin/bash
+```
