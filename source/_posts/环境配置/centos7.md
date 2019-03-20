@@ -77,6 +77,13 @@ sudo docker run --detach \
 sudo docker run -d --name gitlab-runner --add-host=lj.io:127.0.0.1 --restart always   -v /root/lj/gitlab-runner/config:/etc/gitlab-runner   -v /var/run/docker.sock:/var/run/docker.sock   gitlab/gitlab-runner
 ```
 
+## [mysql](http://www.runoob.com/docker/docker-install-mysql.html)
+
+```
+docker pull mysql
+sudo docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+```
+
 ## 容器开机启动
 
 ```
