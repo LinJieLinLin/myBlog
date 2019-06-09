@@ -109,3 +109,68 @@ docker update --restart=always xxx
 ```
 docker exec -it [name] /bin/bash
 ```
+
+### 查看 centos 版本
+
+`cat /etc/redhat-release`
+
+# nginx
+
+```
+sudo yum install nginx
+sudo systemctl start nginx
+```
+
+# MYSQL
+
+```
+sudo rpm -ivh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+sudo yum -y install mysql-community-server
+sudo systemctl start mysqld
+# 自启动
+sudo systemctl enable mysqld
+# 状态
+sudo systemctl status mysqld
+# 查看默认密码
+cat /var/log/mysqld.log | grep -i 'temporary password'
+# 配置mysql
+mysql_secure_installation
+
+```
+
+# PHP
+
+```
+sudo  rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+sudo yum -y install php72w php72w-cli php72w-common php72w-devel php72w-embedded php72w-fpm php72w-gd php72w-mbstring php72w-mysqlnd php72w-opcache php72w-pdo php72w-xml php72w-process php-mysqli --skip-broken
+# 查看已安装扩展
+php -m
+# 启动php-fpm
+sudo service php-fpm start
+# 检查启动是否成功
+sudo service php-fpm status
+# 设置开机自启动
+sudo systemctl enable php-fpm.service
+# 检查开机自启动是否设置成功
+sudo systemctl list-dependencies | grep php-fpm
+ ps -ef | grep php-fpm
+# 查看监听端口
+netstat -ant | grep 9000
+```
+
+## php nginx 配置
+
+```
+# 配置最后加上：
+fastcgi_param  PHP_ADMIN_VALUE  "open_basedir=/home/php项目根目录/:/tmp/:/proc/";
+```
+
+# 安装 redis
+
+```
+yum install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+yum --enablerepo=remi install redis
+# 开机启动
+systemctl enable redis.service
+```

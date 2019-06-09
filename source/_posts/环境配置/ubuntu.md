@@ -315,3 +315,55 @@ $ Exec=bash 软件路径
 
 01   *   *   *   *     root run-parts /etc/cron.hourly
 ```
+
+## 修改 host
+
+```
+sudo vim /etc/hosts
+```
+
+# PHP
+
+## fastadmin
+
+```
+# 依赖
+sudo apt-get install php7.2-zip php7.2-gd -y
+sudo service php7.2-fmp restart
+# composer
+sudo apt install composer -y
+# 使用镜像
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
+# 开启debug，修改 /fastadmin/application/config.php
+# 关于没有权限（线上这样设置）
+chown www:www /var/www/fastadmin -R
+chmod 655 /var/www/fastadmin -R
+chmod u+w /var/www/fastadmin/runtime -R
+chmod u+w /var/www/fastadmin/public/upload -R
+# 强制重新安装
+php think install -u 数据库用户名 -p 数据库密码 --force=true
+```
+
+# android ubuntu18.04
+
+## mysql
+
+```
+# 开启这个才能启动mysql
+usermod -a -G aid_inet,aid_net_raw mysql
+# 配置mysql
+sudo mysql_secure_installation
+# 设置root 密码
+y y y n y
+# 允许设置简单密码
+set global validate_password_policy=0;
+set global validate_password_length=4;
+# 创建用户
+CREATE USER 'linj'@'localhost' IDENTIFIED BY '123456';
+# del
+drop user 'linj'@'localhost';
+# 全部权限
+grant all on *.* to  'linj'@'localhost' identified by '123456';
+# test数据库全部权限
+grant all on test.* to  'linj'@'localhost' identified by '123456';
+```
