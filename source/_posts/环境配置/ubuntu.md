@@ -1,6 +1,5 @@
 ---
-title: ubuntu16.04
-date: 2016-12-01 01:01:01
+title: ubuntu
 tags:
   - 配置
 ---
@@ -175,13 +174,23 @@ ssh-add -D
 ```
 sudo apt install openssh-server
 sudo rm -r /etc/ssh/ssh*key
+# 使用 
 sudo dpkg-reconfigure openssh-server
+# 或使用二选一
+sudo ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
+sudo ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
+sudo ssh-keygen -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
 # 客户端生成ssh
 ssh-keygen -t rsa -P ''
 # 将客户端公钥id_rsa.pub复制到服务端
 scp ~/.ssh/id_rsa.pub user@192.168.1.140:~
 # 将上传到服务端的公钥添加到~/.ssh/authorzied_keys之中
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+# 服务端开启key登录
+sudo vim /etc/ssh/sshd_config
+# 打开选项 PubkeyAuthentication yes
+# 打开选项 AuthorizedKeysFile
+sudo service ssh restart
 ```
 
 ## 添加软件图标到启动器
@@ -329,7 +338,7 @@ sudo vim /etc/hosts
 ```
 # 依赖
 sudo apt-get install php7.2-zip php7.2-gd -y
-sudo service php7.2-fmp restart
+sudo service php7.2-fpm restart
 # composer
 sudo apt install composer -y
 # 使用镜像
@@ -367,3 +376,7 @@ grant all on *.* to  'linj'@'localhost' identified by '123456';
 # test数据库全部权限
 grant all on test.* to  'linj'@'localhost' identified by '123456';
 ```
+
+## php(arm64 android)
+
+> php 环境下运行 curl get 请求返回 false
