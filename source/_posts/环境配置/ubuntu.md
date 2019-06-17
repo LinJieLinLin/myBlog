@@ -174,7 +174,7 @@ ssh-add -D
 ```
 sudo apt install openssh-server
 sudo rm -r /etc/ssh/ssh*key
-# 使用 
+# 使用
 sudo dpkg-reconfigure openssh-server
 # 或使用二选一
 sudo ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
