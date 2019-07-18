@@ -61,6 +61,13 @@ curl ip.gs
 npm config set proxy=http://127.0.0.1:7777
 ```
 
+- node sass
+
+```
+# windows
+npm config set sass-binary-site=http://npm.taobao.org/mirrors/node-sass
+```
+
 - shell 全局代理：
 
 ```
