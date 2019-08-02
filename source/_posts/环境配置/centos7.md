@@ -132,6 +132,8 @@ sudo docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql
 ```
 # 没有使用到 --link的容器使用
 docker update --restart=always xxx
+# 取消启动
+docker update --restart=no xxx
 ```
 
 ## 修改容器 host
