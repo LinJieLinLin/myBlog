@@ -23,6 +23,49 @@ db.createUser({ user: 'test', pwd: '123456', roles: [{ role: "readWrite", db: "t
 
 ```
 
+### 备份恢复
+
+```
+一.备份数据库：
+方法一：进入mongodb容器：
+docker exec -it 容器名 /bin/sh
+
+执行备份指令：
+mongodump -h ip  -d 数据库名 -o  容器存放备份数据的地址
+注意：若容器内的存备份数据的地址没有被映射出来，则exit推出容器回到宿主机,
+          执行：
+          docker cp 容器名:容器内存备份数据的地址  宿主机的存放备份数据的地址
+方法二：直接在宿主机执行导出操作：
+
+            将备份指令写入sh文件，建立宿主机和docker容器之间的联系
+
+          docker run --link 容器名:mongodb -v 容器存放备份数据的地址:宿主机存放导出文件的地址 mongo 宿主机存放sh文件的地址
+          例如：
+         docker run --link zks-mongo:mongodb -v /zks/db_backup:/zks/db_backup mongo /zks/db_backup/backupright.sh
+
+二、导入数据库
+
+  将数据到入docker中mongodb,且mongodb已经存在这个数据库表
+
+  先删掉原来的的数据库表，否则，新导入进去的数据如果有一些和原来的数据重复就不能导入成功
+  删掉数据库表的步骤：
+  1.进入mongodb容器
+  2.执行mongo
+  3.查看有哪些数据库 show dbs
+  4.进入某个数据库 use 数据库名
+  5.查看数据库中有哪些表 show collections
+  6.删除数据库中的某个表 db.数据库表名.drop()
+
+  将要导入的数据库表放在容器映射到宿主机的路径下
+  执行：
+  mongorestore -h mongodb容器的ip -d 要导入的数据库的表名 要导入的数据库表存放的路径
+---------------------
+作者：crush1988
+来源：CSDN
+原文：https://blog.csdn.net/crush1988/article/details/81019302
+版权声明：本文为博主原创文章，转载请附上博文链接！
+```
+
 ### 默认数据地址:
 
 ```
