@@ -150,3 +150,11 @@ df -hl
 # 查看当前目录文件大小，max-depth为目录层数
 du -h --max-depth=1
 ```
+
+### 同步时间
+
+```
+# apt-get install ntpdate
+#  yum install ntp
+ntpdate cn.pool.ntp.org
+```
