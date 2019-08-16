@@ -9,6 +9,18 @@ tags:
 
 <!--more-->
 
+# 自动网络对时
+
+```
+sudo yum -y install ntp
+# 使用 ntpdate 测试 NTP
+ntpdate pool.ntp.org
+# 查看服务器时间
+date
+# 启动ntpd daemon，持续校准时间
+systemctl start ntpd
+```
+
 # docker in centos7
 
 ## [docker-mongo](https://www.jianshu.com/p/2181b2e27021)
@@ -136,10 +148,16 @@ docker update --restart=always xxx
 docker update --restart=no xxx
 ```
 
+## 导出容器信息
+
+```
+docker inspect name/id
+```
+
 ## 修改容器 host
 
 ```
-# 启动容器时添加
+# 创建容器时添加
 --add-host= lj.io:127.0.0.1
 ```
 
