@@ -386,6 +386,29 @@ sudo apt-get check 检查是否有损坏的依赖
 sudo vim /etc/hosts
 ```
 
+# WSL
+
+## 开机启动脚本
+
+```
+# win+r shell:startup
+# 编辑 ubuntu.vbs
+set ws=wscript.createobject("wscript.shell")
+ws.run "C:\Windows\System32\bash.exe",0
+ws.run "C:\Windows\System32\bash.exe  -c 'sudo /root/init.sh'",0
+```
+
+## 默认使用 root
+
+```
+# 设置root密码
+sudo passwd root
+# win设置WSL使用 root
+# powershell
+ubuntu1804.exe -v
+ubuntu1804.exe config --default-user root
+```
+
 # PHP
 
 ## fastadmin
