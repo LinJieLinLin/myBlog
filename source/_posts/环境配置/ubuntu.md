@@ -83,7 +83,11 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | b
 vim ~/.profile
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-wq
+# wq
+# 使用淘宝源
+~/.bashrc
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+# wq
 source ~/.profile
 NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install stable
 ```
