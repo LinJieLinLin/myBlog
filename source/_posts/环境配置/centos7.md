@@ -173,6 +173,17 @@ docker inspect name/id
 docker exec -it [name] /bin/bash
 ```
 
+## zip 相关
+
+```
+# 压缩
+zip –q –r a.zip /home/wwwroot/a
+# 解压缩 到当前目录
+unzip a.zip
+# 解压缩带参
+unzip a.zip -q -d /home/a
+```
+
 ### 查看 centos 版本
 
 `cat /etc/redhat-release`
