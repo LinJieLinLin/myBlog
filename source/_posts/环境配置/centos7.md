@@ -1,6 +1,6 @@
 ---
 title: centos7
-date: 2016-07-07 07:07:11
+# date: 2016-07-07 07:07:11
 tags:
   - 配置
 ---
@@ -127,6 +127,12 @@ sudo docker run --detach \
 ```
 
 ## [gitlab-runner](https://segmentfault.com/a/1190000011553991)
+
+```
+sudo docker run -d --name gitlab-runner --add-host=lj.io:127.0.0.1 --restart always   -v /root/lj/gitlab-runner/config:/etc/gitlab-runner   -v /var/run/docker.sock:/var/run/docker.sock   gitlab/gitlab-runner
+```
+
+## [gitlab-multi-runner](https://hub.docker.com/r/sameersbn/gitlab-ci-multi-runner)
 
 ```
 sudo docker run -d --name gitlab-runner --add-host=lj.io:127.0.0.1 --restart always   -v /root/lj/gitlab-runner/config:/etc/gitlab-runner   -v /var/run/docker.sock:/var/run/docker.sock   gitlab/gitlab-runner
