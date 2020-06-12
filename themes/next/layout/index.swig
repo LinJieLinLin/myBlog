@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+  {% include '_partials/pagination.swig' %}
   <section id="posts" class="posts-expand">
     {% for post in page.posts %}
       {{ post_template.render(post, true) }}
