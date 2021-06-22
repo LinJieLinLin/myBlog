@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>centos6.5 |  Hexo</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-环境配置/centos6.5"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  centos6.5
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/centos6.5/" class="article-date">
+  <time datetime="2016-07-06T23:07:11.000Z" itemprop="datePublished">2016-07-07</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">2.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">9 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote><p>centos6.5 </p>
+</blockquote>
+
+<span id="more"></span>
+
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><h2 id="vsftpd"><a href="#vsftpd" class="headerlink" title="vsftpd"></a>vsftpd</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="虚拟用户"><a href="#虚拟用户" class="headerlink" title="虚拟用户"></a>虚拟用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">yum -y install db4 db4-utils</span><br><span class="line">#创建用户列表，注意奇行是用户名，偶行是密码</span><br><span class="line">vim /etc/vsftpd/virtual_user.txt</span><br><span class="line"></span><br><span class="line">#添加用户</span><br><span class="line">test</span><br><span class="line">123456</span><br><span class="line"></span><br><span class="line"># 生成虚拟用户认证的db文件</span><br><span class="line">db_load -T -t hash -f /etc/vsftpd/virtual_user.txt /etc/vsftpd/virtual_user.db</span><br><span class="line"># 编辑认证文件</span><br><span class="line">vim /etc/pam.d/vsftpd</span><br><span class="line"># 保留第一行注释其他，在最后增加以下两句</span><br><span class="line"># 32位系统</span><br><span class="line">auth required /lib/security/pam_userdb.so db=/etc/vsftpd/virtual_user</span><br><span class="line">account required /lib/security/pam_userdb.so db=/etc/vsftpd/virtual_user</span><br><span class="line"># 64位系统</span><br><span class="line">auth required /lib64/security/pam_userdb.so db=/etc/vsftpd/virtual_user</span><br><span class="line">account required /lib64/security/pam_userdb.so db=/etc/vsftpd/virtual_user</span><br><span class="line">#生成配置文件</span><br><span class="line">mkdir -p /etc/vsftpd/virtual_conf</span><br><span class="line"></span><br><span class="line">#添加账户，文件名等于virtual_user.txt里面的账户名，否则下面设置无效</span><br><span class="line">vim /etc/vsftpd/virtual_conf/test</span><br><span class="line"></span><br><span class="line"># 每个虚拟用户的单独配置，会覆盖模板配置文件配置</span><br><span class="line">local_root=/www/wwwroot</span><br><span class="line">anon_umask=022</span><br><span class="line">write_enable=YES</span><br><span class="line">anon_world_readable_only=NO</span><br><span class="line">anon_upload_enable=YES</span><br><span class="line">anon_mkdir_write_enable=YES</span><br><span class="line">anon_other_write_enable=YES</span><br></pre></td></tr></table></figure>
+
+<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/sysconfig/iptables</span><br><span class="line">iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 50000:50020 -j ACCEPT</span><br><span class="line">service iptables save</span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置-SELinux"><a href="#配置-SELinux" class="headerlink" title="配置 SELinux"></a>配置 SELinux</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 关掉</span><br><span class="line">setenforce 0</span><br><span class="line"># 或使用这个</span><br><span class="line">setsebool -P allow_ftpd_full_access 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="vsftpd-conf"><a href="#vsftpd-conf" class="headerlink" title="vsftpd.conf"></a>vsftpd.conf</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"># Example config file /etc/vsftpd/vsftpd.conf</span><br><span class="line">#</span><br><span class="line"># 如果vsftpd处于独立模式，则这是它将侦听传入FTP连接的端口。</span><br><span class="line">listen_port=21</span><br><span class="line">#</span><br><span class="line"># 登入目录</span><br><span class="line">local_root=/root/home/ftp</span><br><span class="line">#</span><br><span class="line"># 是否允许匿名用户登录</span><br><span class="line">anonymous_enable=NO</span><br><span class="line">#</span><br><span class="line"># 设定本地用户可以访问。注：如使用虚拟宿主用户，在该项目设定为NO的情况下所有虚拟用户将无法访问</span><br><span class="line">local_enable=YES</span><br><span class="line">#</span><br><span class="line"># 设定允许进行写操作(上传、删除)，默认为YES</span><br><span class="line">write_enable=YES</span><br><span class="line">#</span><br><span class="line"># 使用本地时间，如果不设置的话默认时间是GMT格林时间，会慢8个小时</span><br><span class="line">use_localtime=YES</span><br><span class="line">#</span><br><span class="line"># 此参数在VSFTPD使用单独(standalone)模式下有效。此参数定义了FTP服务器最大的并发连接数，当超过此连接数时，服务器拒绝客户端连接。默认值：0（无限制）。</span><br><span class="line">max_clients=5</span><br><span class="line">#</span><br><span class="line"># 此参数在VSFTPD使用单独(standalone)模式下有效。此参数定义每个IP地址最大的并发连接数目。超过这个数目将会拒绝连接。此选项的设置将影响到象网际快车这类的多进程下载软件。默认值为0，表示不限制。</span><br><span class="line">max_per_ip=3</span><br><span class="line">#</span><br><span class="line"># 掩饰码</span><br><span class="line">local_umask=022</span><br><span class="line">#</span><br><span class="line"># 是否允许匿名FTP用户上传文件。</span><br><span class="line">#anon_upload_enable=YES</span><br><span class="line">#</span><br><span class="line"># 是否允许匿名FTP用户能够创建新目录</span><br><span class="line">#anon_mkdir_write_enable=YES</span><br><span class="line">#</span><br><span class="line"># 激活目录消息 - 当远程用户进入某个目录时发送的消息。</span><br><span class="line">dirmessage_enable=YES</span><br><span class="line">#</span><br><span class="line"># 设置为yes时，用户上传和下载文件都会被记录下来，记录文件位置与xferlog_file=/var/log/vsftpd/xferlog</span><br><span class="line">xferlog_enable=YES</span><br><span class="line">#</span><br><span class="line"># 在vsftpd_log_file和xferlog_file文件之间切换登录文件信息，NO 写入 vsftpd_log_file, YES 写入 xferlog_file</span><br><span class="line">xferlog_std_format=YES</span><br><span class="line">#</span><br><span class="line"># 设置另外一个vsftpd的日记文件，也可以不设置</span><br><span class="line">dual_log_enable=YES</span><br><span class="line">xferlog_file=/var/log/vsftpd/xferlog</span><br><span class="line">#</span><br><span class="line"># 设置日志目录</span><br><span class="line">vsftpd_log_file=/var/log/vsftpd/vsftpd.log</span><br><span class="line">#</span><br><span class="line"># 端口样式连接始发的端口（只要名称不正确的 connect_from_port_20 启用），默认值：20</span><br><span class="line">#connect_from_port_20=YES</span><br><span class="line">#</span><br><span class="line"># 是否修改匿名用户所上传文件的所有权。YES，匿名用户所上传的文件的所有权将改为另外一个不同的用户所有，用户由chown_username参数指定。此选项默认值为NO。</span><br><span class="line">#chown_uploads=YES</span><br><span class="line">#</span><br><span class="line"># 指定拥有匿名用户上传文件所有权的用户</span><br><span class="line">#chown_username=whoever</span><br><span class="line">#</span><br><span class="line"># 远程客户端建立与PASV样式数据连接的连接的超时（以秒为单位）,默认值：60。</span><br><span class="line">#accept_timeout=60</span><br><span class="line">#</span><br><span class="line"># 远程客户端响应我们的端口样式数据连接的超时时间（秒）。默认值：60。</span><br><span class="line">#connect_timeout=60</span><br><span class="line">#</span><br><span class="line"># 远程客户端可能在FTP命令之间花费的最长时间（以秒为单位）。如果超时触发，远程客户端将被启动。默认值：300</span><br><span class="line">#idle_session_timeout=300</span><br><span class="line">#</span><br><span class="line"># 超时时间（以秒为单位），大概是允许数据传输停止而无进度的最大时间。如果超时触发，远程客户端将被启动。默认值：300</span><br><span class="line">#data_connection_timeout=300</span><br><span class="line">#</span><br><span class="line"># 本地认证用户允许的最大数据传输速率（以字节为单位）。默认值：0（无限制）</span><br><span class="line">#local_max_rate=0</span><br><span class="line">#</span><br><span class="line"># 建议您在系统上定义一个唯一的用户，ftp服务器可以用作完全独立且无特权的用户。</span><br><span class="line">#nopriv_user=ftpsecure</span><br><span class="line">#</span><br><span class="line"># 是否启动异步传输功能</span><br><span class="line">#async_abor_enable=YES</span><br><span class="line">#</span><br><span class="line"># 是否启用ASCII功能</span><br><span class="line">ascii_upload_enable=YES</span><br><span class="line">ascii_download_enable=YES</span><br><span class="line">#</span><br><span class="line"># 自定义登录显示的字符串</span><br><span class="line">#ftpd_banner=Welcome to blah FTP service.</span><br><span class="line">#</span><br><span class="line"># 指定某个纯文本作为用户登录时显示的欢迎字眼，也可以放置一些让用户知道本FTP服务器的目录架构</span><br><span class="line">#banner_file=/etc/vsftpd/welcome.txt</span><br><span class="line">#</span><br><span class="line"># 您可以指定一个不允许的匿名电子邮件地址的文件。 显然有助于打击某些DoS攻击。</span><br><span class="line">#deny_email_enable=YES</span><br><span class="line"># (default follows)</span><br><span class="line">#banned_email_file=/etc/vsftpd/banned_emails</span><br><span class="line">#</span><br><span class="line"># 锁定某些用户在自家目录中。即当这些用户登录后，不可以转到系统的其他目录，只能在自家目录(及其子目录)下。</span><br><span class="line">#chroot_local_user=YES</span><br><span class="line">chroot_list_enable=YES</span><br><span class="line"># (default follows)</span><br><span class="line">#chroot_list_file=/etc/vsftpd/chroot_list</span><br><span class="line">#</span><br><span class="line"># 此选项默认值为NO , 此时ftpusers 文件中的用户禁止登录FTP 服务器；若此项设为YES ，则 user_list 文件中的用户允许登录 FTP 服务器，而如果同时设置了 userlist_deny=YES ，则 user_list 文件中的用户将不允许登录FTP 服务器，甚至连输入密码提示信息都没有，直接被FTP服务器拒绝</span><br><span class="line">#userlist_enable=YES</span><br><span class="line">#</span><br><span class="line"># 此项默认为YES ，设置是否阻扯user_list 文件中的用户登录FTP 服务器,设置为NO时只允许user_list 当中的用户使用ftp,对于后新建的用户起到屏蔽作用，如果想要使用ftp则必须加入这个列表文件中</span><br><span class="line">#userlist_deny=NO</span><br><span class="line">#</span><br><span class="line"># 当启用“listen”指令时，vsftpd以独立模式运行，并在IPv4套接字上侦听。 该指令不能与listen_ipv6指令一起使用。</span><br><span class="line">listen=YES</span><br><span class="line">#</span><br><span class="line"># 此指令允许侦听IPv6套接字。 要监听IPv4和IPv6套接字，您必须运行两个vsftpd副本和两个配置文件。请确保其中一个listen选项被注释！</span><br><span class="line">#listen_ipv6=YES</span><br><span class="line">#</span><br><span class="line"># 设置 PAM 外挂模块提供的认证服务所使用的配置文件名 ，即/etc/pam.d/vsftpd 文件</span><br><span class="line">pam_service_name=vsftpd.db</span><br><span class="line">#</span><br><span class="line"># 是否开启用虚拟用户功能</span><br><span class="line">guest_enable=YES</span><br><span class="line">#</span><br><span class="line"># 指定虚拟用户的宿主用户，CentOS中已经有内置的ftp用户了</span><br><span class="line">guest_username=root</span><br><span class="line">#</span><br><span class="line"># 匿名客户端允许的最大数据传输速率（以字节为单位）。默认值：0（无限制）</span><br><span class="line">#anon_max_rate=0</span><br><span class="line">#</span><br><span class="line"># 为匿名用户设置文件创建的umask的值。注意！如果要指定八进制值，请记住“0”前缀，否则该值将被视为基数10整数！默认值：077</span><br><span class="line">#anon_umask=022</span><br><span class="line">#</span><br><span class="line"># 设定虚拟用户个人vsftp的CentOS FTP服务文件存放路径。存放虚拟用户个性的CentOS FTP服务文件(配置文件名=虚拟用户名)</span><br><span class="line">user_config_dir=/etc/vsftpd/virtual_conf</span><br><span class="line">#</span><br><span class="line"># 如果要禁止PASV方法获取数据连接，请设置为NO。</span><br><span class="line">pasv_enable=YES</span><br><span class="line">#</span><br><span class="line"># 设定在PASV模式下，建立数据传输所可以使用port范围的下界和上界，0 表示任意。默认值为0。把端口范围设在比较高的一段范围内</span><br><span class="line">pasv_min_port=50000</span><br><span class="line">pasv_max_port=50020</span><br><span class="line">#</span><br><span class="line"># 默认值为NO。为YES时，将关闭PASV模式的安全检查。</span><br><span class="line">pasv_promiscuous=YES</span><br><span class="line">#</span><br><span class="line"># 如果您不想使用PORT方法获取数据连接，则设置为NO。</span><br><span class="line">#port_enable=YES</span><br><span class="line">#</span><br><span class="line"># 默认值为NO。如果要禁用PORT安全检查，确保传出数据连接只能连接到客户端，请设置为YES。</span><br><span class="line">#port_promiscuous=YES</span><br><span class="line">#</span><br><span class="line"># 表明服务器使用 tcp_wrappers 作为主机访问控制方式，tcp_wrappers 可以实现linux 系统中网络服务的基于主机地址的访问控制，在/etc 目录中的hosts.allow 和hosts.deny 两个文件用于设置tcp_wrappers 的访问控制，前者设置允许访问记录，后者设置拒绝访问记录。例如想限制某些主机对FTP 服务器12.36.126.141 的匿名访问，编缉/etc/hosts.allow 文件，如在下面增加两行命令：vsftpd:192.168.2.1:DENY 和vsftpd:192.168.2.20:DENY 表明限制IP 为192.168.2.1/192.168.2.20 主机访问IP 为12.36.126.141 的FTP 服务器，此时FTP 服务器虽可以PING 通，但无法连接</span><br><span class="line">tcp_wrappers=YES</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启-vsftpd-服务"><a href="#重启-vsftpd-服务" class="headerlink" title="重启 vsftpd 服务"></a>重启 vsftpd 服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#启动vsftpd 服务</span><br><span class="line">service vsftpd start</span><br><span class="line"></span><br><span class="line">#重启vsftpd 服务</span><br><span class="line">service vsftpd restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chkconfig vsftpd on</span><br><span class="line">chkconfig vsftpd --list | grep vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="连不上处理"><a href="#连不上处理" class="headerlink" title="连不上处理"></a>连不上处理</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">连接被拒绝</span><br><span class="line">有两个原因，vsftpd进程没有启动，或者服务器防火墙的端口没有打开。</span><br><span class="line">可以用</span><br><span class="line">telnet 服务器IP地址 21</span><br><span class="line">这个命令来测试。</span><br><span class="line"></span><br><span class="line">500 OOPS: priv_sock_get_cmd</span><br><span class="line">增加这个配置应该就可以解决：</span><br><span class="line">seccomp_sandbox=NO</span><br><span class="line"></span><br><span class="line">错误: GnuTLS 错误 -15: An unexpected TLS packet was received.</span><br><span class="line">增加这个配置可以解决：</span><br><span class="line">allow_writeable_chroot=YES</span><br><span class="line"></span><br><span class="line">响应: 425 Security: Bad IP connecting.</span><br><span class="line">这个一般是因为pasv端口没有设置，或者防火墙上对应的端口没有打开。</span><br><span class="line">防火墙上打开40000~40100端口，然后设置</span><br><span class="line">pasv_min_port=40000</span><br><span class="line">pasv_max_port=40100</span><br><span class="line">pasv_promiscuous=YES</span><br><span class="line">就可以解决了。</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考自"><a href="#参考自" class="headerlink" title="参考自"></a><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ea32af794680">参考自</a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作者：马儿爱吃草</span><br><span class="line">链接：https://www.jianshu.com/p/ea32af794680</span><br><span class="line">來源：简书</span><br><span class="line">简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</span><br></pre></td></tr></table></figure>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/centos6.5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/appium-androidUi%E6%B5%8B%E8%AF%95/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            appium-androidUi测试
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/linux/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">linux shell</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2021
+        <i class="ri-heart-fill heart_icon"></i> John Doe
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+  </div>
+</body>
+
+</html>
