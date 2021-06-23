@@ -4,6 +4,9 @@
 name:  GitHub Actions Build and Deploy
 
 on:
+  push:
+    branches:
+      - master
   release:
     branches:
       - master
