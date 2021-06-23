@@ -89,12 +89,12 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
     <title>JS-function</title>
-    <url>/myBlog/2016/10/01/JS-Function/</url>
+    <url>/myBlog/2016/02/01/JS-Function/</url>
     <content><![CDATA[<blockquote><p>与 JS 相关的函数 </p>
 </blockquote>
 
@@ -111,7 +111,7 @@
   </entry>
   <entry>
     <title>JS</title>
-    <url>/myBlog/2016/04/04/JS-%E5%A4%A7%E6%9D%82%E7%83%A9/</url>
+    <url>/myBlog/2016/03/04/JS-%E5%A4%A7%E6%9D%82%E7%83%A9/</url>
     <content><![CDATA[<blockquote><p>与 JS 相关的一些学习记录 </p>
 </blockquote>
 
@@ -140,7 +140,7 @@
   </entry>
   <entry>
     <title>MD基本语法</title>
-    <url>/myBlog/2016/04/01/MD-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <url>/myBlog/2016/01/01/MD-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<blockquote><p>第一次配置 </p>
 </blockquote>
 
@@ -237,7 +237,7 @@
   </entry>
   <entry>
     <title>SCSS_MIXIN</title>
-    <url>/myBlog/2021/06/23/SCSS-MIXIN/</url>
+    <url>/myBlog/2016/04/18/SCSS-MIXIN/</url>
     <content><![CDATA[<blockquote><p>scss mixin 相关收集 </p>
 </blockquote>
 
@@ -261,13 +261,12 @@
         <category>web</category>
       </categories>
       <tags>
-        <tag>编程</tag>
-        <tag>感悟</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
     <title>GIT</title>
-    <url>/myBlog/2016/04/03/git/</url>
+    <url>/myBlog/2018/08/08/git/</url>
     <content><![CDATA[<blockquote><p>与 GIT 相关的一些学习记录 </p>
 </blockquote>
 
@@ -315,13 +314,16 @@
 <h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 恢复暂存区的指定文件到工作区</span><br><span class="line">$ git checkout [file]</span><br><span class="line"># 恢复某个commit的指定文件到暂存区和工作区</span><br><span class="line">$ git checkout [commit] [file]</span><br><span class="line"># 恢复暂存区的所有文件到工作区</span><br><span class="line">$ git checkout .</span><br><span class="line"># 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</span><br><span class="line">$ git reset [file]</span><br><span class="line"># 重置暂存区与工作区，与上一次commit保持一致</span><br><span class="line">$ git reset --hard</span><br><span class="line"># 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span><br><span class="line">$ git reset [commit]</span><br><span class="line"># 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span><br><span class="line">$ git reset --hard [commit]</span><br><span class="line"># 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span><br><span class="line">$ git reset --keep [commit]</span><br><span class="line"># 新建一个commit，用来撤销指定commit</span><br><span class="line"># 后者的所有变化都将被前者抵消，并且应用到当前分支</span><br><span class="line">$ git revert [commit]</span><br><span class="line"># 暂时将未提交的变化移除，稍后再移入</span><br><span class="line">$ git stash</span><br><span class="line">$ git stash pop</span><br><span class="line"># 生成一个可供发布的压缩包</span><br><span class="line">$ git archive</span><br></pre></td></tr></table></figure>
 
 <h2 id="更多内容》》"><a href="#更多内容》》" class="headerlink" title="更多内容》》"></a><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">更多内容》》</a></h2>]]></content>
+      <categories>
+        <category>GIT</category>
+      </categories>
       <tags>
         <tag>GIT</tag>
       </tags>
   </entry>
   <entry>
     <title>HELLO WORLD</title>
-    <url>/myBlog/2016/04/01/hello-world/</url>
+    <url>/myBlog/2016/01/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <span id="more"></span>
 
@@ -348,7 +350,7 @@
   </entry>
   <entry>
     <title>html转base64</title>
-    <url>/myBlog/2018/04/03/html%E8%BD%ACbase64/</url>
+    <url>/myBlog/2016/04/03/html%E8%BD%ACbase64/</url>
     <content><![CDATA[<blockquote><p>html 转 base64 </p>
 </blockquote>
 
@@ -364,7 +366,7 @@
   </entry>
   <entry>
     <title>gulp</title>
-    <url>/myBlog/2016/10/01/%E5%B7%A5%E5%85%B7%E7%B1%BB-gulp/</url>
+    <url>/myBlog/2016/02/01/%E5%B7%A5%E5%85%B7%E7%B1%BB-gulp/</url>
     <content><![CDATA[<blockquote><p>与 gulp 相关的插件 </p>
 </blockquote>
 
@@ -401,7 +403,7 @@
   </entry>
   <entry>
     <title>模板</title>
-    <url>/myBlog/2011/11/11/%E6%A8%A1%E6%9D%BF/</url>
+    <url>/myBlog/2016/01/01/%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<blockquote><p>一句话描述 </p>
 </blockquote>
 
@@ -414,7 +416,7 @@
   </entry>
   <entry>
     <title>移动端web</title>
-    <url>/myBlog/2021/06/23/%E7%A7%BB%E5%8A%A8%E7%AB%AFweb/</url>
+    <url>/myBlog/2016/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AFweb/</url>
     <content><![CDATA[<blockquote><p>移动端 web 相关 </p>
 </blockquote>
 
@@ -436,7 +438,7 @@
   </entry>
   <entry>
     <title>问题记录</title>
-    <url>/myBlog/2021/06/23/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <url>/myBlog/2016/04/02/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<blockquote><p>一些问题收集 </p>
 </blockquote>
 
@@ -527,7 +529,7 @@
   </entry>
   <entry>
     <title>centos7</title>
-    <url>/myBlog/2021/06/23/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/centos7/</url>
+    <url>/myBlog/2018/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/centos7/</url>
     <content><![CDATA[<blockquote><p>centos6.5 </p>
 </blockquote>
 
@@ -596,7 +598,7 @@
   </entry>
   <entry>
     <title>linux shell</title>
-    <url>/myBlog/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/linux/</url>
+    <url>/myBlog/2018/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/linux/</url>
     <content><![CDATA[<blockquote><p>linux shell </p>
 </blockquote>
 
@@ -636,7 +638,7 @@
   </entry>
   <entry>
     <title>mongodb</title>
-    <url>/myBlog/2021/06/23/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/mongoDb/</url>
+    <url>/myBlog/2016/04/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/mongoDb/</url>
     <content><![CDATA[<blockquote><p>mongodb 相关 </p>
 </blockquote>
 
@@ -702,7 +704,7 @@
   </entry>
   <entry>
     <title>ubuntu</title>
-    <url>/myBlog/2021/06/23/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/ubuntu/</url>
+    <url>/myBlog/2018/08/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/ubuntu/</url>
     <content><![CDATA[<blockquote><p>ubuntu 相关 </p>
 </blockquote>
 
@@ -824,7 +826,7 @@
   </entry>
   <entry>
     <title>win CMD</title>
-    <url>/myBlog/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/win/</url>
+    <url>/myBlog/2018/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/win/</url>
     <content><![CDATA[<blockquote><p>win 命令行相关 </p>
 </blockquote>
 
@@ -849,7 +851,7 @@
   </entry>
   <entry>
     <title>sublimetext相关</title>
-    <url>/myBlog/2016/04/04/%E5%B7%A5%E5%85%B7%E7%B1%BB-sublime/</url>
+    <url>/myBlog/2016/05/04/%E5%B7%A5%E5%85%B7%E7%B1%BB-sublime/</url>
     <content><![CDATA[<blockquote><p>sublimetext 快捷键 </p>
 </blockquote>
 
@@ -1091,7 +1093,7 @@
   </entry>
   <entry>
     <title>MD语法</title>
-    <url>/myBlog/2016/04/01/MD-%E8%AF%AD%E6%B3%95/</url>
+    <url>/myBlog/2016/01/01/MD-%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="访问原文"><a href="#访问原文" class="headerlink" title="访问原文"></a><a href="http://wowubuntu.com/markdown/index.html#img">访问原文</a></h1><span id="more"></span>
 <div class="wikistyle"><p>&lt;&lt;<a href="http://wowubuntu.com">访问Wow!Ubuntu</a></p><p><strong>NOTE:</strong>This is Simplelified Chinese Edition Document of Markdown Syntax.If you are seeking for English Edition Document.Please refer to<a href="http://daringfireball.net/projects/markdown/syntax">Markdown:Syntax</a>.</p><p><strong>声明：</strong>这份文档派生(fork)于<a href="http://markdown.tw/">繁体中文版</a>，在此基础上进行了繁体转简体工作，并进行了适当的润色。此文档用Markdown语法编写，你可以到这里<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md">查看它的源文件</a>。「繁体中文版的原始文件可以<a href="https://github.com/othree/markdown-syntax-zhtw/blob/master/syntax.md">查看这里</a>。」--By @<a href="http://twitter.com/riku">riku</a></p><p><strong>注：</strong>本项目托管于<a href="http://gitcafe.com/riku/Markdown-Syntax-CN/">GitCafe</a>上，请通过"派生"和"合并请求"来帮忙改进本项目。</p><p><strong>***AD:</strong>本网站托管于具备SSD硬盘的<a href="https://www.digitalocean.com/?refcode=824a4f4aea1a">DigitalOcean.com</a>VPS服务商，<a href="https://www.digitalocean.com/?refcode=824a4f4aea1a">点击此处</a>进入购买，即可免费获赠10USD优惠款！</p><h1>Markdown语法说明</h1><ul><li><a href="#overview">概述</a><ul><li><a href="#philosophy">宗旨</a></li><li><a href="#html">兼容HTML</a></li><li><a href="#autoescape">特殊字符自动转换</a></li></ul></li><li><a href="#block">区块元素</a><ul><li><a href="#p">段落和换行</a></li><li><a href="#header">标题</a></li><li><a href="#blockquote">区块引用</a></li><li><a href="#list">列表</a></li><li><a href="#precode">代码区块</a></li><li><a href="#hr">分隔线</a></li></ul></li><li><a href="#span">区段元素</a><ul><li><a href="#link">链接</a></li><li><a href="#em">强调</a></li><li><a href="#code">代码</a></li><li><a href="#img">图片</a></li></ul></li><li><a href="#misc">其它</a><ul><li><a href="#backslash">反斜杠</a></li><li><a href="#autolink">自动链接</a></li></ul></li><li><a href="#acknowledgement">感谢</a></li><li><a href="#editor">Markdown免费编辑器</a></li></ul><hr><h2 id="overview">概述</h2><h3 id="philosophy">宗旨</h3><p>Markdown的目标是实现「易读易写」。</p><p>可读性，无论如何，都是最重要的。一份使用Markdown格式撰写的文件应该可以直接以纯文本发布，并且看起来不会像是由许多标签或是格式指令所构成。Markdown语法受到一些既有text-to-HTML格式的影响，包括<a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>、<a href="http://www.aaronsw.com/2002/atx/">atx</a>、<a href="http://textism.com/tools/textile/">Textile</a>、<a href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>、<a href="http://www.triptico.com/software/grutatxt.html">Grutatext</a>和<a href="http://ettext.taint.org/doc/">EtText</a>，而最大灵感来源其实是纯文本电子邮件的格式。</p><p>总之，Markdown的语法全由一些符号所组成，这些符号经过精挑细选，其作用一目了然。比如：在文字两旁加上星号，看起来就像*强调*。Markdown的列表看起来，嗯，就是列表。Markdown的区块引用看起来就真的像是引用一段文字，就像你曾在电子邮件中见过的那样。</p><h3 id="html">兼容HTML</h3><p>Markdown语法的目标是：成为一种适用于网络的<em>书写</em>语言。</p><p>Markdown不是想要取代HTML，甚至也没有要和它相近，它的语法种类很少，只对应HTML标记的一小部分。Markdown的构想<em>不是</em>要使得HTML文档更容易书写。在我看来，HTML已经很容易写了。Markdown的理念是，能让文档更容易读、写和随意改。HTML是一种<em>发布</em>的格式，Markdown是一种<em>书写</em>的格式。就这样，Markdown的格式语法只涵盖纯文本可以涵盖的范围。</p><p>不在Markdown涵盖范围之内的标签，都可以直接在文档里面用HTML撰写。不需要额外标注这是HTML或是Markdown；只要直接加标签就可以了。</p><p>要制约的只有一些HTML区块元素――比如<code>&lt;div&gt;</code>、<code>&lt;table&gt;</code>、<code>&lt;pre&gt;</code>、<code>&lt;p&gt;</code>等标签，必须在前后加上空行与其它内容区隔开，还要求它们的开始标签与结尾标签不能用制表符或空格来缩进。Markdown的生成器有足够智能，不会在HTML区块标签外加上不必要的<code>&lt;p&gt;</code>标签。</p><p>例子如下，在Markdown文件里加上一段HTML表格：</p><pre><code>这是一个普通段落。&lt;table&gt;&lt;tr&gt;&lt;td&gt;Foo&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;这是另一个普通段落。</code></pre><p>请注意，在HTML区块标签间的Markdown格式语法将不会被处理。比如，你在HTML区块内使用Markdown样式的<code>*强调*</code>会没有效果。</p><p>HTML的区段（行内）标签如<code>&lt;span&gt;</code>、<code>&lt;cite&gt;</code>、<code>&lt;del&gt;</code>可以在Markdown的段落、列表或是标题里随意使用。依照个人习惯，甚至可以不用Markdown格式，而直接采用HTML标签来格式化。举例说明：如果比较喜欢HTML的<code>&lt;a&gt;</code>或<code>&lt;img&gt;</code>标签，可以直接使用这些标签，而不用Markdown提供的链接或是图像标签语法。</p><p>和处在HTML区块标签间不同，Markdown语法在HTML区段标签间是有效的。</p><h3 id="autoescape">特殊字符自动转换</h3><p>在HTML文件中，有两个字符需要特殊处理：<code>&lt;</code>和<code>&amp;</code>。<code>&lt;</code>符号用于起始标签，<code>&amp;</code>符号则用于标记HTML实体，如果你只是想要显示这些字符的原型，你必须要使用实体的形式，像是<code>&amp;lt;</code>和<code>&amp;amp;</code>。</p><p><code>&amp;</code>字符尤其让网络文档编写者受折磨，如果你要打「<code>AT&amp;T</code>」，你必须要写成「<code>AT&amp;amp;T</code>」。而网址中的<code>&amp;</code>字符也要转换。比如你要链接到：</p><pre><code>http:</code></pre><p>你必须要把网址转换写为：</p><pre><code>http:</code></pre><p>才能放到链接标签的<code>href</code>属性里。不用说也知道这很容易忽略，这也可能是HTML标准检验所检查到的错误中，数量最多的。</p><p>Markdown让你可以自然地书写字符，需要转换的由它来处理好了。如果你使用的<code>&amp;</code>字符是HTML字符实体的一部分，它会保留原状，否则它会被转换成<code>&amp;amp</code>;。</p><p>所以你如果要在文档中插入一个版权符号<code>©</code>，你可以这样写：</p><pre><code>&amp;copy;</code></pre><p>Markdown会保留它不动。而若你写：</p><pre><code>AT&amp;T</code></pre><p>Markdown就会将它转为：</p><pre><code>AT&amp;amp;T</code></pre><p>类似的状况也会发生在<code>&lt;</code>符号上，因为Markdown允许<a href="#html">兼容HTML</a>，如果你是把<code>&lt;</code>符号作为HTML标签的定界符使用，那Markdown也不会对它做任何转换，但是如果你写：</p><pre><code>4&lt;5</code></pre><p>Markdown将会把它转换为：</p><pre><code>4&amp;lt;5</code></pre><p>不过需要注意的是，code范围内，不论是行内还是区块，<code>&lt;</code>和<code>&amp;</code>两个符号都<em>一定</em>会被转换成HTML实体，这项特性让你可以很容易地用Markdown写HTML code（和HTML相对而言，HTML语法中，你要把所有的<code>&lt;</code>和<code>&amp;</code>都转换为HTML实体，才能在HTML文件里面写出HTML code。）</p><hr><h2 id="block">区块元素</h2><h3 id="p">段落和换行</h3><p>一个Markdown段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p><p>「由一个或多个连续的文本行组成」这句话其实暗示了Markdown允许段落内的强迫换行（插入换行符），这个特性和其他大部分的text-to-HTML格式不一样（包括Movable Type的「Convert Line Breaks」选项），其它的格式会把每个换行符都转成<code>&lt;br/&gt;</code>标签。</p><p>如果你<em>确实</em>想要依赖Markdown来插入<code>&lt;br/&gt;</code>标签的话，在插入处先按入两个以上的空格然后回车。</p><p>的确，需要多费点事（多加空格）来产生<code>&lt;br/&gt;</code>，但是简单地「每个换行都转换为<code>&lt;br/&gt;</code>」的方法在Markdown中并不适合，Markdown中email式的<a href="#blockquote">区块引用</a>和多段落的<a href="#list">列表</a>在使用换行来排版的时候，不但更好用，还更方便阅读。</p><h3 id="header">标题</h3><p>Markdown支持两种标题的语法，类<a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>和类<a href="http://www.aaronsw.com/2002/atx/">atx</a>形式。</p><p>类Setext形式是用底线的形式，利用<code>=</code>（最高阶标题）和<code>-</code>（第二阶标题），例如：</p><pre><code>This is an H1=============This is an H2-------------</code></pre><p>任何数量的<code>=</code>和<code>-</code>都可以有效果。</p><p>类Atx形式则是在行首插入1到6个<code>#</code>，对应到标题1到6阶，例如：</p><pre><code>#这是H1##这是H2######这是H6</code></pre><p>你可以选择性地「闭合」类atx样式的标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上<code>#</code>，而行尾的<code>#</code>数量也不用和开头一样（行首的井字符数量决定标题的阶数）：</p><pre><code>#这是H1###这是H2#####这是H3######</code></pre><h3 id="blockquote">区块引用Blockquotes</h3><p>Markdown标记区块引用是使用类似email中用<code>&gt;</code>的引用方式。如果你还熟悉在email信件中的引言部分，你就知道怎么在Markdown文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上<code>&gt;</code>：</p><pre><code>&gt;This is a blockquote with two paragraphs.Lorem ipsum dolor sit amet,&gt;consectetuer adipiscing elit.Aliquam hendrerit mi posuere lectus.&gt;Vestibulum enim wisi,viverra nec,fringilla in,laoreet vitae,risus.&gt;&gt;Donec sit amet nisl.Aliquam semper ipsum sit amet velit.Suspendisse&gt;id sem consectetuer libero luctus adipiscing.</code></pre><p>Markdown也允许你偷懒只在整个段落的第一行最前面加上<code>&gt;</code>：</p><pre><code>&gt;This is a blockquote with two paragraphs.Lorem ipsum dolor sit amet,consectetuer adipiscing elit.Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi,viverra nec,fringilla in,laoreet vitae,risus.&gt;Donec sit amet nisl.Aliquam semper ipsum sit amet velit.Suspendisse id sem consectetuer libero luctus adipiscing.</code></pre><p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的<code>&gt;</code>：</p><pre><code>&gt;This is the first level of quoting.&gt;&gt;&gt;This is nested blockquote.&gt;&gt;Back to the first level.</code></pre><p>引用的区块内也可以使用其他的Markdown语法，包括标题、列表、代码区块等：</p><pre><code>&gt;##这是一个标题。&gt;&gt;1.这是第一行列表项。&gt;2.这是第二行列表项。&gt;&gt;给出一些例子代码：&gt;&gt;return shell_exec("echo $input | $markdown_script");</code></pre><p>任何像样的文本编辑器都能轻松地建立email型的引用。例如在BBEdit中，你可以选取文字后然后从选单中选择<em>增加引用阶层</em>。</p><h3 id="list">列表</h3><p>Markdown支持有序列表和无序列表。</p><p>无序列表使用星号、加号或是减号作为列表标记：</p><pre><code>*Red*Green*Blue</code></pre><p>等同于：</p><pre><code>+Red+Green+Blue</code></pre><p>也等同于：</p><pre><code>-Red-Green-Blue</code></pre><p>有序列表则使用数字接着一个英文句点：</p><pre><code>1.Bird 2.McHale 3.Parish</code></pre><p>很重要的一点是，你在列表标记上使用的数字并不会影响输出的HTML结果，上面的列表所产生的HTML标记为：</p><pre><code>&lt;ol&gt;&lt;li&gt;Bird&lt;/li&gt;&lt;li&gt;McHale&lt;/li&gt;&lt;li&gt;Parish&lt;/li&gt;&lt;/ol&gt;</code></pre><p>如果你的列表标记写成：</p><pre><code>1.Bird 1.McHale 1.Parish</code></pre><p>或甚至是：</p><pre><code>3.Bird 1.McHale 8.Parish</code></pre><p>你都会得到完全相同的HTML输出。重点在于，你可以让Markdown文件的列表数字和输出的结果相同，或是你懒一点，你可以完全不用在意数字的正确性。</p><p>如果你使用懒惰的写法，建议第一个项目最好还是从1.开始，因为Markdown未来可能会支持有序列表的start属性。</p><p>列表项目标记通常是放在最左边，但是其实也可以缩进，最多3个空格，项目标记后面则一定要接着至少一个空格或制表符。</p><p>要让列表看起来更漂亮，你可以把内容用固定的缩进整理好：</p><pre><code>*Lorem ipsum dolor sit amet,consectetuer adipiscing elit.Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi,viverra nec,fringilla in,laoreet vitae,risus.*Donec sit amet nisl.Aliquam semper ipsum sit amet velit.Suspendisse id sem consectetuer libero luctus adipiscing.</code></pre><p>但是如果你懒，那也行：</p><pre><code>*Lorem ipsum dolor sit amet,consectetuer adipiscing elit.Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi,viverra nec,fringilla in,laoreet vitae,risus.*Donec sit amet nisl.Aliquam semper ipsum sit amet velit.Suspendisse id sem consectetuer libero luctus adipiscing.</code></pre><p>如果列表项目间用空行分开，在输出HTML时Markdown就会将项目内容用<code>&lt;p&gt;</code>标签包起来，举例来说：</p><pre><code>*Bird*Magic</code></pre><p>会被转换为：</p><pre><code>&lt;ul&gt;&lt;li&gt;Bird&lt;/li&gt;&lt;li&gt;Magic&lt;/li&gt;&lt;/ul&gt;</code></pre><p>但是这个：</p><pre><code>*Bird*Magic</code></pre><p>会被转换为：</p><pre><code>&lt;ul&gt;&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre><p>列表项目可以包含多个段落，每个项目下的段落都必须缩进4个空格或是1个制表符：</p><pre><code>1.This is a list item with two paragraphs.Lorem ipsum dolor sit amet,consectetuer adipiscing elit.Aliquam hendrerit mi posuere lectus.Vestibulum enim wisi,viverra nec,fringilla in,laoreet vitae,risus.Donec sit amet nisl.Aliquam semper ipsum sit amet velit.2.Suspendisse id sem consectetuer libero luctus adipiscing.</code></pre><p>如果你每行都有缩进，看起来会看好很多，当然，再次地，如果你很懒惰，Markdown也允许：</p><pre><code>*This is a list item with two paragraphs.This is the second paragraph in the list item.You're only required to indent the first line. Lorem ipsum
       dolor sit amet, consectetuer adipiscing elit. * Another item in the same
