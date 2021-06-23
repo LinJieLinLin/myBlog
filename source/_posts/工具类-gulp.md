@@ -1,6 +1,6 @@
 ---
 title: gulp
-date: 2016-10-01 00:00:00
+date: 2016-02-01 00:00:00
 tags:
   - JS
 categories: [工具类]

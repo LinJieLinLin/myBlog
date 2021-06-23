@@ -1,6 +1,6 @@
 ---
 title: JS-function
-date: 2016-10-01 00:03:54
+date: 2016-02-01 00:03:54
 tags:
   - JS
 categories: [web]

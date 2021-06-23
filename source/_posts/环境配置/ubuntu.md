@@ -1,5 +1,6 @@
 ---
 title: ubuntu
+date: 2018-08-02 00:03:54
 tags:
   - 配置
 ---

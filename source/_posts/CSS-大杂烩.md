@@ -2,7 +2,7 @@
 title: CSS
 date: 2016-04-02 00:03:54
 tags:
-  - CSS
+  - css
 categories: [web]
 ---
 

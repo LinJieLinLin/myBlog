@@ -4,7 +4,7 @@ menu:
   归档: /archives
   分类: /categories
   标签: /tags
-  GIT: /2016/04/03/git
+  GIT: /2018/08/08/git
   友链: /friends
 
 # 站点次标题和打字动效
@@ -138,7 +138,7 @@ busuanzi:
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
   enable: true
-  url: https://s9.cnzz.com/z_stat.php?id=1278069914&web_id=1278069914
+  url: https://s9.cnzz.com/z_stat.php?id=1280044797&web_id=1280044797
 
 # Google Analytics
 google_analytics: ''
@@ -195,16 +195,13 @@ friends_link:
   Hexo官网:
     url: https://hexo.io
     img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo.png
-  Hexo图表插件:
-    url: https://github.com/Shen-Yu/hexo-tag-chart
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo-tag-chart.png
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: true
+  enable: false
   app_id: #
   app_key: #
 # Valine配置
@@ -239,13 +236,8 @@ minivaline:
 # 首页广告配置
 # 可以根据需要自行增加ad_3，ad_4...，留空则不显示，建议图片和url不要带ad等关键词，否则可能会被adblock等插件屏蔽
 ads:
-  # ad_1:
-  #   title: vultr优惠vps
-  #   img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/vultr.png
-  #   url: https://www.vultr.com/?ref=8630075
-  #   width: 300
-  # ad_2:
-  #   title: 云服务器全球购低至2折
-  #   img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/ten_2.jpg
-  #   url: https://curl.qcloud.com/kvO7hb43
-  #   width: 300
+  ad_1:
+    title: 又拍云
+    img: /myBlog/images/upyun.png
+    url: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+    width: 250

@@ -1,8 +1,9 @@
 ---
 title: GIT
-date: 2016-04-03 00:03:54
+date: 2018-08-08 00:03:54
 tags:
   - GIT
+categories: [GIT]
 ---
 
 {% blockquote %} 与 GIT 相关的一些学习记录 {% endblockquote %}

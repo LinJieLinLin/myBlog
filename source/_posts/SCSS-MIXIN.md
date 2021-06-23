@@ -1,7 +1,7 @@
 ---
 title: SCSS_MIXIN
-<!-- date: 2016-04-18 22:57:05 -->
-tags: [编程, 感悟]
+date: 2016-04-18 22:57:05
+tags: [css]
 categories: [web]
 ---
 
