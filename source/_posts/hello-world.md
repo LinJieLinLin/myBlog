@@ -1,30 +1,34 @@
 ---
 title: HELLO WORLD
 date: 2016-04-01 01:01:01
-tags: 
-- MD
+tags:
+  - MD
 ---
+
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
 <!--more-->
+
 ## Quick Start
 
 ### Create a new post
 
-``` bash
+```bash
 $ hexo new "My New Post"
 ```
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
-## 
+##
+
 ```---
 title: title
 //date: 2016-04-4 00:03:54
-tags: 
+tags:
 - tags1
 - tags2
 ---
-{% cq %} describe {% endcq %}
+{% blockquote %} describe {% endblockquote %}
 <!--more-->
 
 # first section
@@ -32,7 +36,7 @@ tags:
 
 ### Run server
 
-``` bash
+```bash
 $ hexo s
 ```
 
@@ -40,7 +44,7 @@ More info: [Server](https://hexo.io/docs/server.html)
 
 ### Generate static files
 
-``` bash
+```bash
 $ hexo g
 ```
 
@@ -48,12 +52,13 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 
 ### Deploy to remote sites
 
-``` bash
+```bash
 $ hexo d
 ```
 
 ### build
-``` hexo c
+
+```hexo c
     hexo g
     hexo d
 ```

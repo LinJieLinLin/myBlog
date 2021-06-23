@@ -5,7 +5,7 @@ tags:
   - 配置
 ---
 
-{% cq %} centos6.5 {% endcq %}
+{% blockquote %} centos6.5 {% endblockquote %}
 
 <!--more-->
 

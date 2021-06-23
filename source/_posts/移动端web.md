@@ -2,9 +2,10 @@
 title: 移动端web
 tags:
   - web
+categories: [web]
 ---
 
-{% cq %} 移动端 web 相关 {% endcq %}
+{% blockquote %} 移动端 web 相关 {% endblockquote %}
 
 <!--more-->
 

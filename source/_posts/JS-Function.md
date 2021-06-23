@@ -1,15 +1,23 @@
 ---
 title: JS-function
 date: 2016-10-01 00:03:54
-tags: 
-- JS
+tags:
+  - JS
+categories: [web]
 ---
-{% cq %} 与JS相关的函数 {% endcq %}
+
+{% blockquote %} 与 JS 相关的函数 {% endblockquote %}
+
 <!--more-->
+
 # 时间相关
+
 # 正则相关
+
 # 位置相关
-## 获取元素相对于这个页面的X标
+
+## 获取元素相对于这个页面的 X 标
+
 ```
 /**
  * [获取元素相对于这个页面的X坐标]
@@ -28,6 +36,3 @@ lin.pageY = function(argE) {
     return argE.getBoundingClientRect().top + (document.documentElement.scrollTop || document.body.scrollTop);
 };
 ```
-
-
-

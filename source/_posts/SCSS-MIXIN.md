@@ -1,11 +1,11 @@
 ---
 title: SCSS_MIXIN
 <!-- date: 2016-04-18 22:57:05 -->
-tags:
-  - SCSS
+tags: [编程, 感悟]
+categories: [web]
 ---
 
-{% cq %} scss mixin 相关收集 {% endcq %}
+{% blockquote %} scss mixin 相关收集 {% endblockquote %}
 
 <!--more-->
 

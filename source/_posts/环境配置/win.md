@@ -5,7 +5,7 @@ tags:
   - 配置
 ---
 
-{% cq %} win 命令行相关 {% endcq %}
+{% blockquote %} win 命令行相关 {% endblockquote %}
 
 <!--more-->
 

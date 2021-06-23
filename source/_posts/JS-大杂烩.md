@@ -1,13 +1,19 @@
 ---
 title: JS
 date: 2016-04-4 00:03:54
-tags: 
-- JS
+tags:
+  - JS
+categories: [web]
 ---
-{% cq %} 与JS相关的一些学习记录 {% endcq %}
+
+{% blockquote %} 与 JS 相关的一些学习记录 {% endblockquote %}
+
 <!--more-->
-# [测试浏览器支持的localStorage大小](https://arty.name/localstorage.html)
+
+# [测试浏览器支持的 localStorage 大小](https://arty.name/localstorage.html)
+
 ## 获取当前存储大小
+
 ```
 if(window.localStorage){
     var hasUse =unescape(encodeURIComponent(JSON.stringify(localStorage))).length;
@@ -16,7 +22,9 @@ if(window.localStorage){
 ```
 
 # 原生
-## 标签页激活状态visibilitychange
+
+## 标签页激活状态 visibilitychange
+
 ```
 // 各种浏览器兼容
 var hidden, state, visibilityChange;
@@ -37,17 +45,18 @@ if (typeof document.hidden !== "undefined") {
     visibilityChange = "webkitvisibilitychange";
     state = "webkitVisibilityState";
 }
- 
+
 // 添加监听器，在title里显示状态变化
 document.addEventListener(visibilityChange, function() {
     document.title = document[state];
 }, false);
- 
+
 // 初始化
 document.title = document[state];
 ```
 
-# 为每个元素添加outline for chrome
+# 为每个元素添加 outline for chrome
+
 ```
 [].forEach.call($$("*"),function(a){
 
@@ -57,24 +66,29 @@ document.title = document[state];
 ```
 
 # angular
-## 获取scope元素
+
+## 获取 scope 元素
+
 ```
 var a = angular.element('body[ng-controller="yourCtrl"]').scope()
 ```
+
 ## 广播通信
+
 ```
 <!--父级-->
-<div ng-controller="ParentCtrl"> 
-    <!--自己-->              
-    <div ng-controller="SelfCtrl">              
+<div ng-controller="ParentCtrl">
+    <!--自己-->
+    <div ng-controller="SelfCtrl">
         <a ng-click="click()">click me</a>
         <!--子级-->
-        <div ng-controller="ChildCtrl"></div>   
+        <div ng-controller="ChildCtrl"></div>
     </div>
     <!--平级-->
-    <div ng-controller="BroCtrl"></div>         
+    <div ng-controller="BroCtrl"></div>
 </div>
 ```
+
 ```
 app.controller('SelfCtrl', function($scope) {
     $scope.click = function () {
@@ -86,37 +100,39 @@ app.controller('SelfCtrl', function($scope) {
 app.controller('ParentCtrl', function($scope) {
     $scope.$on('to-parent', function(event,data) {
         //父级能得到值
-        console.log('ParentCtrl', data);       
+        console.log('ParentCtrl', data);
     });
     $scope.$on('to-child', function(event,data) {
         //子级得不到值
-        console.log('ParentCtrl', data);       
+        console.log('ParentCtrl', data);
     });
 });
 
 app.controller('ChildCtrl', function($scope){
     $scope.$on('to-child', function(event,data) {
         //子级能得到值
-        console.log('ChildCtrl', data);      
+        console.log('ChildCtrl', data);
     });
     $scope.$on('to-parent', function(event,data) {
         //父级得不到值
-        console.log('ChildCtrl', data);      
+        console.log('ChildCtrl', data);
     });
 });
 
-app.controller('BroCtrl', function($scope){  
-    $scope.$on('to-parent', function(event,data) { 
-        //平级得不到值  
-        console.log('BroCtrl', data);          
-    });  
-    $scope.$on('to-child', function(event,data) { 
-        //平级得不到值 
-        console.log('BroCtrl', data);           
-    });  
+app.controller('BroCtrl', function($scope){
+    $scope.$on('to-parent', function(event,data) {
+        //平级得不到值
+        console.log('BroCtrl', data);
+    });
+    $scope.$on('to-child', function(event,data) {
+        //平级得不到值
+        console.log('BroCtrl', data);
+    });
 });
 ```
-## 模拟href（异步新页面打开不支持）
+
+## 模拟 href（异步新页面打开不支持）
+
 ```
 $scope.eventTest = function($event) {
     if ($event.target.href === window.location.href) {

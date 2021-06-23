@@ -4,7 +4,7 @@ tags:
   - 配置
 ---
 
-{% cq %} ubuntu 相关 {% endcq %}
+{% blockquote %} ubuntu 相关 {% endblockquote %}
 
 <!--more-->
 

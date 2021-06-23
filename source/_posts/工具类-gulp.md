@@ -1,28 +1,39 @@
 ---
 title: gulp
 date: 2016-10-01 00:00:00
-tags: 
-- JS
+tags:
+  - JS
+categories: [工具类]
 ---
-{% cq %} 与gulp相关的插件 {% endcq %}
+
+{% blockquote %} 与 gulp 相关的插件 {% endblockquote %}
+
 <!--more-->
-# gulp插件加载
->gulp-load-plugins
 
-# js文档生成
->gulp-documentation
+# gulp 插件加载
 
-# 简化angular moudle声明
->gulp-ng-annotate
+> gulp-load-plugins
 
-# 处理sass
->gulp-sass
+# js 文档生成
 
-# 生成sourceMap
->gulp-sourcemaps
+> gulp-documentation
+
+# 简化 angular moudle 声明
+
+> gulp-ng-annotate
+
+# 处理 sass
+
+> gulp-sass
+
+# 生成 sourceMap
+
+> gulp-sourcemaps
 
 # 实时更新
->browser-sync
+
+> browser-sync
 
 # 雪碧图
->gulp.spritesmith
+
+> gulp.spritesmith

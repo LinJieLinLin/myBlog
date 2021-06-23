@@ -5,7 +5,7 @@ tags:
   - 配置
 ---
 
-{% cq %} linux shell {% endcq %}
+{% blockquote %} linux shell {% endblockquote %}
 
 <!--more-->
 

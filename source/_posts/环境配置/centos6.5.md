@@ -1,17 +1,24 @@
 ---
 title: centos6.5
 date: 2016-07-07 07:07:11
-tags: 
-- 配置
+tags:
+  - 配置
 ---
-{% cq %} centos6.5 {% endcq %}
+
+{% blockquote %} centos6.5 {% endblockquote %}
+
 <!--more-->
+
 # 软件
+
 ## vsftpd
+
 ```
 yum install vsftpd
 ```
+
 ### 虚拟用户
+
 ```
 yum -y install db4 db4-utils
 #创建用户列表，注意奇行是用户名，偶行是密码
@@ -47,7 +54,9 @@ anon_upload_enable=YES
 anon_mkdir_write_enable=YES
 anon_other_write_enable=YES
 ```
+
 ### 防火墙
+
 ```
 # vim /etc/sysconfig/iptables
 iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 21 -j ACCEPT
@@ -55,14 +64,18 @@ iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 50000:50020 -j ACCE
 service iptables save
 service iptables restart
 ```
-### 配置SELinux
+
+### 配置 SELinux
+
 ```
 # 关掉
 setenforce 0
 # 或使用这个
 setsebool -P allow_ftpd_full_access 1
 ```
+
 ### vsftpd.conf
+
 ```
 # Example config file /etc/vsftpd/vsftpd.conf
 #
@@ -118,7 +131,7 @@ vsftpd_log_file=/var/log/vsftpd/vsftpd.log
 # 端口样式连接始发的端口（只要名称不正确的 connect_from_port_20 启用），默认值：20
 #connect_from_port_20=YES
 #
-# 是否修改匿名用户所上传文件的所有权。YES，匿名用户所上传的文件的所有权将改为另外一个不同的用户所有，用户由chown_username参数指定。此选项默认值为NO。 
+# 是否修改匿名用户所上传文件的所有权。YES，匿名用户所上传的文件的所有权将改为另外一个不同的用户所有，用户由chown_username参数指定。此选项默认值为NO。
 #chown_uploads=YES
 #
 # 指定拥有匿名用户上传文件所有权的用户
@@ -215,7 +228,9 @@ pasv_promiscuous=YES
 # 表明服务器使用 tcp_wrappers 作为主机访问控制方式，tcp_wrappers 可以实现linux 系统中网络服务的基于主机地址的访问控制，在/etc 目录中的hosts.allow 和hosts.deny 两个文件用于设置tcp_wrappers 的访问控制，前者设置允许访问记录，后者设置拒绝访问记录。例如想限制某些主机对FTP 服务器12.36.126.141 的匿名访问，编缉/etc/hosts.allow 文件，如在下面增加两行命令：vsftpd:192.168.2.1:DENY 和vsftpd:192.168.2.20:DENY 表明限制IP 为192.168.2.1/192.168.2.20 主机访问IP 为12.36.126.141 的FTP 服务器，此时FTP 服务器虽可以PING 通，但无法连接
 tcp_wrappers=YES
 ```
-### 重启vsftpd服务
+
+### 重启 vsftpd 服务
+
 ```
 #启动vsftpd 服务
 service vsftpd start
@@ -223,12 +238,16 @@ service vsftpd start
 #重启vsftpd 服务
 service vsftpd restart
 ```
+
 ### 开机启动
+
 ```
 chkconfig vsftpd on
 chkconfig vsftpd --list | grep vsftpd
 ```
+
 ### 连不上处理
+
 ```
 连接被拒绝
 有两个原因，vsftpd进程没有启动，或者服务器防火墙的端口没有打开。
@@ -252,12 +271,12 @@ pasv_max_port=40100
 pasv_promiscuous=YES
 就可以解决了。
 ```
+
 ### [参考自](https://www.jianshu.com/p/ea32af794680)
+
 ```
 作者：马儿爱吃草
 链接：https://www.jianshu.com/p/ea32af794680
 來源：简书
 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 ```
-
-
