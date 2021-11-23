@@ -5,6 +5,7 @@ menu:
   分类: /categories
   标签: /tags
   GIT: /2018/08/08/git
+  lj-utils: https://linjielinlin.github.io/utils/lj-utils/index.html
   友链: /friends
 
 # 站点次标题和打字动效
@@ -181,6 +182,9 @@ gongan:
 
 # 友情链接
 friends_link:
+  uniDemo:
+    url: http://unidemo.lj4.top/unidemo/index.html
+    img: /images/avatar.png
   Ayer主题: #网站名称
     #网站地址
     url: https://github.com/Shen-Yu/hexo-theme-ayer
