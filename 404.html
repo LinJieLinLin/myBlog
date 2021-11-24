@@ -1,79 +1,757 @@
 <!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="LinJieLinLin,前端,博客,web" />
+       
+      <meta name="description" content="LinJieLinLin,前端,博客,web" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> LinJieLinLin</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/myBlog/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/myBlog/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+
+      <!-- mermaid -->
+      
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="page-"
+  class="article article-type-page"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+       
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
     <title>404</title>
-    <meta name="keywords" content="Hexo,Ayer,404,Design" />
-    <meta name="description" content="hexo theme ayer page 404." />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
     <style>
-      html,
-      figure {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-      }
-
-      body {
-        margin: 20px;
+    html,
+    body {
+        height: 100%;
+        min-height: 450px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        color: #5d7399;
+    }
+    
+    .content {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        background-color: #d2e1ec;
+        background-image: linear-gradient(to bottom, #bbcfe1 0%, #e8f2f6 80%);
         overflow: hidden;
-      }
-
-      h1,
-      h3 {
-        width: 100%;
+    }
+    
+    .snow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 20;
+    }
+    
+    .main-text {
+        padding: 20vh 20px 0 20px;
         text-align: center;
-        color: #403e3e;
-      }
-
-      h3 a {
-        color: #0681d0;
-      }
-
-      .forrestgump img {
-        width: 52rem;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        border-radius: 5%;
-        opacity: 0.8;
-      }
-
-      @media screen and (max-width: 768px) {
-        .forrestgump img {
-          width: 100%;
-        }
-      }
+        line-height: 2em;
+        font-size: 5vh;
+    }
+    
+    .home-link {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.6;
+        border-bottom: 1px dashed rgba(93, 115, 153, 0.5);
+    }
+    
+    .home-link:hover {
+        opacity: 1;
+    }
+    
+    .ground {
+        height: 160px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #f6f9fa;
+        box-shadow: 0 0 10px 10px #f6f9fa;
+    }
+    
+    .ground:before,
+    .ground:after {
+        content: '';
+        display: block;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: -62.5px;
+        z-index: -1;
+        background: transparent;
+        transform: scaleX(0.2) rotate(45deg);
+    }
+    
+    .ground:after {
+        left: 50%;
+        margin-left: -166.66667px;
+        box-shadow: -285px 315px 15px #8e9eba, -640px 560px 15px #aab6cb, -855px 945px 15px #a4b1c8, -1175px 1225px 15px #b4bed1, -1515px 1485px 15px #a1aec6, -1785px 1815px 15px #8193b2, -2070px 2130px 15px #b0bccf, -2395px 2405px 15px #a7b4c9, -2670px 2730px 15px #94a3be, -2975px 3025px 15px #adb9cd, -3295px 3305px 15px #8193b2, -3605px 3595px 15px #7e90b0, -3850px 3950px 15px #9aa9c2, -4205px 4195px 15px #8193b2, -4540px 4460px 15px #b0bccf, -4770px 4830px 15px #adb9cd;
+    }
+    
+    .ground:before {
+        right: 50%;
+        margin-right: -166.66667px;
+        box-shadow: 330px -270px 15px #9dabc4, 645px -555px 15px #8193b2, 895px -905px 15px #8193b2, 1190px -1210px 15px #b7c1d3, 1475px -1525px 15px #aab6cb, 1810px -1790px 15px #bac4d5, 2105px -2095px 15px #a7b4c9, 2440px -2360px 15px #bac4d5, 2655px -2745px 15px #8a9bb8, 2990px -3010px 15px #8798b6, 3310px -3290px 15px #aab6cb, 3580px -3620px 15px #8a9bb8, 3910px -3890px 15px #97a6c0, 4240px -4160px 15px #8798b6, 4485px -4515px 15px #91a1bc, 4775px -4825px 15px #a7b4c9;
+    }
+    
+    .mound {
+        margin-top: -80px;
+        font-weight: 800;
+        font-size: 180px;
+        text-align: center;
+        color: #dd4040;
+        pointer-events: none;
+    }
+    
+    .mound:before {
+        content: '';
+        display: block;
+        width: 600px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        margin-left: -300px;
+        top: 50px;
+        z-index: 1;
+        border-radius: 100%;
+        background-color: #e8f2f6;
+        background-image: linear-gradient(to bottom, #dee8f1, #f6f9fa 60px);
+    }
+    
+    .mound:after {
+        content: '';
+        display: block;
+        width: 28px;
+        height: 6px;
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
+        top: 68px;
+        z-index: 2;
+        background: #dd4040;
+        border-radius: 100%;
+        transform: rotate(-15deg);
+        box-shadow: -56px 12px 0 1px #dd4040, -126px 6px 0 2px #dd4040, -196px 24px 0 3px #dd4040;
+    }
+    
+    .mound_text {
+        transform: rotate(6deg);
+    }
+    
+    .mound_spade {
+        display: block;
+        width: 35px;
+        height: 30px;
+        position: absolute;
+        right: 50%;
+        top: 42%;
+        margin-right: -250px;
+        z-index: 0;
+        transform: rotate(35deg);
+        background: #dd4040;
+    }
+    
+    .mound_spade:before,
+    .mound_spade:after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+    
+    .mound_spade:before {
+        width: 40%;
+        height: 30px;
+        bottom: 98%;
+        left: 50%;
+        margin-left: -20%;
+        background: #dd4040;
+    }
+    
+    .mound_spade:after {
+        width: 100%;
+        height: 30px;
+        top: -55px;
+        left: 0%;
+        box-sizing: border-box;
+        border: 10px solid #dd4040;
+        border-radius: 4px 4px 20px 20px;
+    }
     </style>
-  </head>
+    <script>
+    (function() {
+        function ready(fn) {
+            if (document.readyState != 'loading') {
+                fn();
+            } else {
+                document.addEventListener('DOMContentLoaded', fn);
+            }
+        }
 
-  <body>
-    <div class="notfound">
-      <a class="notfound-link" href="/">
-        <img
-          width="40"
-          src="data:image/png;base64,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"
-        />
-      </a>
-      <figure class="forrestgump">
-        <figcaption>
-          <h1>404<br />Not Found!</h1>
-          <h3>
-            Please check it, Maybe you should read
-            <a href="https://hexo.io/docs/">Hexo</a> and
-            <a href="https://shen-yu.gitee.io/2019/ayer/">Ayer</a> Docs
-            carefully.
-          </h3>
-          <h3>
-            亲，获取不到该路径的页面呢，请检查一下哦，可能你还需要仔细阅读
-            <a href="https://hexo.io/docs/">Hexo</a> 和
-            <a href="https://shen-yu.gitee.io/2019/ayer/">Ayer</a> 的说明文档~
-          </h3>
-        </figcaption>
-        <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/404.jpg" />
-      </figure>
+        function makeSnow(el) {
+            var ctx = el.getContext('2d');
+            var width = 0;
+            var height = 0;
+            var particles = [];
+
+            var Particle = function() {
+                this.x = this.y = this.dx = this.dy = 0;
+                this.reset();
+            }
+
+            Particle.prototype.reset = function() {
+                this.y = Math.random() * height;
+                this.x = Math.random() * width;
+                this.dx = (Math.random() * 1) - 0.5;
+                this.dy = (Math.random() * 0.5) + 0.5;
+            }
+
+            function createParticles(count) {
+                if (count != particles.length) {
+                    particles = [];
+                    for (var i = 0; i < count; i++) {
+                        particles.push(new Particle());
+                    }
+                }
+            }
+
+            function onResize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                el.width = width;
+                el.height = height;
+
+                createParticles((width * height) / 10000);
+            }
+
+            function updateParticles() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.fillStyle = '#f6f9fa';
+
+                particles.forEach(function(particle) {
+                    particle.y += particle.dy;
+                    particle.x += particle.dx;
+
+                    if (particle.y > height) {
+                        particle.y = 0;
+                    }
+
+                    if (particle.x > width) {
+                        particle.reset();
+                        particle.y = 0;
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, 5, 0, Math.PI * 2, false);
+                    ctx.fill();
+                });
+
+                window.requestAnimationFrame(updateParticles);
+            }
+
+            onResize();
+            updateParticles();
+
+            window.addEventListener('resize', onResize);
+        }
+
+        ready(function() {
+            var canvas = document.getElementById('snow');
+            makeSnow(canvas);
+        });
+    })();
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <canvas id="snow" class="snow"></canvas>
+        <div class="main-text">
+            <h1>您访问的页面不存在！</h1><a href="/myBlog" class="home-link">点我回主页.</a>
+        </div>
+        <div class="ground">
+            <div class="mound">
+                <div class="mound_text">404</div>
+                <div class="mound_spade"></div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
+
+</html>
+ 
+      <!-- reward -->
+      
+      <div id="reword-out">
+        <div id="reward-btn">
+          Donate
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/404.html" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+   
+ 
+    
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2016-2021
+        <i class="ri-heart-fill heart_icon"></i> LinJieLinLin
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        Powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+        <span class="division">|</span>
+        Theme - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+        <li>
+          <a href="http://www.beian.miit.gov.cn/" target="_black" rel="nofollow">粤ICP备17131911号</a>
+        </li>
+        
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1280044797&amp;web_id=1280044797'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/myBlog/"><img src="/myBlog/images/avatar.png" alt="LinJieLinLin"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/myBlog/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/myBlog/images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/myBlog/js/jquery-2.0.3.min.js"></script>
+ 
+<script src="/myBlog/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/myBlog/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/myBlog/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+ 
+<script src="/myBlog/js/clickLove.js"></script>
+ 
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/myBlog/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/myBlog/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+  </div>
+</body>
+
 </html>
