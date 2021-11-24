@@ -103,10 +103,4 @@ theme: ayer
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  message: 'hexo-deploy'
-  name: 'linjielinlin'
-  email: '993353454@qq.com'
-  branch: 'gh-pages'
-  repo: 'https://github.com/LinJieLinLin/myBlog.git'
-  token: ''
+  type: ''
