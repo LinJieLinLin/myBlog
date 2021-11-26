@@ -183,7 +183,10 @@ gongan:
 # 友情链接
 friends_link:
   uniDemo:
-    url: http://unidemo.lj4.top/unidemo/index.html
+    url: https://linjielinlin.github.io/unidemo/index.html
+    img: /images/avatar.png
+  lj-utils:
+    url: https://linjielinlin.github.io/utils/lj-utils/index.html
     img: /images/avatar.png
   Ayer主题: #网站名称
     #网站地址
