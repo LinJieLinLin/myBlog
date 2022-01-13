@@ -1438,6 +1438,7 @@
     <url>/myBlog/2021/08/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/codeFormat/</url>
     <content><![CDATA[<blockquote><p>代码格式化相关 </p>
 </blockquote>
+<span id="more"></span>
 
 <h1 id="eslint-格式化"><a href="#eslint-格式化" class="headerlink" title="eslint 格式化"></a>eslint 格式化</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">devDependencies</span><br><span class="line">eslint</span><br><span class="line">以下按需：</span><br><span class="line">&quot;eslint-plugin-html&quot;</span><br><span class="line">&quot;eslint-plugin-import&quot;</span><br><span class="line">&quot;eslint-plugin-node&quot;</span><br><span class="line">&quot;eslint-plugin-promise&quot;</span><br><span class="line">&quot;eslint-plugin-standard&quot;</span><br><span class="line">&quot;eslint-plugin-vue&quot;</span><br><span class="line">react:</span><br><span class="line">&quot;eslint-plugin-eslint-comments&quot;</span><br><span class="line">&quot;eslint-plugin-jest&quot;</span><br><span class="line">&quot;eslint-plugin-jsx-a11y&quot;</span><br><span class="line">&quot;eslint-plugin-react&quot;</span><br><span class="line">&quot;eslint-plugin-react-hooks&quot;</span><br><span class="line">&quot;eslint-plugin-unicorn&quot;</span><br><span class="line">&quot;eslint-template-visitor&quot; --&gt;</span><br></pre></td></tr></table></figure>
 
@@ -1693,6 +1694,7 @@
     <url>/myBlog/2021/08/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/vscode/</url>
     <content><![CDATA[<blockquote><p>vsCode 相关 </p>
 </blockquote>
+<span id="more"></span>
 
 <h1 id="vscode"><a href="#vscode" class="headerlink" title=".vscode"></a>.vscode</h1><h2 id="launch-json-vue-edgeDebug"><a href="#launch-json-vue-edgeDebug" class="headerlink" title="launch.json,vue edgeDebug"></a>launch.json,vue edgeDebug</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">  &quot;configurations&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;type&quot;: &quot;pwa-msedge&quot;,</span><br><span class="line">      &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">      &quot;name&quot;: &quot;edge&quot;,</span><br><span class="line">      &quot;url&quot;: &quot;http://localhost:8888&quot;,</span><br><span class="line">      &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;/src&quot;,</span><br><span class="line">      &quot;breakOnLoad&quot;: true,</span><br><span class="line">      &quot;sourceMapPathOverrides&quot;: &#123;</span><br><span class="line">        &quot;webpack:///src/*&quot;: &quot;$&#123;webRoot&#125;/*&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
