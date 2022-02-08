@@ -194,10 +194,10 @@ friends_link:
     #网站图片(可忽略不写)
     img: /images/ayer.png
   GitHub:
-    url: https://github.com/Shen-Yu
+    url: https://github.com/LinJieLinLin
     img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/github.png
   码云:
-    url: https://gitee.com/shen-yu
+    url: https://gitee.com/linjielinlin
     img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/gitee.png
   Hexo官网:
     url: https://hexo.io
