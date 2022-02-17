@@ -9,6 +9,17 @@ categories: [GIT]
 {% blockquote %} 与 GIT 相关的一些学习记录 {% endblockquote %}
 
 <!--more-->
+# [commit规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
+
+```
+feat：新功能
+fix：修补 bug
+docs：文档类变动
+style：样式
+refactor：重构
+test：增加测试
+chore：构建过程或辅助工具的变动
+```
 
 # 忽略变更
 
@@ -35,7 +46,7 @@ git config credential.helper store
 git config --global credential.helper store
 ```
 
-## 配置文件加上(.git/config)：
+## 配置文件加上(.git/config)
 
 ```
 [credential]
@@ -97,7 +108,7 @@ $ git init [project-name]
 $ git clone [url]
 ```
 
-## Git 的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。
+## Git 的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）
 
 ```
 # 显示当前的Git配置
