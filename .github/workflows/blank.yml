@@ -28,13 +28,12 @@ jobs:
           node-version: '16.x'
       - name: Setup Hexo Dependencies
         run: |
-          npm install hexo-cli -g
           npm install
       - name: Deploy Hexo
         run: |
-          hexo clean
-          hexo generate 
-          hexo deploy
+          npm run postinstall
+          npm run clean
+          npm run build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
