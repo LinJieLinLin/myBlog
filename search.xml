@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>记一次主题更新</title>
+    <url>/myBlog/2022/02/18/QA/%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<blockquote><p>使用patch-package生成patch覆盖node_modules里的包 </p>
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="升级主题"><a href="#升级主题" class="headerlink" title="升级主题"></a>升级主题</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn upgrade-interactive --latest</span><br><span class="line"><span class="meta"># </span><span class="language-bash">选择要升级的包即可</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>问题一：_config.ayer.yml与主题包内的_config.yml配置是assign形式</p>
+</blockquote>
+<blockquote>
+<p>问题二：本blog运行在二级目录下，开始全局search发现引用的js xml均请求根路径</p>
+</blockquote>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">手动进入主题包目录 1.node_modules\hexo-theme-ayer\_config.yml 删除多余配置 2.node_modules\hexo-theme-ayer\<span class="built_in">source</span>\dist\main.js /js/search.js to /二级目录名/js/search.js /search.xml to /二级目录名/search.xml</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">然后执行打补丁</span></span><br><span class="line">npx patch-package hexo-theme-ayer</span><br><span class="line"><span class="meta"># </span><span class="language-bash">在package.json script添加</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash"><span class="string">&quot;postinstall&quot;</span>: <span class="string">&quot;npx patch-package&quot;</span>,</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">提交即可</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">ps 以后升级主题包的话，生成的patch版本对应改上即可</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>问题</category>
+      </categories>
+      <tags>
+        <tag>问题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>codeFormat</title>
     <url>/myBlog/2021/08/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/codeFormat/</url>
     <content><![CDATA[<blockquote><p>代码格式化相关 </p>
@@ -834,7 +859,7 @@
   </entry>
   <entry>
     <title>问题记录</title>
-    <url>/myBlog/2016/04/02/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <url>/myBlog/2016/04/02/QA/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<blockquote><p>一些问题收集 </p>
 </blockquote>
 
