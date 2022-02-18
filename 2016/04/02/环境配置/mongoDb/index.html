@@ -33,8 +33,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     </head>
   </html>
 </html>
@@ -74,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">621</span>
+            <span class="post-count">632</span>
         </span>
     </span>
 
@@ -83,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">2 min</span>
+            <span class="post-count">3 min</span>
         </span>
     </span>
 </div>
@@ -124,15 +135,15 @@
 
 <h1 id="ubnutu-64-mongodb-install"><a href="#ubnutu-64-mongodb-install" class="headerlink" title="ubnutu 64 mongodb install"></a><a target="_blank" rel="noopener" href="https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-ubuntu/">ubnutu 64 mongodb install</a></h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6</span><br><span class="line"># 要翻墙</span><br><span class="line">$ echo &quot;deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list</span><br><span class="line">MongoDB 默认的数据目录是 /data/db/ ，就直接使用默认的。</span><br><span class="line">#创建数据存储目录</span><br><span class="line">$ sudo mkdir -p /data/db</span><br><span class="line">#赋予目录权限</span><br><span class="line">$ sudo chmod 755 /data/*</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置-MongoDB"><a href="#配置-MongoDB" class="headerlink" title="配置 MongoDB"></a>配置 MongoDB</h2><h3 id="指定配置启动"><a href="#指定配置启动" class="headerlink" title="指定配置启动"></a>指定配置启动</h3><p>首先要创建配置文件，默认的配置文件路径是：/etc/mongod.conf。<br>一个简单的配置文件如下：</p>
+<h2 id="配置-MongoDB"><a href="#配置-MongoDB" class="headerlink" title="配置 MongoDB"></a>配置 MongoDB</h2><h3 id="指定配置启动"><a href="#指定配置启动" class="headerlink" title="指定配置启动"></a>指定配置启动</h3><p>首先要创建配置文件，默认的配置文件路径是：&#x2F;etc&#x2F;mongod.conf。<br>一个简单的配置文件如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">verbose = true</span><br><span class="line"># 数据存放目录</span><br><span class="line">dbpath = /data/db</span><br><span class="line"># 日志目录</span><br><span class="line">logpath = /var/log/mongodb/mongodb.log</span><br><span class="line">logappend = true</span><br><span class="line">port = 27017</span><br></pre></td></tr></table></figure>
 
 <h3 id="指定配置文件的命令如下："><a href="#指定配置文件的命令如下：" class="headerlink" title="指定配置文件的命令如下："></a>指定配置文件的命令如下：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod -f /etc/mongod.conf</span><br></pre></td></tr></table></figure>
 
-<h3 id="控制脚本在：-etc-init-d-mongod"><a href="#控制脚本在：-etc-init-d-mongod" class="headerlink" title="控制脚本在：/etc/init.d/mongod"></a>控制脚本在：/etc/init.d/mongod</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">安装开机服务</span><br><span class="line">sudo update-rc.d mongod defaults 95</span><br></pre></td></tr></table></figure>
+<h3 id="控制脚本在：-x2F-etc-x2F-init-d-x2F-mongod"><a href="#控制脚本在：-x2F-etc-x2F-init-d-x2F-mongod" class="headerlink" title="控制脚本在：&#x2F;etc&#x2F;init.d&#x2F;mongod"></a>控制脚本在：&#x2F;etc&#x2F;init.d&#x2F;mongod</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">安装开机服务</span><br><span class="line">sudo update-rc.d mongod defaults 95</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>如果想要切换用户运行 MongoDB 的话，需要设置 /var/lib/mongodb 、 /var/log/mongodb 两个目录的权限</p>
+<p>如果想要切换用户运行 MongoDB 的话，需要设置 &#x2F;var&#x2F;lib&#x2F;mongodb 、 &#x2F;var&#x2F;log&#x2F;mongodb 两个目录的权限</p>
 </blockquote>
 <h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#启动服务端</span><br><span class="line">$ mongod</span><br><span class="line">#启动客户端</span><br><span class="line">$ mongo</span><br></pre></td></tr></table></figure>
 
@@ -285,9 +296,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -295,8 +307,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -324,11 +335,23 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
+      <a class="nav-item-link" href="/myBlog/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2019/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
     </li>
     
   </ul>
@@ -336,6 +359,10 @@
 <nav class="navbar navbar-bottom">
   <ul class="nav">
     <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
       
       
     </li>
@@ -370,7 +397,7 @@
   </div>
 </div>
     
-<script src="/myBlog/js/jquery-2.0.3.min.js"></script>
+<script src="/myBlog/js/jquery-3.6.0.min.js"></script>
  
 <script src="/myBlog/js/lazyload.min.js"></script>
 
@@ -594,6 +621,8 @@
 
 
     
+    
+
   </div>
 </body>
 

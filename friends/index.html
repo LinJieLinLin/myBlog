@@ -33,8 +33,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     </head>
   </html>
 </html>
@@ -49,26 +60,6 @@
     
     <h1 class="page-type-title">Friends</h1>
     <ul id="friends_link">
-        
-        <li class="friends_li">
-            <a href="https://linjielinlin.github.io/unidemo/index.html" target="_blank" class="search-title"
-                >
-                
-                <img src="/myBlog/images/avatar.png">
-                
-                uniDemo
-            </a>
-        </li>
-        
-        <li class="friends_li">
-            <a href="https://linjielinlin.github.io/utils/lj-utils/index.html" target="_blank" class="search-title"
-                >
-                
-                <img src="/myBlog/images/avatar.png">
-                
-                lj-utils
-            </a>
-        </li>
         
         <li class="friends_li">
             <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" class="search-title"
@@ -107,6 +98,36 @@
                 <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo.png">
                 
                 Hexo官网
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://github.com/Shen-Yu/hexo-tag-chart" target="_blank" class="search-title"
+                >
+                
+                <img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo-tag-chart.png">
+                
+                Hexo图表插件
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://linjielinlin.github.io/unidemo/index.html" target="_blank" class="search-title"
+                >
+                
+                <img src="/myBlog/images/avatar.png">
+                
+                uniDemo
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://linjielinlin.github.io/utils/lj-utils/index.html" target="_blank" class="search-title"
+                >
+                
+                <img src="/myBlog/images/avatar.png">
+                
+                lj-utils
             </a>
         </li>
         
@@ -164,9 +185,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -174,8 +196,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -203,11 +224,23 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
+      <a class="nav-item-link" href="/myBlog/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2019/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
     </li>
     
   </ul>
@@ -215,6 +248,10 @@
 <nav class="navbar navbar-bottom">
   <ul class="nav">
     <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
       
       
     </li>
@@ -249,7 +286,7 @@
   </div>
 </div>
     
-<script src="/myBlog/js/jquery-2.0.3.min.js"></script>
+<script src="/myBlog/js/jquery-3.6.0.min.js"></script>
  
 <script src="/myBlog/js/lazyload.min.js"></script>
 
@@ -457,6 +494,8 @@
 
 
     
+    
+
   </div>
 </body>
 

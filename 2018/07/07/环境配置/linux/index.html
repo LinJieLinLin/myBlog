@@ -33,8 +33,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     </head>
   </html>
 </html>
@@ -74,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">845</span>
+            <span class="post-count">847</span>
         </span>
     </span>
 
@@ -117,7 +128,7 @@
 
 <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h3 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp|grep 80</span><br></pre></td></tr></table></figure>
 
-<h3 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h3><h3 id="更改文件-文件夹所有者"><a href="#更改文件-文件夹所有者" class="headerlink" title="更改文件/文件夹所有者"></a>更改文件/文件夹所有者</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R root:root 文件/文件夹</span><br></pre></td></tr></table></figure>
+<h3 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h3><h3 id="更改文件-x2F-文件夹所有者"><a href="#更改文件-x2F-文件夹所有者" class="headerlink" title="更改文件&#x2F;文件夹所有者"></a>更改文件&#x2F;文件夹所有者</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R root:root 文件/文件夹</span><br></pre></td></tr></table></figure>
 
 <h3 id="建立软连接"><a href="#建立软连接" class="headerlink" title="建立软连接"></a>建立软连接</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s 源目录 目标目录（绝对路径）</span><br></pre></td></tr></table></figure>
 
@@ -125,7 +136,7 @@
 
 <h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adduser linj</span><br><span class="line"># 输入密码，然后一路回车，按y</span><br><span class="line"># 添加root权限</span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
 
-<h3 id="改变用户-组"><a href="#改变用户-组" class="headerlink" title="改变用户/组"></a>改变用户/组</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># -R 为递归操作</span><br><span class="line">chown -R username dirname/filename</span><br><span class="line"># -R 为递归操作</span><br><span class="line">chgrp -R groupname dirname</span><br></pre></td></tr></table></figure>
+<h3 id="改变用户-x2F-组"><a href="#改变用户-x2F-组" class="headerlink" title="改变用户&#x2F;组"></a>改变用户&#x2F;组</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># -R 为递归操作</span><br><span class="line">chown -R username dirname/filename</span><br><span class="line"># -R 为递归操作</span><br><span class="line">chgrp -R groupname dirname</span><br></pre></td></tr></table></figure>
 
 <h3 id="显示磁盘空间"><a href="#显示磁盘空间" class="headerlink" title="显示磁盘空间"></a>显示磁盘空间</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df -hl</span><br><span class="line"># 查看当前目录文件大小，max-depth为目录层数</span><br><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
 
@@ -276,9 +287,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -286,8 +298,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -315,11 +326,23 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
+      <a class="nav-item-link" href="/myBlog/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2019/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
     </li>
     
   </ul>
@@ -327,6 +350,10 @@
 <nav class="navbar navbar-bottom">
   <ul class="nav">
     <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
       
       
     </li>
@@ -361,7 +388,7 @@
   </div>
 </div>
     
-<script src="/myBlog/js/jquery-2.0.3.min.js"></script>
+<script src="/myBlog/js/jquery-3.6.0.min.js"></script>
  
 <script src="/myBlog/js/lazyload.min.js"></script>
 
@@ -585,6 +612,8 @@
 
 
     
+    
+
   </div>
 </body>
 

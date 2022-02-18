@@ -33,8 +33,19 @@
        
  
 
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
       <!-- mermaid -->
       
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
     </head>
   </html>
 </html>
@@ -74,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">561</span>
+            <span class="post-count">562</span>
         </span>
     </span>
 
@@ -103,7 +114,7 @@
 
 <span id="more"></span>
 
-<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><h2 id="ios-textarea-padding-top-padding-bottom-会多出-20px，margin-left-10px"><a href="#ios-textarea-padding-top-padding-bottom-会多出-20px，margin-left-10px" class="headerlink" title="ios textarea padding-top/padding-bottom 会多出 20px，margin-left:-10px;"></a>ios textarea padding-top/padding-bottom 会多出 20px，margin-left:-10px;</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let isIos = wx.getSystemInfoSync().platform === &#x27;ios&#x27;</span><br></pre></td></tr></table></figure>
+<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><h2 id="ios-textarea-padding-top-x2F-padding-bottom-会多出-20px，margin-left-10px"><a href="#ios-textarea-padding-top-x2F-padding-bottom-会多出-20px，margin-left-10px" class="headerlink" title="ios textarea padding-top&#x2F;padding-bottom 会多出 20px，margin-left:-10px;"></a>ios textarea padding-top&#x2F;padding-bottom 会多出 20px，margin-left:-10px;</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let isIos = wx.getSystemInfoSync().platform === &#x27;ios&#x27;</span><br></pre></td></tr></table></figure>
 
 <h2 id="ios11-以下-用到-column-和-flex-1-时，flex-1-会失效（多用在整页布局上）"><a href="#ios11-以下-用到-column-和-flex-1-时，flex-1-会失效（多用在整页布局上）" class="headerlink" title="ios11 以下 用到 column 和 flex:1 时，flex:1 会失效（多用在整页布局上）"></a>ios11 以下 用到 column 和 flex:1 时，flex:1 会失效（多用在整页布局上）</h2><h2 id="cover-view"><a href="#cover-view" class="headerlink" title="cover-view"></a>cover-view</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 尽量不用flex布局</span><br><span class="line"># 尽量不使用 mode=&quot;aspectFill&quot;(swiper-item cover失效，少用吧),用object-fit: cover;代替</span><br></pre></td></tr></table></figure>
 
@@ -273,9 +284,10 @@
       </li>
     </ul>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
   <i class="ri-arrow-up-line"></i>
 </div>
 
@@ -283,8 +295,7 @@
   <i class="ri-moon-line"></i>
 </div>
 
-      </div>
-    </main>
+    </div>
     <aside class="sidebar on">
       <button class="navbar-toggle"></button>
 <nav class="navbar">
@@ -312,11 +323,23 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
+      <a class="nav-item-link" href="/myBlog/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2019/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/myBlog/2018/08/08/git">GIT</a>
     </li>
     
   </ul>
@@ -324,6 +347,10 @@
 <nav class="navbar navbar-bottom">
   <ul class="nav">
     <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
       
       
     </li>
@@ -358,7 +385,7 @@
   </div>
 </div>
     
-<script src="/myBlog/js/jquery-2.0.3.min.js"></script>
+<script src="/myBlog/js/jquery-3.6.0.min.js"></script>
  
 <script src="/myBlog/js/lazyload.min.js"></script>
 
@@ -582,6 +609,8 @@
 
 
     
+    
+
   </div>
 </body>
 
