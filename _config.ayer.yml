@@ -93,7 +93,7 @@ copyright_type: 1
 
 # 是否启用搜索
 # 需要安装hexo-generator-searchdb(https://github.com/theme-next/hexo-generator-searchdb)
-search: false
+search: true
 
 # RSS订阅(先安装hexo-generator-feed插件，再去博客根目录config进行配置)
 # 不想显示可以直接留空
@@ -248,3 +248,8 @@ ads:
     img: /myBlog/images/upyun.png
     url: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
     width: 250
+
+# 网站开启加密访问，密码可设置任何字符
+lock:
+  enable: false
+  password: 123456
