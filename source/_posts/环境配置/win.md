@@ -8,6 +8,14 @@ tags:
 {% blockquote %} win 命令行相关 {% endblockquote %}
 
 <!--more-->
+# echo输入文件
+
+``` Shell
+# 奖内容写入.npmrc中，若不存在文件则生成
+echo registry= > /root/.npmrc
+# 向文件追加内容,会换行
+echo https://registry.npmmirror.com/ >> /root/.npmrc
+```
 
 # 设置代理
 
