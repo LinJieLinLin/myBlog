@@ -40,6 +40,8 @@ tags:
   "editor.tabSize": 2,
   // 保存即格式化
   "editor.formatOnSave": true,
+  // typescript版本使用项目依赖的版本
+  "typescript.tsdk": "node_modules/typescript/lib"
   // eslint自动修复
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
