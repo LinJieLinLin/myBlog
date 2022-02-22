@@ -63,7 +63,7 @@
 
 <h1 id="vscode"><a href="#vscode" class="headerlink" title=".vscode"></a>.vscode</h1><h2 id="launch-json-vue-edgeDebug"><a href="#launch-json-vue-edgeDebug" class="headerlink" title="launch.json,vue edgeDebug"></a>launch.json,vue edgeDebug</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">  &quot;configurations&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;type&quot;: &quot;pwa-msedge&quot;,</span><br><span class="line">      &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">      &quot;name&quot;: &quot;edge&quot;,</span><br><span class="line">      &quot;url&quot;: &quot;http://localhost:8888&quot;,</span><br><span class="line">      &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;/src&quot;,</span><br><span class="line">      &quot;breakOnLoad&quot;: true,</span><br><span class="line">      &quot;sourceMapPathOverrides&quot;: &#123;</span><br><span class="line">        &quot;webpack:///src/*&quot;: &quot;$&#123;webRoot&#125;/*&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="setting-json-项目级配置"><a href="#setting-json-项目级配置" class="headerlink" title="setting.json 项目级配置"></a>setting.json 项目级配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 重新设定tabsize</span><br><span class="line">  &quot;editor.tabSize&quot;: 2,</span><br><span class="line">  // 保存即格式化</span><br><span class="line">  &quot;editor.formatOnSave&quot;: true,</span><br><span class="line">  // eslint自动修复</span><br><span class="line">  &quot;editor.codeActionsOnSave&quot;: &#123;</span><br><span class="line">    &quot;source.fixAll.eslint&quot;: true,</span><br><span class="line">    &quot;source.organizeImports&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="setting-json-项目级配置"><a href="#setting-json-项目级配置" class="headerlink" title="setting.json 项目级配置"></a>setting.json 项目级配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 重新设定tabsize</span><br><span class="line">  &quot;editor.tabSize&quot;: 2,</span><br><span class="line">  // 保存即格式化</span><br><span class="line">  &quot;editor.formatOnSave&quot;: true,</span><br><span class="line">  // typescript版本使用项目依赖的版本</span><br><span class="line">  &quot;typescript.tsdk&quot;: &quot;node_modules/typescript/lib&quot;</span><br><span class="line">  // eslint自动修复</span><br><span class="line">  &quot;editor.codeActionsOnSave&quot;: &#123;</span><br><span class="line">    &quot;source.fixAll.eslint&quot;: true,</span><br><span class="line">    &quot;source.organizeImports&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="sftp-json-ftp-配置"><a href="#sftp-json-ftp-配置" class="headerlink" title="sftp.json ftp 配置"></a>sftp.json ftp 配置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;名称&quot;,</span><br><span class="line">  &quot;protocol&quot;: &quot;sftp|ftp&quot;,</span><br><span class="line">  &quot;port&quot;: 22,</span><br><span class="line">  &quot;username&quot;: &quot;用户名&quot;,</span><br><span class="line">  &quot;host&quot;: &quot;host&quot;,</span><br><span class="line">  &quot;password&quot;: &quot;&quot;,</span><br><span class="line">  &quot;context&quot;: &quot;dist/本地目录&quot;,</span><br><span class="line">  &quot;ignore&quot;: [&quot;.vscode&quot;, &quot;.git&quot;, &quot;.DS_Store&quot;, &quot;node_modules&quot;],</span><br><span class="line">  &quot;remotePath&quot;: &quot;目标目录&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -374,6 +374,30 @@
       </tags>
   </entry>
   <entry>
+    <title>appium-androidUi测试</title>
+    <url>/myBlog/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/appium-androidUi%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<blockquote><p>appium-androidUi 测试环境搭建 </p>
+</blockquote>
+
+<span id="more"></span>
+
+<h1 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h1><h2 id="appium"><a href="#appium" class="headerlink" title="appium"></a><a href="http://appium.io/">appium</a></h2><h2 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a><a href="https://www.java.com/zh_CN/">JAVA</a></h2><h2 id="AndroidSDK"><a href="#AndroidSDK" class="headerlink" title="AndroidSDK"></a><a href="http://sdk.android-studio.org/">AndroidSDK</a></h2><h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="确认-JAVA-环境变量，没有则添加"><a href="#确认-JAVA-环境变量，没有则添加" class="headerlink" title="确认 JAVA 环境变量，没有则添加"></a>确认 JAVA 环境变量，没有则添加</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 测试</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置-AndroidSDK-环境变量"><a href="#设置-AndroidSDK-环境变量" class="headerlink" title="设置 AndroidSDK 环境变量"></a>设置 AndroidSDK 环境变量</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 测试</span><br><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+
+<h2 id="连接真机"><a href="#连接真机" class="headerlink" title="连接真机"></a>连接真机</h2><blockquote>
+<p>手机打开开发者模式，允许调试，允许 USB 安装程序<br>下载谷歌框架，安卓最新版 Chrome（调试 webview）</p>
+</blockquote>
+<h2 id="使用-node-js-编写测试代码"><a href="#使用-node-js-编写测试代码" class="headerlink" title="使用 node.js 编写测试代码"></a>使用 node.js 编写测试代码</h2><blockquote>
+<p>安装 node.js,安装依赖</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i wd,... -g</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>centos6.5</title>
     <url>/myBlog/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/centos6.5/</url>
     <content><![CDATA[<blockquote><p>centos6.5 </p>
@@ -401,30 +425,6 @@
 ]]></content>
       <tags>
         <tag>配置</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>appium-androidUi测试</title>
-    <url>/myBlog/2016/07/07/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/appium-androidUi%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<blockquote><p>appium-androidUi 测试环境搭建 </p>
-</blockquote>
-
-<span id="more"></span>
-
-<h1 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h1><h2 id="appium"><a href="#appium" class="headerlink" title="appium"></a><a href="http://appium.io/">appium</a></h2><h2 id="JAVA"><a href="#JAVA" class="headerlink" title="JAVA"></a><a href="https://www.java.com/zh_CN/">JAVA</a></h2><h2 id="AndroidSDK"><a href="#AndroidSDK" class="headerlink" title="AndroidSDK"></a><a href="http://sdk.android-studio.org/">AndroidSDK</a></h2><h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="确认-JAVA-环境变量，没有则添加"><a href="#确认-JAVA-环境变量，没有则添加" class="headerlink" title="确认 JAVA 环境变量，没有则添加"></a>确认 JAVA 环境变量，没有则添加</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 测试</span><br><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置-AndroidSDK-环境变量"><a href="#设置-AndroidSDK-环境变量" class="headerlink" title="设置 AndroidSDK 环境变量"></a>设置 AndroidSDK 环境变量</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 测试</span><br><span class="line">adb devices</span><br></pre></td></tr></table></figure>
-
-<h2 id="连接真机"><a href="#连接真机" class="headerlink" title="连接真机"></a>连接真机</h2><blockquote>
-<p>手机打开开发者模式，允许调试，允许 USB 安装程序<br>下载谷歌框架，安卓最新版 Chrome（调试 webview）</p>
-</blockquote>
-<h2 id="使用-node-js-编写测试代码"><a href="#使用-node-js-编写测试代码" class="headerlink" title="使用 node.js 编写测试代码"></a>使用 node.js 编写测试代码</h2><blockquote>
-<p>安装 node.js,安装依赖</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i wd,... -g</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
