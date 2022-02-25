@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>记一次主题更新 |  LinJieLinLin</title>
+      <title>typeScript |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -58,7 +58,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-QA/模板"
+  id="post-typeScript"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -69,7 +69,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  记一次主题更新
+  typeScript
 </h1>
  
 
@@ -77,19 +77,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/myBlog/2022/02/18/QA/%E6%A8%A1%E6%9D%BF/" class="article-date">
-  <time datetime="2022-02-18T21:27:30.000Z" itemprop="datePublished">2022-02-18</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/myBlog/categories/%E9%97%AE%E9%A2%98/">问题</a>
-  </div>
-  
+      <a href="/myBlog/2021/11/02/typeScript/" class="article-date">
+  <time datetime="2021-11-02T22:03:54.000Z" itemprop="datePublished">2021-11-02</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">187</span>
+            <span class="post-count">353</span>
         </span>
     </span>
 
@@ -113,20 +109,20 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote><p>使用patch-package生成patch覆盖node_modules里的包 </p>
+  <blockquote><p>typeScript 相关 </p>
 </blockquote>
 
-<span id="more"></span>
-
-<h2 id="升级主题"><a href="#升级主题" class="headerlink" title="升级主题"></a>升级主题</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn upgrade-interactive --latest</span><br><span class="line"><span class="meta"># </span><span class="language-bash">选择要升级的包即可</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>问题一：_config.ayer.yml与主题包内的_config.yml配置是assign形式</p>
+<h1 id="ts访问器-key自动补全任意层级"><a href="#ts访问器-key自动补全任意层级" class="headerlink" title="ts访问器,key自动补全任意层级"></a>ts访问器,key自动补全任意层级</h1><blockquote>
+<p>很多时候我们会对配置类型写一个访问器, 用 key1.key2.key3 这样的形式来访问深层内容. 这代码用JavaScript写起来很容易, 一行就能搞定:</p>
 </blockquote>
-<blockquote>
-<p>问题二：本blog运行在二级目录下，开始全局search发现引用的js xml均请求根路径</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">get</span>(<span class="params">data, key, defaultValue</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> key.<span class="title function_">split</span>(<span class="string">&#x27;.&#x27;</span>).<span class="title function_">reduce</span>(<span class="function">(<span class="params">o, x</span>) =&gt;</span> o[x], data) ?? defaultValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="用TS-在第一个参数类型确定的情况下-key自动补全任意层级-返回的value类型正确"><a href="#用TS-在第一个参数类型确定的情况下-key自动补全任意层级-返回的value类型正确" class="headerlink" title="用TS,在第一个参数类型确定的情况下, key自动补全任意层级, 返回的value类型正确"></a>用TS,在第一个参数类型确定的情况下, key自动补全任意层级, 返回的value类型正确</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">STORAGE</span> = &#123;</span><br><span class="line">    <span class="attr">redis</span>: &#123;</span><br><span class="line">        <span class="attr">host</span>: <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">        <span class="attr">port</span>: <span class="number">3000</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// keyof without function</span></span><br><span class="line">type <span class="title class_">KeyOf</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Record</span>&lt;string, any&gt;, K = keyof T&gt; = K <span class="keyword">extends</span> string ? (T[K] <span class="keyword">extends</span> <span class="title class_">Function</span> ? never : K) : never</span><br><span class="line">type <span class="title class_">FileId</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Record</span>&lt;string, any&gt;, K = <span class="title class_">KeyOf</span>&lt;T&gt;&gt; = K <span class="keyword">extends</span> string ? (K | <span class="string">`<span class="subst">$&#123;K&#125;</span>.<span class="subst">$&#123;FileId&lt;T[K]&gt;&#125;</span>`</span>) : never</span><br><span class="line">type <span class="title class_">ValueOf</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Record</span>&lt;string, any&gt;, K&gt; = K <span class="keyword">extends</span> <span class="string">`<span class="subst">$&#123;infer I&#125;</span>.<span class="subst">$&#123;infer R&#125;</span>`</span> ? <span class="title class_">ValueOf</span>&lt;T[I], R&gt; : (K <span class="keyword">extends</span> string ? T[K] : never)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> get&lt;T, K <span class="keyword">extends</span> <span class="title class_">FileId</span>&lt;T&gt;&gt;(<span class="attr">data</span>: T, <span class="attr">key</span>: K, defaultValue?: <span class="title class_">ValueOf</span>&lt;T, K&gt;): <span class="title class_">ValueOf</span>&lt;T, K&gt; | <span class="literal">undefined</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> key.<span class="title function_">split</span>(<span class="string">&#x27;.&#x27;</span>).<span class="title function_">reduce</span>(<span class="function">(<span class="params">o, x</span>) =&gt;</span> o[x], data <span class="keyword">as</span> any) ?? defaultValue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> host = <span class="title function_">get</span>(<span class="variable constant_">STORAGE</span>, <span class="string">&#x27;redis.host&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(host)</span><br></pre></td></tr></table></figure>
+
+<h3 id="FileId"><a href="#FileId" class="headerlink" title="FileId"></a>FileId</h3><blockquote>
+<p>FileId 的作用是将一个类型的属性名称转换为一组字符串, 以便能够用 . 进行层级访问.</p>
 </blockquote>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">手动进入主题包目录 1.node_modules\hexo-theme-ayer\_config.yml 删除多余配置 2.node_modules\hexo-theme-ayer\<span class="built_in">source</span>\dist\main.js /js/search.js to /二级目录名/js/search.js /search.xml to /二级目录名/search.xml</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">然后执行打补丁</span></span><br><span class="line">npx patch-package hexo-theme-ayer</span><br><span class="line"><span class="meta"># </span><span class="language-bash">在package.json script添加</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash"><span class="string">&quot;postinstall&quot;</span>: <span class="string">&quot;npx patch-package&quot;</span>,</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">提交即可</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">ps 以后升级主题包的话，生成的patch版本对应改上即可</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">FileId</span>&lt;</span><br><span class="line">    T <span class="keyword">extends</span> <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">any</span>&gt;,</span><br><span class="line">    K = <span class="title class_">KeyOf</span>&lt;T&gt;, <span class="comment">// 这里获取当前 T 的所有 key</span></span><br><span class="line">&gt; = K <span class="keyword">extends</span> <span class="built_in">string</span></span><br><span class="line">        ? (K | <span class="string">`<span class="subst">$&#123;K&#125;</span>.<span class="subst">$&#123;FileId&lt;T[K]&gt;&#125;</span>`</span>)</span><br><span class="line">        : <span class="built_in">never</span></span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -185,12 +181,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/2022/02/18/QA/%E6%A8%A1%E6%9D%BF/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/2021/11/02/typeScript/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/%E9%97%AE%E9%A2%98/" rel="tag">问题</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/typeScript/" rel="tag">typeScript</a></li></ul>
 
     </footer>
   </div>
@@ -198,19 +194,19 @@
    
   <nav class="article-nav">
     
-      <a href="/myBlog/2022/02/25/vue/" class="article-nav-link">
+      <a href="/myBlog/2022/02/18/QA/%E6%A8%A1%E6%9D%BF/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            (no title)
+            记一次主题更新
           
         </div>
       </a>
     
     
-      <a href="/myBlog/2021/11/02/typeScript/" class="article-nav-link">
+      <a href="/myBlog/2021/08/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/codeFormat/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">typeScript</div>
+        <div class="article-nav-title">codeFormat</div>
       </a>
     
   </nav>
