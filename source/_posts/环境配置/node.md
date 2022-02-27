@@ -9,6 +9,7 @@ tags:
 {% blockquote %} node 相关 {% endblockquote %}
 
 # [nvm](https://github.com/coreybutler/nvm-windows)
+
 ``` shell
 # 安装目录
 nvm root
@@ -19,20 +20,23 @@ nvm use 14.15.3
 ```
 
 # [nvs](https://github.com/jasongin/nvs/releases)
+
 ## 修改默认源 vim ./defaults.json
+
 ``` json
 {
-	"aliases": {
-	},
-	// for windows
-	"linkToSystem": true,
-	"remotes": {
-		"default": "node",
-		"node": "https://npm.taobao.org/mirrors/node/"
-	},
-	"bootstrap": "node/12.18.2"
+ "aliases": {
+ },
+ // for windows
+ "linkToSystem": true,
+ "remotes": {
+  "default": "node",
+  "node": "https://npm.taobao.org/mirrors/node/"
+ },
+ "bootstrap": "node/12.18.2"
 }
 ```
+
 ``` shell
 # 添加源
 nvs remote taobao https://npm.taobao.org/mirrors/node/
@@ -48,4 +52,13 @@ nvs which
 nvs use 14.15.3
 # npm 必装
 npm i nrm yarn yrm eslint prettier http-server pnpm  -g --registry=https://registry.npm.taobao.org
+```
+
+# npm配置
+
+``` shell
+# puppeteer下载源
+npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
+# 指定npm源
+npm i nrm --registry=https://registry.npm.taobao.org
 ```
