@@ -8,6 +8,8 @@ tags:
 
 {% blockquote %} node 相关 {% endblockquote %}
 
+<!--more-->
+
 # [nvm](https://github.com/coreybutler/nvm-windows)
 
 ``` shell

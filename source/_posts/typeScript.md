@@ -7,6 +7,7 @@ tags:
 
 {% blockquote %} typeScript 相关 {% endblockquote %}
 
+<!--more-->
 # ts访问器,key自动补全任意层级
 
 > 很多时候我们会对配置类型写一个访问器, 用 key1.key2.key3 这样的形式来访问深层内容. 这代码用JavaScript写起来很容易, 一行就能搞定:
