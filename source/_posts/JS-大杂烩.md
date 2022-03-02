@@ -17,11 +17,20 @@ categories: [web]
 ```
 if(window.localStorage){
     var hasUse =unescape(encodeURIComponent(JSON.stringify(localStorage))).length;
-    alert(hasUse);
+    console.log(hasUse);
 }
 ```
 
 # 原生
+
+## 获取整数(向下最整)
+
+```JS
+let num = 3.141592654
+let a=~~num
+let b=Math.floor(num)
+console.log(a===b)
+```
 
 ## 标签页激活状态 visibilitychange
 

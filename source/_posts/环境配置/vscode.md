@@ -32,6 +32,22 @@ tags:
 }
 ```
 
+## launch.json,react edgeDebug
+
+```
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+}
+```
+
 ## setting.json 项目级配置
 
 ```
