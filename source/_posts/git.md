@@ -21,6 +21,15 @@ test：增加测试
 chore：构建过程或辅助工具的变动
 ```
 
+# git ssh pull error: .ssh 报错 Their offer: ssh-rsa fatal: Could not read from remote repository
+
+``` shell
+# .ssh目录添加config文件
+Host *
+HostkeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+```
+
 # 忽略变更
 
 ```
