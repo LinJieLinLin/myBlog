@@ -23,6 +23,28 @@ if(window.localStorage){
 
 # 原生
 
+## getter setter
+
+```js
+let obj = {
+    value: 0,
+    get db(){
+        this.value = 2*this.value
+        return this
+    },
+    get v(){
+        return this.value
+    },
+    set v(v){
+        this.value = v
+    }
+}
+// 0
+console.log(obj.value)
+console.log(obj.v=1)
+
+```
+
 ## 获取整数(向下最整)
 
 ```JS
@@ -64,7 +86,7 @@ document.addEventListener(visibilityChange, function() {
 document.title = document[state];
 ```
 
-# 为每个元素添加 outline for chrome
+## 为每个元素添加 outline for chrome
 
 ```
 [].forEach.call($$("*"),function(a){
