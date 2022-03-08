@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title></title>
-    <url>/myBlog/2022/03/02/vue/</url>
+    <url>/myBlog/2022/03/08/vue/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -146,6 +146,8 @@
 
 <span id="more"></span>
 <h1 id="commit规范"><a href="#commit规范" class="headerlink" title="commit规范"></a><a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits">commit规范</a></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feat：新功能</span><br><span class="line">fix：修补 bug</span><br><span class="line">docs：文档类变动</span><br><span class="line">style：样式</span><br><span class="line">refactor：重构</span><br><span class="line">test：增加测试</span><br><span class="line">chore：构建过程或辅助工具的变动</span><br></pre></td></tr></table></figure>
+
+<h1 id="git-ssh-pull-error-ssh-报错-Their-offer-ssh-rsa-fatal-Could-not-read-from-remote-repository"><a href="#git-ssh-pull-error-ssh-报错-Their-offer-ssh-rsa-fatal-Could-not-read-from-remote-repository" class="headerlink" title="git ssh pull error: .ssh 报错 Their offer: ssh-rsa fatal: Could not read from remote repository"></a>git ssh pull error: .ssh 报错 Their offer: ssh-rsa fatal: Could not read from remote repository</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">.ssh目录添加config文件</span></span><br><span class="line">Host *</span><br><span class="line">HostkeyAlgorithms +ssh-rsa</span><br><span class="line">PubkeyAcceptedKeyTypes +ssh-rsa</span><br></pre></td></tr></table></figure>
 
 <h1 id="忽略变更"><a href="#忽略变更" class="headerlink" title="忽略变更"></a>忽略变更</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git update-index --assume-unchanged fileName</span><br><span class="line">git update-index --no-assume-unchanged fileName</span><br></pre></td></tr></table></figure>
 
