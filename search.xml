@@ -2,8 +2,32 @@
 <search>
   <entry>
     <title></title>
-    <url>/myBlog/2022/03/14/vue/</url>
+    <url>/myBlog/2022/03/23/vue/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>lerna相关</title>
+    <url>/myBlog/2022/03/13/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/lerna-yarn/</url>
+    <content><![CDATA[<blockquote><p>lerna相关 </p>
+</blockquote>
+
+<span id="more"></span>
+
+<h1 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a><a href="https://github.com/lerna/lerna">lerna</a></h1><h2 id="运行子包命令"><a href="#运行子包命令" class="headerlink" title="运行子包命令"></a>运行子包命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna run --scope 包名 dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装所有子包依赖"><a href="#安装所有子包依赖" class="headerlink" title="安装所有子包依赖"></a>安装所有子包依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna bootstrap </span><br></pre></td></tr></table></figure>
+
+<h2 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
+
+<h2 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>配置</tag>
+        <tag>lerna</tag>
+        <tag>构建</tag>
+      </tags>
   </entry>
   <entry>
     <title>记一次主题更新</title>
@@ -121,30 +145,6 @@
       <tags>
         <tag>配置</tag>
         <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>lerna相关</title>
-    <url>/myBlog/2018/11/11/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/lerna-yarn/</url>
-    <content><![CDATA[<blockquote><p>lerna相关 </p>
-</blockquote>
-
-<span id="more"></span>
-
-<h1 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a><a href="https://github.com/lerna/lerna">lerna</a></h1><h2 id="运行子包命令"><a href="#运行子包命令" class="headerlink" title="运行子包命令"></a>运行子包命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna run --scope 包名 dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装所有子包依赖"><a href="#安装所有子包依赖" class="headerlink" title="安装所有子包依赖"></a>安装所有子包依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna bootstrap </span><br></pre></td></tr></table></figure>
-
-<h2 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
-
-<h2 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>配置</tag>
-        <tag>lerna</tag>
-        <tag>构建</tag>
       </tags>
   </entry>
   <entry>
@@ -943,7 +943,7 @@
 
 <span id="more"></span>
 
-<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><h2 id="ios-textarea-padding-top-x2F-padding-bottom-会多出-20px，margin-left-10px"><a href="#ios-textarea-padding-top-x2F-padding-bottom-会多出-20px，margin-left-10px" class="headerlink" title="ios textarea padding-top&#x2F;padding-bottom 会多出 20px，margin-left:-10px;"></a>ios textarea padding-top&#x2F;padding-bottom 会多出 20px，margin-left:-10px;</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let isIos = wx.getSystemInfoSync().platform === &#x27;ios&#x27;</span><br></pre></td></tr></table></figure>
+<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><h2 id="ios-textarea-padding-top-x2F-padding-bottom-会多出-20px，margin-left-10px"><a href="#ios-textarea-padding-top-x2F-padding-bottom-会多出-20px，margin-left-10px" class="headerlink" title="ios textarea padding-top&#x2F;padding-bottom 会多出 20px，margin-left:-10px"></a>ios textarea padding-top&#x2F;padding-bottom 会多出 20px，margin-left:-10px</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let isIos = wx.getSystemInfoSync().platform === &#x27;ios&#x27;</span><br></pre></td></tr></table></figure>
 
 <h2 id="ios11-以下-用到-column-和-flex-1-时，flex-1-会失效（多用在整页布局上）"><a href="#ios11-以下-用到-column-和-flex-1-时，flex-1-会失效（多用在整页布局上）" class="headerlink" title="ios11 以下 用到 column 和 flex:1 时，flex:1 会失效（多用在整页布局上）"></a>ios11 以下 用到 column 和 flex:1 时，flex:1 会失效（多用在整页布局上）</h2><h2 id="cover-view"><a href="#cover-view" class="headerlink" title="cover-view"></a>cover-view</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 尽量不用flex布局</span><br><span class="line"># 尽量不使用 mode=&quot;aspectFill&quot;(swiper-item cover失效，少用吧),用object-fit: cover;代替</span><br></pre></td></tr></table></figure>
 
@@ -964,7 +964,7 @@
 
 <h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="Safari-音视频不会自动播放，没有-canplay-监听-详见"><a href="#Safari-音视频不会自动播放，没有-canplay-监听-详见" class="headerlink" title="Safari 音视频不会自动播放，没有 canplay 监听 详见"></a>Safari 音视频不会自动播放，没有 canplay 监听 <a href="https://rcp.dyfchk2.kuxiao.cn/space/teacher-space.html#/coursesManager">详见</a></h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 针对Safari preload=&quot;metadata&quot;</span><br><span class="line">if (navigator.userAgent.indexOf(&#x27;Safari&#x27;) &gt; -1 &amp;&amp; navigator.userAgent.indexOf(&#x27;Chrome&#x27;) &lt; 1) &#123;</span><br><span class="line">                        O.canplay = true;</span><br><span class="line">                    &#125;else if (f.get(&#x27;Player&#x27;).readyState &lt;= 2)&#123;</span><br><span class="line"></span><br><span class="line">                    &#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="ie9-只有前-31-个-link-或-style-标记关联的-CSS-能够应用，从第-32-个开始，其标记关联的-CSS-都将失效-CSS-文件的大小不能超过-288kb-超过切分为多个即可-。"><a href="#ie9-只有前-31-个-link-或-style-标记关联的-CSS-能够应用，从第-32-个开始，其标记关联的-CSS-都将失效-CSS-文件的大小不能超过-288kb-超过切分为多个即可-。" class="headerlink" title="ie9 只有前 31 个 link 或 style 标记关联的 CSS 能够应用，从第 32 个开始，其标记关联的 CSS 都将失效,CSS 文件的大小不能超过 288kb(超过切分为多个即可)。"></a>ie9 只有前 31 个 link 或 style 标记关联的 CSS 能够应用，从第 32 个开始，其标记关联的 CSS 都将失效,CSS 文件的大小不能超过 288kb(超过切分为多个即可)。</h2><h2 id="ie-css-不支持-unset-initial-关键字"><a href="#ie-css-不支持-unset-initial-关键字" class="headerlink" title="ie css 不支持 unset initial 关键字"></a>ie css 不支持 unset initial 关键字</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">要设置unset前添加默认属性。</span><br></pre></td></tr></table></figure>
+<h2 id="ie9-只有前-31-个-link-或-style-标记关联的-CSS-能够应用，从第-32-个开始，其标记关联的-CSS-都将失效-CSS-文件的大小不能超过-288kb-超过切分为多个即可"><a href="#ie9-只有前-31-个-link-或-style-标记关联的-CSS-能够应用，从第-32-个开始，其标记关联的-CSS-都将失效-CSS-文件的大小不能超过-288kb-超过切分为多个即可" class="headerlink" title="ie9 只有前 31 个 link 或 style 标记关联的 CSS 能够应用，从第 32 个开始，其标记关联的 CSS 都将失效,CSS 文件的大小不能超过 288kb(超过切分为多个即可)"></a>ie9 只有前 31 个 link 或 style 标记关联的 CSS 能够应用，从第 32 个开始，其标记关联的 CSS 都将失效,CSS 文件的大小不能超过 288kb(超过切分为多个即可)</h2><h2 id="ie-css-不支持-unset-initial-关键字"><a href="#ie-css-不支持-unset-initial-关键字" class="headerlink" title="ie css 不支持 unset initial 关键字"></a>ie css 不支持 unset initial 关键字</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">要设置unset前添加默认属性。</span><br></pre></td></tr></table></figure>
 
 <h2 id="ie11-字体图标显示不出来-添加静态文件缓存即可）"><a href="#ie11-字体图标显示不出来-添加静态文件缓存即可）" class="headerlink" title="ie11 字体图标显示不出来(添加静态文件缓存即可）"></a>ie11 字体图标显示不出来(添加静态文件缓存即可）</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># nginx config eg</span><br><span class="line"> location ~* .(gif|jpeg|jpg|png|woff|ttf|otf|svg|woff2|eot|woff2\?*|eot\?*|ttf\?*)$ &#123;</span><br><span class="line">       proxy_pass   http://127.0.0.1:4673;</span><br><span class="line">       proxy_set_header Host $host;</span><br><span class="line">       proxy_set_header X-Forward-For $remote_addr;</span><br><span class="line">       expires 1d;</span><br><span class="line">       access_log /var/log/eot.log main;</span><br><span class="line">       proxy_hide_header Pragma;</span><br><span class="line">       add_header Cache-Control &quot;public, max-age=86400&quot;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 ]]></content>

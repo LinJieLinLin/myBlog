@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> LinJieLinLin</title>
+      <title>lerna相关 |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -58,24 +58,34 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-vue"
+  id="post-环境配置/lerna-yarn"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  lerna相关
+</h1>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
-      <a href="/myBlog/2022/03/14/vue/" class="article-date">
-  <time datetime="2022-03-14T09:50:01.099Z" itemprop="datePublished">2022-03-14</time>
+      <a href="/myBlog/2022/03/13/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/lerna-yarn/" class="article-date">
+  <time datetime="2022-03-13T00:00:00.000Z" itemprop="datePublished">2022-03-13</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">0</span>
+            <span class="post-count">93</span>
         </span>
     </span>
 
@@ -91,13 +101,29 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-   
+  <blockquote><p>lerna相关 </p>
+</blockquote>
+
+<span id="more"></span>
+
+<h1 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a><a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">lerna</a></h1><h2 id="运行子包命令"><a href="#运行子包命令" class="headerlink" title="运行子包命令"></a>运行子包命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna run --scope 包名 dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装所有子包依赖"><a href="#安装所有子包依赖" class="headerlink" title="安装所有子包依赖"></a>安装所有子包依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna bootstrap </span><br></pre></td></tr></table></figure>
+
+<h2 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
+
+<h2 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
+ 
       <!-- reward -->
       
       <div id="reword-out">
@@ -155,16 +181,27 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/2022/03/14/vue/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/2022/03/13/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/lerna-yarn/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/lerna/" rel="tag">lerna</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/%E6%9E%84%E5%BB%BA/" rel="tag">构建</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
+    
+      <a href="/myBlog/2022/03/23/vue/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            (no title)
+          
+        </div>
+      </a>
     
     
       <a href="/myBlog/2022/02/18/QA/%E6%A8%A1%E6%9D%BF/" class="article-nav-link">
