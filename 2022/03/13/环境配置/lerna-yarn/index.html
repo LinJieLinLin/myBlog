@@ -114,15 +114,15 @@
 
 <span id="more"></span>
 
-<h1 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a><a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">lerna</a></h1><h2 id="运行子包命令"><a href="#运行子包命令" class="headerlink" title="运行子包命令"></a>运行子包命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna run --scope 包名 dev</span><br></pre></td></tr></table></figure>
+<h2 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a><a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">lerna</a></h2><h3 id="运行子包命令"><a href="#运行子包命令" class="headerlink" title="运行子包命令"></a>运行子包命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna run --scope 包名 dev</span><br></pre></td></tr></table></figure>
 
-<h2 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
+<h3 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装所有子包依赖"><a href="#安装所有子包依赖" class="headerlink" title="安装所有子包依赖"></a>安装所有子包依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna bootstrap </span><br></pre></td></tr></table></figure>
+<h3 id="安装所有子包依赖"><a href="#安装所有子包依赖" class="headerlink" title="安装所有子包依赖"></a>安装所有子包依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna bootstrap </span><br></pre></td></tr></table></figure>
 
-<h2 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
+<h3 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
 
-<h2 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
+<h3 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -194,11 +194,11 @@
    
   <nav class="article-nav">
     
-      <a href="/myBlog/2022/03/23/vue/" class="article-nav-link">
+      <a href="/myBlog/2022/03/20/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/pnpm/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            (no title)
+            pnpm相关
           
         </div>
       </a>
@@ -253,7 +253,7 @@
     <ul>
       
         <li>
-          <a href="http://www.beian.miit.gov.cn/" target="_black" rel="nofollow">粤ICP备17131911号</a>
+          <a href="http://beian.miit.gov.cn/" target="_black" rel="nofollow">粤ICP备17131911号</a>
         </li>
         
     </ul>
