@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">632</span>
+            <span class="post-count">626</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -109,15 +109,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote><p>mongodb 相关 </p>
+  <blockquote><p>mongodb  </p>
 </blockquote>
 
 <span id="more"></span>
 
 <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="创建管理员"><a href="#创建管理员" class="headerlink" title="创建管理员"></a>创建管理员</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">db.createUser(</span><br><span class="line">   &#123;</span><br><span class="line">     user: &quot;admin&quot;,</span><br><span class="line">     pwd: &quot;123456&quot;,</span><br><span class="line">     roles: [ &#123; role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot; &#125; ]</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>##创建普通用户</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">db.createUser(</span><br><span class="line">   &#123;</span><br><span class="line">     user: &quot;test&quot;,</span><br><span class="line">     pwd: &quot;123456&quot;,</span><br><span class="line">     roles: [ &#123; role: &quot;readWrite&quot;, db: &quot;test&quot; &#125; ]</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="创建普通用户"><a href="#创建普通用户" class="headerlink" title="创建普通用户"></a>创建普通用户</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">db.createUser(</span><br><span class="line">   &#123;</span><br><span class="line">     user: &quot;test&quot;,</span><br><span class="line">     pwd: &quot;123456&quot;,</span><br><span class="line">     roles: [ &#123; role: &quot;readWrite&quot;, db: &quot;test&quot; &#125; ]</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h2 id="开启权限验证"><a href="#开启权限验证" class="headerlink" title="开启权限验证"></a>开启权限验证</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># win 添加到/mongod.conf里</span><br><span class="line">auth = true</span><br><span class="line"># ubuntu添加到/etc/mongod.conf里</span><br><span class="line">security:</span><br><span class="line">  authorization: enabled</span><br></pre></td></tr></table></figure>
 
@@ -138,7 +137,7 @@
 <h2 id="配置-MongoDB"><a href="#配置-MongoDB" class="headerlink" title="配置 MongoDB"></a>配置 MongoDB</h2><h3 id="指定配置启动"><a href="#指定配置启动" class="headerlink" title="指定配置启动"></a>指定配置启动</h3><p>首先要创建配置文件，默认的配置文件路径是：&#x2F;etc&#x2F;mongod.conf。<br>一个简单的配置文件如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">verbose = true</span><br><span class="line"># 数据存放目录</span><br><span class="line">dbpath = /data/db</span><br><span class="line"># 日志目录</span><br><span class="line">logpath = /var/log/mongodb/mongodb.log</span><br><span class="line">logappend = true</span><br><span class="line">port = 27017</span><br></pre></td></tr></table></figure>
 
-<h3 id="指定配置文件的命令如下："><a href="#指定配置文件的命令如下：" class="headerlink" title="指定配置文件的命令如下："></a>指定配置文件的命令如下：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod -f /etc/mongod.conf</span><br></pre></td></tr></table></figure>
+<h3 id="指定配置文件的命令如下"><a href="#指定配置文件的命令如下" class="headerlink" title="指定配置文件的命令如下"></a>指定配置文件的命令如下</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod -f /etc/mongod.conf</span><br></pre></td></tr></table></figure>
 
 <h3 id="控制脚本在：-x2F-etc-x2F-init-d-x2F-mongod"><a href="#控制脚本在：-x2F-etc-x2F-init-d-x2F-mongod" class="headerlink" title="控制脚本在：&#x2F;etc&#x2F;init.d&#x2F;mongod"></a>控制脚本在：&#x2F;etc&#x2F;init.d&#x2F;mongod</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">安装开机服务</span><br><span class="line">sudo update-rc.d mongod defaults 95</span><br></pre></td></tr></table></figure>
 
@@ -147,7 +146,7 @@
 </blockquote>
 <h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#启动服务端</span><br><span class="line">$ mongod</span><br><span class="line">#启动客户端</span><br><span class="line">$ mongo</span><br></pre></td></tr></table></figure>
 
-<h2 id="服务启动、停止、重启"><a href="#服务启动、停止、重启" class="headerlink" title="服务启动、停止、重启"></a>服务启动、停止、重启</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service mongodb start</span><br><span class="line">$ sudo service mongodb stop</span><br><span class="line">$ sudo service mongodb restart</span><br></pre></td></tr></table></figure>
+<h2 id="服务启动、停止、重启"><a href="#服务启动、停止、重启" class="headerlink" title="服务启动、停止、重启"></a>服务启动、停止、重启</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongodb start</span><br><span class="line">sudo service mongodb stop</span><br><span class="line">sudo service mongodb restart</span><br></pre></td></tr></table></figure>
 
 <h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable mongod</span><br></pre></td></tr></table></figure>
  

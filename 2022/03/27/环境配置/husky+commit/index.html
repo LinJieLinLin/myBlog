@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>husky+commitlint相关 |  LinJieLinLin</title>
+      <title>husky+commitlint |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -69,7 +69,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  husky+commitlint相关
+  husky+commitlint
 </h1>
  
 
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">22</span>
+            <span class="post-count">231</span>
         </span>
     </span>
 
@@ -109,12 +109,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote><p>husky+commitlint相关 </p>
+  <blockquote><p>husky+commitlint </p>
 </blockquote>
 
 <span id="more"></span>
 
-<h2 id="husky"><a href="#husky" class="headerlink" title="husky"></a><a target="_blank" rel="noopener" href="https://typicode.github.io/husky">husky</a></h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pnpm i husky --save-dev</span><br><span class="line">npm set-script postinstall &quot;npx husky install&quot;</span><br><span class="line">npx husky install</span><br></pre></td></tr></table></figure>
+<h2 id="husky"><a href="#husky" class="headerlink" title="husky"></a><a target="_blank" rel="noopener" href="https://typicode.github.io/husky">husky</a></h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm i husky --save-dev</span><br><span class="line">npm set-script postinstall &quot;npx husky install&quot;</span><br><span class="line">npx husky install</span><br><span class="line">npm i lint-staged --save-dev</span><br><span class="line"><span class="meta"># </span><span class="language-bash">pre-commit 在代码commit前运行，通过钩子函数，可以判断提交的代码是否符合规范，我们可以在这里做强制格式化</span></span><br><span class="line">npx husky add .husky/pre-commit &quot;npx lint-staged&quot;</span><br><span class="line"><span class="meta"># </span><span class="language-bash">在pre-commit之后运行，会检查commit的内容，做commit规范</span></span><br><span class="line">npm i commitlint --save-dev</span><br><span class="line">npm i @commitlint/config-conventionl --save-dev</span><br><span class="line">npx husky add .husky/commit-msg &#x27;npx --no-install commitlint --edit &quot;$1&quot;&#x27;</span><br><span class="line"><span class="meta"># </span><span class="language-bash">pre-push可以在代码push之前运行一些脚本，目前的实践就是在push行为之前做本地编包、测试</span></span><br><span class="line">npx husky add .husky/pre-push &quot;echo before push&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .lintstagedrc.js</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="string">&#x27;src/*.&#123;js,jsx,ts,tsx&#125;&#x27;</span>: [<span class="string">&#x27;npx prettier --write&#x27;</span>, <span class="string">&#x27;npx eslint --fix&#x27;</span>],</span><br><span class="line">  <span class="string">&#x27;src/*.&#123;css,less,scss&#125;&#x27;</span>: [<span class="string">&#x27;npx prettier --write&#x27;</span>, <span class="string">&#x27;npx stylelint --fix&#x27;</span>],</span><br><span class="line">  <span class="string">&#x27;*.&#123;json,md&#125;&#x27;</span>: [<span class="string">&#x27;npx prettier --write&#x27;</span>],</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// .commitlintrc.js</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;<span class="attr">extends</span>: [<span class="string">&quot;@commitlint/config-conventional&quot;</span>]&#125;;</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -198,7 +200,7 @@
     
       <a href="/myBlog/2022/03/20/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/pnpm/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">pnpm相关</div>
+        <div class="article-nav-title">pnpm</div>
       </a>
     
   </nav>
