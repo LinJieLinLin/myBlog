@@ -3,6 +3,7 @@ title: codeFormat
 date: 2021-08-02 00:03:54
 tags:
   - 配置
+  - eslint
 ---
 
 {% blockquote %} 代码格式化相关 {% endblockquote %}
@@ -69,7 +70,7 @@ env:
 
 ### .eslintrc.js
 
-```
+``` js
 module.exports = {
   <!-- 运行环境 -->
   "env": {
@@ -77,8 +78,8 @@ module.exports = {
   },
   <!-- 插件 -->
   'plugins': [
-		'vue'
-	],
+  'vue'
+ ],
   <!-- 扩展配置文件 -->
   extends:[],
   <!-- 规则 -->
@@ -93,7 +94,8 @@ module.exports = {
 
 #### 为特定类型的文件指定处理器
 
-```
+``` json
+// rules
  "overrides": [
         {
             "files": ["*.md"],
@@ -108,14 +110,64 @@ module.exports = {
     ]
 ```
 
-# prettier 格式化
+# stylelint 格式化
+
+## 安装
+
+``` shell
+npm i -d stylelint stylelint-config-recommended-scss stylelint-config-prettier
+# 添加scripts
+npm set-script stylelint "stylelint \"src/**/*.scss\""
+```
+
+``` json
+// .stylelintrc.json
+{
+  "extends": ["stylelint-config-recommended-scss","stylelint-config-prettier"]
+}
+```
+
+``` js
+// .stylelintrc.js
+module.exports = {
+  extends: ['stylelint-config-recommended-scss', 'stylelint-config-prettier'],
+  rules: {
+    indentation: 2,
+    'scss/operator-no-unspaced': null,
+    'no-duplicate-selectors': null,
+    'selector-type-no-unknown': null,
+  },
+  overrides: [
+    {
+      files: ['src/**/*.scss'],
+      customSyntax: 'postcss-scss',
+    },
+  ],
+}
 
 ```
-不使用prettier格式化代码,常用于css PX 处理
+
+# prettier 格式化
+
+``` shell
+# 不使用prettier格式化代码,常用于css PX 处理
 /* prettier-ignore */
-<!-- devDependencies prettier -->
-<!-- scripts -->
+# 全局安装
+npm i prettier -g
+# 局部安装
+npm i prettier -D
+# package.json script
 "prettier --write 'src/**/*.{js,jsx,tsx,ts,vue,less,md,json}'",
+# eslint 增加prettier解决冲突
+npm i eslint-config-prettier -D
+```
+
+``` js
+// .eslintrc
+module.exports = {
+  extends:[
+    'prettier'
+  ],
 ```
 
 # git 代码提交检查

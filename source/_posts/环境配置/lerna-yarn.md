@@ -11,15 +11,15 @@ tags:
 
 <!--more-->
 
-# [lerna](https://github.com/lerna/lerna)
+## [lerna](https://github.com/lerna/lerna)
 
-## 运行子包命令
+### 运行子包命令
 
 ```shell
 lerna run --scope 包名 dev
 ```
 
-## 查看包
+### 查看包
 
 ```shell
 lerna ls -a
@@ -27,13 +27,13 @@ lerna ls -a
 lerna ls
 ```
 
-## 安装所有子包依赖
+### 安装所有子包依赖
 
 ```shell
 lerna bootstrap 
 ```
 
-## 为所有子包添加一个 "共同 "的依赖
+### 为所有子包添加一个 "共同 "的依赖
 
 ```shell
 lerna add husky --dev 
@@ -41,7 +41,7 @@ lerna add husky --dev
 lerna add husky --dev -W 
 ```
 
-## 删除依赖
+### 删除依赖
 
 ```shell
 lerna exec -- yarn remove husky

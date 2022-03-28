@@ -10,7 +10,7 @@ tags:
 
 <!--more-->
 
-# [nvm](https://github.com/coreybutler/nvm-windows)
+## [nvm](https://github.com/coreybutler/nvm-windows)
 
 ``` shell
 # 安装目录
@@ -21,9 +21,9 @@ nvm install v14.15.3
 nvm use 14.15.3
 ```
 
-# [nvs](https://github.com/jasongin/nvs/releases)
+## [nvs](https://github.com/jasongin/nvs/releases)
 
-## 修改默认源 vim ./defaults.json
+### 修改默认源 vim ./defaults.json
 
 ``` json
 {
@@ -56,11 +56,17 @@ nvs use 14.15.3
 npm i nrm yarn yrm eslint prettier http-server pnpm  -g --registry=https://registry.npm.taobao.org
 ```
 
-# npm配置
+## npm配置
 
 ``` shell
 # puppeteer下载源
 npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
 # 指定npm源
 npm i nrm --registry=https://registry.npm.taobao.org
+# 修改package.json script配置
+npm set-script postinstall "npx husky install"
+# 配置npm init 默认属性
+npm set init.license "Apache-2.0"
+npm set init.author.email  "993353454@qq.com"
+npm set init.author.name  "linjielinlin"
 ```
