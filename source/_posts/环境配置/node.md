@@ -6,7 +6,7 @@ tags:
   - node
 ---
 
-{% blockquote %} node 相关 {% endblockquote %}
+{% blockquote %} node {% endblockquote %}
 
 <!--more-->
 

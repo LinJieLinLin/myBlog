@@ -1,5 +1,5 @@
 ---
-title: lerna相关
+title: lerna
 date: 2022-03-13
 tags:
   - 配置
@@ -7,7 +7,7 @@ tags:
   - 构建
 ---
 
-{% blockquote %} lerna相关 {% endblockquote %}
+{% blockquote %} lerna {% endblockquote %}
 
 <!--more-->
 

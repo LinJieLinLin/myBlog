@@ -6,7 +6,7 @@ tags:
   - 配置
 ---
 
-{% blockquote %} mongodb 相关 {% endblockquote %}
+{% blockquote %} mongodb  {% endblockquote %}
 
 <!--more-->
 
@@ -25,7 +25,7 @@ db.createUser(
 
 ```
 
-##创建普通用户
+## 创建普通用户
 
 ```
 db.createUser(
@@ -124,10 +124,10 @@ logappend = true
 port = 27017
 ```
 
-### 指定配置文件的命令如下：
+### 指定配置文件的命令如下
 
 ```
-$ mongod -f /etc/mongod.conf
+mongod -f /etc/mongod.conf
 ```
 
 ### 控制脚本在：/etc/init.d/mongod
@@ -151,9 +151,9 @@ $ mongo
 ## 服务启动、停止、重启
 
 ```
-$ sudo service mongodb start
-$ sudo service mongodb stop
-$ sudo service mongodb restart
+sudo service mongodb start
+sudo service mongodb stop
+sudo service mongodb restart
 ```
 
 ## 开机启动

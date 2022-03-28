@@ -9,36 +9,36 @@ tags:
 {% blockquote %} 代码格式化相关 {% endblockquote %}
 <!--more-->
 
-# eslint 格式化
+## eslint 格式化
 
-```
-devDependencies
-eslint
-以下按需：
+``` json
+// devDependencies
+// eslint
+// 以下按需：
 "eslint-plugin-html"
 "eslint-plugin-import"
 "eslint-plugin-node"
 "eslint-plugin-promise"
 "eslint-plugin-standard"
 "eslint-plugin-vue"
-react:
+// react:
 "eslint-plugin-eslint-comments"
 "eslint-plugin-jest"
 "eslint-plugin-jsx-a11y"
 "eslint-plugin-react"
 "eslint-plugin-react-hooks"
 "eslint-plugin-unicorn"
-"eslint-template-visitor" -->
+"eslint-template-visitor"
 ```
 
-```
-<!-- scripts -->
+``` js
+// scripts
 "lint": "eslint src/**/*.{js,jsx,ts,tsx,vue} --fix",
 ```
 
-## eslint 配置
+### eslint 配置
 
-```
+``` js
 <!-- 初始化 -->
 eslint --init
  <!-- 关闭当前行 -->
@@ -49,9 +49,9 @@ eslint --init
 /* eslint-disable */
 ```
 
-### package.json
+#### package.json
 
-```
+``` json
 "eslintConfig":
   {
     "env": {
@@ -61,14 +61,14 @@ eslint --init
   }
 ```
 
-### YAML
+#### YAML
 
-```
+``` shell
 env:
     browser: true
 ```
 
-### .eslintrc.js
+#### .eslintrc.js
 
 ``` js
 module.exports = {
@@ -110,9 +110,9 @@ module.exports = {
     ]
 ```
 
-# stylelint 格式化
+## stylelint 格式化
 
-## 安装
+### 安装
 
 ``` shell
 npm i -d stylelint stylelint-config-recommended-scss stylelint-config-prettier
@@ -147,7 +147,7 @@ module.exports = {
 
 ```
 
-# prettier 格式化
+## prettier 格式化
 
 ``` shell
 # 不使用prettier格式化代码,常用于css PX 处理
@@ -170,11 +170,11 @@ module.exports = {
   ],
 ```
 
-# git 代码提交检查
+## git 代码提交检查
 
-```
-<!-- package.json -->
-<!-- devDependencies: husky lint-staged -->
+``` json
+// package.json
+// devDependencies: husky lint-staged
 {
   "husky": {
     "hooks": {

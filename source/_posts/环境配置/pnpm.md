@@ -1,5 +1,5 @@
 ---
-title: pnpm相关
+title: pnpm
 date: 2022-03-20
 tags:
   - 配置
@@ -7,7 +7,7 @@ tags:
   - 构建
 ---
 
-{% blockquote %} pnpm相关 {% endblockquote %}
+{% blockquote %} pnpm {% endblockquote %}
 
 <!--more-->
 

@@ -10,20 +10,20 @@ categories: [web]
 
 <!--more-->
 
-# [测试浏览器支持的 localStorage 大小](https://arty.name/localstorage.html)
+## [测试浏览器支持的 localStorage 大小](https://arty.name/localstorage.html)
 
-## 获取当前存储大小
+### 获取当前存储大小
 
-```
+``` js
 if(window.localStorage){
     var hasUse =unescape(encodeURIComponent(JSON.stringify(localStorage))).length;
     console.log(hasUse);
 }
 ```
 
-# 原生
+## 原生
 
-## getter setter
+### getter setter
 
 ```js
 let obj = {
@@ -45,7 +45,7 @@ console.log(obj.v=1)
 
 ```
 
-## 获取整数(向下最整)
+### 获取整数(向下最整)
 
 ```JS
 let num = 3.141592654
@@ -54,9 +54,9 @@ let b=Math.floor(num)
 console.log(a===b)
 ```
 
-## 标签页激活状态 visibilitychange
+### 标签页激活状态 visibilitychange
 
-```
+``` js
 // 各种浏览器兼容
 var hidden, state, visibilityChange;
 if (typeof document.hidden !== "undefined") {
@@ -86,9 +86,9 @@ document.addEventListener(visibilityChange, function() {
 document.title = document[state];
 ```
 
-## 为每个元素添加 outline for chrome
+### 为每个元素添加 outline for chrome
 
-```
+```js
 [].forEach.call($$("*"),function(a){
 
   a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)
@@ -96,17 +96,17 @@ document.title = document[state];
 })
 ```
 
-# angular
+## angular
 
-## 获取 scope 元素
+### 获取 scope 元素
 
-```
+```js
 var a = angular.element('body[ng-controller="yourCtrl"]').scope()
 ```
 
-## 广播通信
+### 广播通信
 
-```
+```js
 <!--父级-->
 <div ng-controller="ParentCtrl">
     <!--自己-->
@@ -120,7 +120,7 @@ var a = angular.element('body[ng-controller="yourCtrl"]').scope()
 </div>
 ```
 
-```
+```js
 app.controller('SelfCtrl', function($scope) {
     $scope.click = function () {
         $scope.$broadcast('to-child', 'child');
@@ -162,9 +162,9 @@ app.controller('BroCtrl', function($scope){
 });
 ```
 
-## 模拟 href（异步新页面打开不支持）
+### 模拟 href（异步新页面打开不支持）
 
-```
+```js
 $scope.eventTest = function($event) {
     if ($event.target.href === window.location.href) {
         //阻止事件冒泡

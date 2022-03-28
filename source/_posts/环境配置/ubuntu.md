@@ -5,7 +5,7 @@ tags:
   - 配置
 ---
 
-{% blockquote %} ubuntu 相关 {% endblockquote %}
+{% blockquote %} ubuntu {% endblockquote %}
 
 <!--more-->
 
@@ -75,7 +75,7 @@ npm config set sass-binary-site=http://npm.taobao.org/mirrors/node-sass
 export http_proxy="http://127.0.0.1:7777/"
 ```
 
-## node 相关
+## node
 
 - install nvm
 
@@ -208,7 +208,7 @@ sudo service ssh restart
 ## 添加软件图标到启动器
 
 ```
-$ Exec=bash 软件路径
+Exec=bash 软件路径
 ```
 
 # 配置链接
