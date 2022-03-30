@@ -17,7 +17,6 @@ yarn upgrade-interactive --latest
 ```
 
 > 问题一：_config.ayer.yml与主题包内的_config.yml配置是assign形式
-
 > 问题二：本blog运行在二级目录下，开始全局search发现引用的js xml均请求根路径
 
 ## 解决方案

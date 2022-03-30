@@ -10,11 +10,11 @@ categories: [web]
 
 <!--more-->
 
-# 将元素垂直居中
+## 将元素垂直居中
 
 1. CSS3 transform:
 
-```
+```css
 .c{
 top:50%;transform: translate(0 , -50%);
 }
@@ -22,7 +22,7 @@ top:50%;transform: translate(0 , -50%);
 
 2. 把容器当作表格单元:
 
-```
+```css
 .parent{display:table;};.child{display:table-cell;vertical-align:middle;}
 ```
 
@@ -43,11 +43,11 @@ top:50%;transform: translate(0 , -50%);
 
 4. 触屏下 ie 或 edge 点击显示:hover 伪类(添加在 html 标签中)
 
-```
+```html
 aria-haspopup="true"
 ```
 
-# Display: 属性
+## Display: 属性
 
 - none：隐藏对象。与 visibility 属性的 hidden 值不同，其不为被隐藏的对象保留其物理空间
 - inline：指定对象为内联元素。
@@ -72,14 +72,14 @@ aria-haspopup="true"
 - flex：将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
 - inline-flex：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
 
-# visibility 属性
+## visibility 属性
 
 - visible 默认值。元素是可见的。
 - hidden 元素是不可见的。
 - collapse 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。
 - inherit 规定应该从父元素继承 visibility 属性的值。
 
-# HTML 标签
+## HTML 标签
 
 - 布局类：header, footer, container, main, content, aside, page, section
 - 包裹类：wrap, inner
@@ -101,26 +101,26 @@ aria-haspopup="true"
 - 方向类：up, down, left, right
 - 其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading
 
-# 手机 wap
+## 手机 wap
 
-## 去掉 input buttom 默认样式
+### 去掉 input buttom 默认样式
 
-```
+```css
 input[type=button]{
   -webkit-appearance:none;
   outline:none
 }
 ```
 
-## 去掉点击默认样式
+### 去掉点击默认样式
 
-```
+```css
 -webkit-tap-highlight-color:transparent;
 ```
 
-# tap 效果(使用 tap_item 类时点击生效)
+## tap 效果(使用 tap_item 类时点击生效)
 
-```
+```css
 [class*='btn_'],
 [class*='tap_'] {
   transition: 400ms;
