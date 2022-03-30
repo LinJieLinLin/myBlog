@@ -1,3 +1,5 @@
-# [我的博客](http://linjielinlin.github.io/myBlog/)
+# 我的博客
 
-# [myBlog](http://linjielinlin.github.io/myBlog/)
+## [github](https://linjielinlin.github.io/myBlog/)
+
+## [lj4.top/myBlog](http://lj4.top/myBlog)
