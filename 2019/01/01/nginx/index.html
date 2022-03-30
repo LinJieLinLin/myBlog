@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>CSS |  LinJieLinLin</title>
+      <title>nginx |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -58,7 +58,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-CSS-大杂烩"
+  id="post-nginx"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -69,7 +69,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  CSS
+  nginx
 </h1>
  
 
@@ -77,19 +77,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/myBlog/2016/04/02/CSS-%E5%A4%A7%E6%9D%82%E7%83%A9/" class="article-date">
-  <time datetime="2016-04-02T00:03:54.000Z" itemprop="datePublished">2016-04-02</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/myBlog/categories/web/">web</a>
-  </div>
-  
+      <a href="/myBlog/2019/01/01/nginx/" class="article-date">
+  <time datetime="2019-01-01T00:03:54.000Z" itemprop="datePublished">2019-01-01</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1k</span>
+            <span class="post-count">350</span>
         </span>
     </span>
 
@@ -98,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -113,87 +109,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <blockquote><p>与 CSS 相关的一些学习记录 </p>
+  <blockquote><p>nginx配置 </p>
 </blockquote>
 
 <span id="more"></span>
 
-<h2 id="将元素垂直居中"><a href="#将元素垂直居中" class="headerlink" title="将元素垂直居中"></a>将元素垂直居中</h2><ol>
-<li>CSS3 transform:</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.c</span>&#123;</span><br><span class="line"><span class="attribute">top</span>:<span class="number">50%</span>;<span class="attribute">transform</span>: <span class="built_in">translate</span>(<span class="number">0</span> , -<span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    // 端口号</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name www.example.com;</span><br><span class="line">    location / &#123;</span><br><span class="line">        root /var/www/html;</span><br><span class="line">        index index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">    location /api&#123;</span><br><span class="line">        expires 12h;</span><br><span class="line">        if ($request_uri ~* &quot;(html|php|jsp|cgi|asp|aspx)&quot;)</span><br><span class="line">        &#123;</span><br><span class="line">             expires 0;</span><br><span class="line">        &#125;</span><br><span class="line">        proxy_pass http://129.204.212.27;</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header REMOTE-HOST $remote_addr;</span><br><span class="line"></span><br><span class="line">        #持久化连接相关配置</span><br><span class="line">        #proxy_connect_timeout 30s;</span><br><span class="line">        #proxy_read_timeout 86400s;</span><br><span class="line">        #proxy_send_timeout 30s;</span><br><span class="line">        #proxy_http_version 1.1;</span><br><span class="line">        #proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">        #proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line"></span><br><span class="line">        proxy_cache cache_one;</span><br><span class="line">        proxy_cache_key $host$uri$is_args$args;</span><br><span class="line">        proxy_cache_valid 200 304 301 302 1m;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        proxy_set_header Accept-Encoding &quot;&quot;;</span><br><span class="line">        sub_filter &quot;^/api&quot; &quot;/api&quot;;</span><br><span class="line">        sub_filter_once off;</span><br><span class="line"></span><br><span class="line">        add_header X-Cache $upstream_cache_status;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li>把容器当作表格单元:</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span>&#123;<span class="attribute">display</span>:table;&#125;;<span class="selector-class">.child</span>&#123;<span class="attribute">display</span>:table-cell;<span class="attribute">vertical-align</span>:middle;&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>这个方法使用了一个 position:absolute，有固定宽度和高度的 div。这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#content &#123;</span><br><span class="line">    position:absolute;</span><br><span class="line">    top:0;</span><br><span class="line">    bottom:0;</span><br><span class="line">    left:0;</span><br><span class="line">    right:0;</span><br><span class="line">    margin:auto;</span><br><span class="line">    height:240px;</span><br><span class="line">    width:70%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>触屏下 ie 或 edge 点击显示:hover 伪类(添加在 html 标签中)</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aria-haspopup=&quot;true&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Display-属性"><a href="#Display-属性" class="headerlink" title="Display: 属性"></a>Display: 属性</h2><ul>
-<li>none：隐藏对象。与 visibility 属性的 hidden 值不同，其不为被隐藏的对象保留其物理空间</li>
-<li>inline：指定对象为内联元素。</li>
-<li>block：指定对象为块元素。</li>
-<li>list-item：指定对象为列表项目。</li>
-<li>inline-block：指定对象为内联块元素。（CSS2）</li>
-<li>table：指定对象作为块元素级的表格。类同于 html 标签<code>&lt;table&gt;</code>（CSS2）</li>
-<li>inline-table：指定对象作为内联元素级的表格。类同于 html 标签<code>&lt;table&gt;</code>（CSS2）</li>
-<li>table-caption：指定对象作为表格标题。类同于 html 标签<code>&lt;caption&gt;</code>（CSS2）</li>
-<li>table-cell：指定对象作为表格单元格。类同于 html 标签<code>&lt;td&gt;</code>（CSS2）</li>
-<li>table-row：指定对象作为表格行。类同于 html 标签<code>&lt;tr&gt;</code>（CSS2）</li>
-<li>table-row-group：指定对象作为表格行组。类同于 html 标签<code>&lt;tbody&gt;</code>（CSS2）</li>
-<li>table-column：指定对象作为表格列。类同于 html 标签<code>&lt;col&gt;</code>（CSS2）</li>
-<li>table-column-group：指定对象作为表格列组显示。类同于 html 标签<code>&lt;colgroup&gt;</code>（CSS2）</li>
-<li>table-header-group：指定对象作为表格标题组。类同于 html 标签<code>&lt;thead&gt;</code>（CSS2）</li>
-<li>table-footer-group：指定对象作为表格脚注组。类同于 html 标签<code>&lt;tfoot&gt;</code>（CSS2）</li>
-<li>run-in：根据上下文决定对象是内联对象还是块级对象。（CSS3）</li>
-<li>box：将对象作为弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
-<li>inline-box：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
-<li>flexbox：将对象作为弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</li>
-<li>inline-flexbox：将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）（CSS3）</li>
-<li>flex：将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</li>
-<li>inline-flex：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）</li>
-</ul>
-<h2 id="visibility-属性"><a href="#visibility-属性" class="headerlink" title="visibility 属性"></a>visibility 属性</h2><ul>
-<li>visible 默认值。元素是可见的。</li>
-<li>hidden 元素是不可见的。</li>
-<li>collapse 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 “hidden”。</li>
-<li>inherit 规定应该从父元素继承 visibility 属性的值。</li>
-</ul>
-<h2 id="HTML-标签"><a href="#HTML-标签" class="headerlink" title="HTML 标签"></a>HTML 标签</h2><ul>
-<li>布局类：header, footer, container, main, content, aside, page, section</li>
-<li>包裹类：wrap, inner</li>
-<li>区块类：region, block, box</li>
-<li>结构类：hd, bd, ft, top, bottom, left, right, middle, col, row, grid, span</li>
-<li>列表类：list, item, field</li>
-<li>主次类：primary, secondary, sub, minor</li>
-<li>大小类：s, m, l, xl, large, small</li>
-<li>状态类：active, current, checked, hover, fail, success, warn, error, on, off</li>
-<li>导航类：nav, prev, next, breadcrumb, forward, back, indicator, paging, first, last</li>
-<li>交互类：tips, alert, modal, pop, panel, tabs, accordion, slide, scroll, overlay,</li>
-<li>星级类：rate, star</li>
-<li>分割类：group, seperate, divider</li>
-<li>等分类：full, half, third, quarter</li>
-<li>表格类：table, tr, td, cell, row</li>
-<li>图片类：img, thumbnail, original, album, gallery</li>
-<li>语言类：cn, en</li>
-<li>论坛类：forum, bbs, topic, post</li>
-<li>方向类：up, down, left, right</li>
-<li>其他语义类：btn, close, ok, cancel, switch; link, title, info, intro, more, icon; form, label, search, contact, phone, date, email, user; view, loading</li>
-</ul>
-<h2 id="手机-wap"><a href="#手机-wap" class="headerlink" title="手机 wap"></a>手机 wap</h2><h3 id="去掉-input-buttom-默认样式"><a href="#去掉-input-buttom-默认样式" class="headerlink" title="去掉 input buttom 默认样式"></a>去掉 input buttom 默认样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=button]</span>&#123;</span><br><span class="line">  -webkit-appearance:none;</span><br><span class="line">  <span class="attribute">outline</span>:none</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="去掉点击默认样式"><a href="#去掉点击默认样式" class="headerlink" title="去掉点击默认样式"></a>去掉点击默认样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-tap-highlight-<span class="attribute">color</span>:transparent;</span><br></pre></td></tr></table></figure>
-
-<h2 id="tap-效果-使用-tap-item-类时点击生效"><a href="#tap-效果-使用-tap-item-类时点击生效" class="headerlink" title="tap 效果(使用 tap_item 类时点击生效)"></a>tap 效果(使用 tap_item 类时点击生效)</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[class*=<span class="string">&#x27;btn_&#x27;</span>]</span>,</span><br><span class="line"><span class="selector-attr">[class*=<span class="string">&#x27;tap_&#x27;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">400ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-attr">[class*=<span class="string">&#x27;btn_&#x27;</span>]</span><span class="selector-pseudo">:active</span>,</span><br><span class="line"><span class="selector-attr">[class*=<span class="string">&#x27;tap_&#x27;</span>]</span><span class="selector-pseudo">:active</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">0ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-attr">[class*=<span class="string">&#x27;tap_&#x27;</span>]</span><span class="selector-class">.tap_item</span><span class="selector-pseudo">:active</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#d9d9d9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 查看 Nginx 程序文件目录:/usr/sbin/nginx</span></span><br><span class="line">ps  -ef | grep nginx</span><br><span class="line"></span><br><span class="line"><span class="comment">## 查看 nginx.conf 配置文件目录:/etc/nginx/nginx.conf</span></span><br><span class="line">nginx -t                 </span><br><span class="line">vim /etc/nginx/nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">## 配置文件目录：/etc/nginx</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 虚拟主机配置文件目录：/etc/nginx/sites-available/</span></span><br><span class="line"><span class="comment">## 虚拟主机文件夹目录：/var/www/，详情可在 /etc/nginx/sites-available/ 中配置</span></span><br><span class="line"><span class="comment">## 默认网页文件目录：/usr/share/nginx/html</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 测试配置文件，只检查配置文件是否存在语法错误</span></span><br><span class="line">nginx -t -c &lt;path-to-nginx.conf&gt;</span><br><span class="line">sudo nginx -t -c /etc/nginx/nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment">## 启动 Nginx 服务</span></span><br><span class="line">nginx 安装目录 -c &lt;path-to-nginx.conf&gt;</span><br><span class="line">sudo /etc/init.d/nginx start</span><br><span class="line"></span><br><span class="line"><span class="comment">## 停止 Nginx 服务</span></span><br><span class="line">sudo /usr/sbin/nginx -s stop </span><br><span class="line"></span><br><span class="line"><span class="comment">## 重启 Nginx </span></span><br><span class="line">sudo /usr/sbin/nginx -s reload  <span class="comment"># 0.8 版本之后的方法</span></span><br><span class="line"><span class="built_in">kill</span> -HUP pid     <span class="comment"># 向 master 进程发送信号从容地重启 Nginx，即服务不中断</span></span><br><span class="line"></span><br><span class="line">sudo service nginx start</span><br><span class="line">sudo service nginx stop</span><br><span class="line">sudo service nginx restart</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -252,12 +175,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/2016/04/02/CSS-%E5%A4%A7%E6%9D%82%E7%83%A9/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lj4.top/2019/01/01/nginx/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/css/" rel="tag">css</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myBlog/tags/nginx/" rel="tag">nginx</a></li></ul>
 
     </footer>
   </div>
@@ -265,19 +188,19 @@
    
   <nav class="article-nav">
     
-      <a href="/myBlog/2016/04/03/html%E8%BD%ACbase64/" class="article-nav-link">
+      <a href="/myBlog/2021/07/02/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/node/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            html转base64
+            node
           
         </div>
       </a>
     
     
-      <a href="/myBlog/2016/04/02/%E7%A7%BB%E5%8A%A8%E7%AB%AFweb/" class="article-nav-link">
+      <a href="/myBlog/2018/11/11/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/webpack-vue%E7%9B%B8%E5%85%B3/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">移动端web</div>
+        <div class="article-nav-title">webpack-vue</div>
       </a>
     
   </nav>
