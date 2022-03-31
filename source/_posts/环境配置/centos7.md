@@ -155,6 +155,32 @@ journalctl -f
 journalctl -f -u nginx
 ```
 
+## 开机启动脚本
+
+```sh
+vi /etc/rc.d/init.d/hi
+#!/bin/bash
+# hi:start|stop|restart
+# chkconfig: 345 90 10
+# description: bigdata
+# processname: bigdata
+/home/hi.sh
+:wq
+vim /home/hi.sh
+echo hi
+:wq
+# 设置权限
+chmod +x /etc/rc.d/init.d/hi
+chmod +x /home/hi.sh
+# 注册设置为开机启动
+chkconfig --add hi
+chkconfig hi on
+# 启动服务
+service hi start
+# 修改sh后刷新
+source /etc/profile
+```
+
 ## nginx
 
 ```shell
