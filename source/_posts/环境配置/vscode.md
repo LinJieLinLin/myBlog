@@ -9,11 +9,11 @@ tags:
 {% blockquote %} vsCode 相关 {% endblockquote %}
 <!--more-->
 
-# .vscode
+## .vscode
 
-## launch.json,vue edgeDebug
+### launch.json,vue edgeDebug
 
-```
+```json
 {
   "version": "0.2.0",
   "configurations": [
@@ -32,9 +32,9 @@ tags:
 }
 ```
 
-## launch.json,react edgeDebug
+### launch.json,react edgeDebug
 
-```
+```json
 {
   "version": "0.2.0",
   "configurations": [
@@ -48,9 +48,9 @@ tags:
 }
 ```
 
-## setting.json 项目级配置
+### setting.json 项目级配置
 
-```
+```json
 {
   // 重新设定tabsize
   "editor.tabSize": 2,
@@ -66,9 +66,9 @@ tags:
 }
 ```
 
-## sftp.json ftp 配置
+### sftp.json ftp 配置
 
-```
+```json
 {
   "name": "名称",
   "protocol": "sftp|ftp",
@@ -78,7 +78,24 @@ tags:
   "password": "",
   "context": "dist/本地目录",
   "ignore": [".vscode", ".git", ".DS_Store", "node_modules"],
-  "remotePath": "目标目录"
+  "remotePath": "目标目录",
+  // 多目录处理 SFTP:Set profiles
+  "profiles": {
+    "a": {
+      "name": "名称",
+      "protocol": "sftp|ftp",
+      "port": 22,
+      "username": "用户名",
+      "host": "host",
+      "password": "",
+      "context": "dist/本地目录",
+      "ignore": [".vscode", ".git", ".DS_Store", "node_modules"],
+      "remotePath": "目标目录",
+    },
+    "b": {
+      "remotePath": "目标目录"
+    },
+  }
 }
 
 ```
