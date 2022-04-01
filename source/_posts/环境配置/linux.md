@@ -9,20 +9,20 @@ tags:
 
 <!--more-->
 
-# 运行
+## 运行
 
-```
+```shell
 #使脚本具有执行权限
 chmod +x ./test.sh
 #执行脚本
 ./test.sh
 ```
 
-# 变量
+## 变量
 
-## 定义变量
+### 定义变量
 
-```
+```shell
 # 设置只读
 hi="hello world!"
 readonly hi
@@ -39,9 +39,9 @@ do
 done
 ```
 
-## 特殊变量
+### 特殊变量
 
-```
+```shell
 $0  当前脚本的文件名
 $n  传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是$1，第二个参数是$2。
 $#  传递给脚本或函数的参数个数。
@@ -63,9 +63,9 @@ echo "参数个数 : ${#}"
 ESC :wq
 ```
 
-## 转义
+### 转义
 
-```
+```shell
 # 有 -e 表示对转义字符进行替换。如果不使用 -e 选项，将会原样输出
 echo -e '***'
 \\  反斜杠
@@ -78,17 +78,17 @@ echo -e '***'
 \v  垂直制表符
 ```
 
-## 自带命令替换
+### 自带命令替换
 
-```
+```shell
 # 不是单引号
 DATE=`date`
 echo "当前时间是： ${DATE}"
 ```
 
-## 变量替换
+### 变量替换
 
-```
+```shell
 ${var}  变量本来的值
 ${var:-word}    如果变量 var 为空或已被删除(unset)，那么返回 word，但不改变 var 的值。
 ${var:=word}    如果变量 var 为空或已被删除(unset)，那么返回 word，并将 var 的值设置为 word。
@@ -97,55 +97,55 @@ ${var:?message} 如果变量 var 为空或已被删除(unset)，那么将消息 
 ${var:+word}    如果变量 var 被定义，那么返回 word，但不改变 var 的值。
 ```
 
-# 常用命令
+## 常用命令
 
 ### 查看端口占用
 
-```
+```shell
 netstat -anp|grep 80
 ```
 
-### wget
-
 ### 更改文件/文件夹所有者
 
-```
-sudo chown -R root:root 文件/文件夹
+```shell
+sudo chown -R root:root dirname/filename
+# -R 为递归操作
+sudo chown -R username dirname/filename
+# -R 为递归操作
+sudo chgrp -R groupname dirname
 ```
 
 ### 建立软连接
 
-```
+```shell
 ln -s 源目录 目标目录（绝对路径）
 ```
 
 ### 修改密码
 
-```
+```shell
 passwd usrname
 ```
 
 ### 新建用户
 
-```
+```shell
 adduser linj
 # 输入密码，然后一路回车，按y
 # 添加root权限
 vim /etc/sudoers
 ```
 
-### 改变用户/组
+### 查看用户/用户组
 
-```
-# -R 为递归操作
-chown -R username dirname/filename
-# -R 为递归操作
-chgrp -R groupname dirname
+```shell
+cat /etc/passwd #查看用户
+cat /etc/group #查看用户组
 ```
 
 ### 显示磁盘空间
 
-```
+```shell
 df -hl
 # 查看当前目录文件大小，max-depth为目录层数
 du -h --max-depth=1
@@ -153,7 +153,7 @@ du -h --max-depth=1
 
 ### 同步时间
 
-```
+```shell
 # apt-get install ntpdate
 #  yum install ntp
 ntpdate cn.pool.ntp.org
