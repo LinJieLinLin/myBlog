@@ -49,8 +49,67 @@ unzip file.zip //解压zip
 # 安装
 wget https://github.com/fatedier/frp/releases/download/v0.41.0/frp_0.41.0_linux_amd64.tar.gz
 tar -xzvf frp_0.41.0_linux_amd64.tar.gz
+# 设置
+vim frps.ini
+[common]
+bind_addr = 0.0.0.0
+bind_port = 7000
+# 启用token认证
+authentication_method = token
+token = tokenKey
+# web proxy,nginx proxy 7002
+vhost_http_port = 7002
+# 设置dashboard
+dashboard_port = 7001
+dashboard_user = userName
+dashboard_pwd = password
+!wq
 # 启动
 ./frps -c ./frps.ini
+# 
+```
+
+```ini
+vim frpc.ini
+[common]
+server_addr = frps ip
+server_port = 7000
+token = tokenKey
+log_file = ./frpc.log
+[web_01]
+type = http
+local_ip = 127.0.0.1
+local_port = 1000
+use_compression = true
+# 访问domain,nginx proxy 
+custom_domains = f.lj4.top
+
+[rdp]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 3389
+# 远程开放端口
+remote_port = 3389
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 22
+remote_port = 7003
+# http代理
+[plugin_http_proxy]
+type = tcp
+remote_port = 6004
+plugin = http_proxy
+plugin_http_user = abc
+plugin_http_passwd = abc
+# socks5 代理
+[plugin_socks5]
+type = tcp
+remote_port = 7004
+plugin = socks5
+plugin_user = abc
+plugin_passwd = abc
 ```
 
 ## 查看 centos 版本
