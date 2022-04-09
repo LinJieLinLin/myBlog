@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">234</span>
+            <span class="post-count">286</span>
         </span>
     </span>
 
@@ -113,20 +113,27 @@
 </blockquote>
 
 <span id="more"></span>
-<h1 id="echo输入文件"><a href="#echo输入文件" class="headerlink" title="echo输入文件"></a>echo输入文件</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">奖内容写入.npmrc中，若不存在文件则生成</span></span><br><span class="line">echo registry= &gt; /root/.npmrc</span><br><span class="line"><span class="meta"># </span><span class="language-bash">向文件追加内容,会换行</span></span><br><span class="line">echo https://registry.npmmirror.com/ &gt;&gt; /root/.npmrc</span><br></pre></td></tr></table></figure>
 
-<h1 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h1><p><code>set http_proxy=http://127.0.0.1:7777</code></p>
-<h1 id="不显示-CMD-窗口"><a href="#不显示-CMD-窗口" class="headerlink" title="不显示 CMD 窗口"></a>不显示 CMD 窗口</h1><p><code>CreateObject(&quot;WScript.Shell&quot;).Run &quot;CMD脚本&quot;,0</code></p>
-<h1 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h1><p><code>netstat -aon|findstr &quot;1119&quot; LISTENING 后面即为PID</code></p>
-<h1 id="查看-PID-对应-exe"><a href="#查看-PID-对应-exe" class="headerlink" title="查看 PID 对应 exe"></a>查看 PID 对应 exe</h1><p><code>tasklist|findstr &quot;PID&quot;</code></p>
-<h1 id="暂停-10-秒"><a href="#暂停-10-秒" class="headerlink" title="暂停 10 秒"></a>暂停 10 秒</h1><p><code>ping localhost -n 10 &gt; nul</code></p>
-<h1 id="空格暂停"><a href="#空格暂停" class="headerlink" title="空格暂停"></a>空格暂停</h1><p><code>pause /s</code></p>
-<h1 id="ARP-绑定"><a href="#ARP-绑定" class="headerlink" title="ARP 绑定"></a>ARP 绑定</h1><p><code>arp -s ip mac</code></p>
-<h1 id="查看-ARP"><a href="#查看-ARP" class="headerlink" title="查看 ARP"></a>查看 ARP</h1><p><code>arp -a</code></p>
-<h1 id="文件夹映射"><a href="#文件夹映射" class="headerlink" title="文件夹映射"></a>文件夹映射</h1><blockquote>
+<h2 id="查看系统版本、激活状态"><a href="#查看系统版本、激活状态" class="headerlink" title="查看系统版本、激活状态"></a>查看系统版本、激活状态</h2><p><code>slmgr /dlv</code></p>
+<h2 id="kms激活"><a href="#kms激活" class="headerlink" title="kms激活"></a>kms激活</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">卸载旧key</span></span><br><span class="line">slmgr /upk</span><br><span class="line"><span class="meta"># </span><span class="language-bash">安装key</span></span><br><span class="line">slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx</span><br><span class="line">slmgr /skms kms.03k.org</span><br><span class="line">slmgr /ato</span><br><span class="line"><span class="meta"># </span><span class="language-bash">查看激活过期时间</span></span><br><span class="line">slmgr –xpr</span><br><span class="line"><span class="meta"># </span><span class="language-bash">查看帮助</span></span><br><span class="line">slmgr </span><br></pre></td></tr></table></figure>
+
+<h2 id="echo输入文件"><a href="#echo输入文件" class="headerlink" title="echo输入文件"></a>echo输入文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">奖内容写入.npmrc中，若不存在文件则生成</span></span><br><span class="line">echo registry= &gt; /root/.npmrc</span><br><span class="line"><span class="meta"># </span><span class="language-bash">向文件追加内容,会换行</span></span><br><span class="line">echo https://registry.npmmirror.com/ &gt;&gt; /root/.npmrc</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set http_proxy=http://127.0.0.1:7777</span><br></pre></td></tr></table></figure>
+
+<h2 id="不显示-CMD-窗口运行脚本"><a href="#不显示-CMD-窗口运行脚本" class="headerlink" title="不显示 CMD 窗口运行脚本"></a>不显示 CMD 窗口运行脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CreateObject(&quot;WScript.Shell&quot;).Run &quot;CMD脚本&quot;,0</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;1119&quot;</span> LISTENING 后面即为PID</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看-PID-对应-exe"><a href="#查看-PID-对应-exe" class="headerlink" title="查看 PID 对应 exe"></a>查看 PID 对应 exe</h2><p><code>tasklist|findstr &quot;PID&quot;</code></p>
+<h2 id="暂停-10-秒"><a href="#暂停-10-秒" class="headerlink" title="暂停 10 秒"></a>暂停 10 秒</h2><p><code>ping localhost -n 10 &gt; nul</code></p>
+<h2 id="空格暂停"><a href="#空格暂停" class="headerlink" title="空格暂停"></a>空格暂停</h2><p><code>pause /s</code></p>
+<h2 id="ARP-绑定"><a href="#ARP-绑定" class="headerlink" title="ARP 绑定"></a>ARP 绑定</h2><p><code>arp -s ip mac</code></p>
+<h2 id="查看-ARP"><a href="#查看-ARP" class="headerlink" title="查看 ARP"></a>查看 ARP</h2><p><code>arp -a</code></p>
+<h2 id="文件夹映射"><a href="#文件夹映射" class="headerlink" title="文件夹映射"></a>文件夹映射</h2><blockquote>
 <p>mklink 只能在命令提示符 “CMD” 中使用。</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mklink [[/d] | [/h] | [/j]] Link Target</span><br><span class="line">/d　　　创建目录符号链接。黙认为文件符号链接。</span><br><span class="line">/h　　　创建硬链接，而不是符号链接。</span><br><span class="line">/h　　　创建目录联接。</span><br><span class="line">Link　　指定新的符号链接名称。</span><br><span class="line">Target　指定新链接引用的路径(相对或绝对)。</span><br><span class="line">eg: mklink /d 新路径 源路径</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mklink [[/d] | [/h] | [/j]] Link Target</span><br><span class="line">/d　　　创建目录符号链接。黙认为文件符号链接。</span><br><span class="line">/h　　　创建硬链接，而不是符号链接。</span><br><span class="line">/h　　　创建目录联接。</span><br><span class="line">Link　　指定新的符号链接名称。</span><br><span class="line">Target　指定新链接引用的路径(相对或绝对)。</span><br><span class="line">eg: mklink /d 新路径 源路径</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
