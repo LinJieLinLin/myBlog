@@ -89,3 +89,16 @@ Link　　指定新的符号链接名称。
 Target　指定新链接引用的路径(相对或绝对)。
 eg: mklink /d 新路径 源路径
 ```
+
+## cmd脚本中文乱码（使用ANSI编码保存即可）
+
+## smba共享设置
+
+```sh
+# 删除smba共享连接
+net use \\192.168.2.1 /delete
+# 创建smba共享连接
+net use \\192.168.2.1 "password" /user:userName
+# 打开共享文件夹，带中文时，使用ANSI编码保存
+explorer "\\192.168.2.1\分享"
+```
