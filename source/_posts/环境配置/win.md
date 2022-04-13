@@ -43,11 +43,17 @@ echo https://registry.npmmirror.com/ >> /root/.npmrc
 set http_proxy=http://127.0.0.1:7777
 ```
 
+## 使用环境变量
+
+```CMD
+echo %path%
+```
+
 ## 不显示 CMD 窗口运行脚本
 
 ```shell
-
-CreateObject("WScript.Shell").Run "CMD脚本",0
+# 0后台 1普通 2最小化 3最大化
+CreateObject("WScript.Shell").Run """CMD脚本""",0
 ```
 
 ## 查看端口占用
@@ -101,4 +107,30 @@ net use \\192.168.2.1 /delete
 net use \\192.168.2.1 "password" /user:userName
 # 打开共享文件夹，带中文时，使用ANSI编码保存
 explorer "\\192.168.2.1\分享"
+```
+
+## nginx
+
+### nginx服务
+
+```sh
+```
+
+### 　命令
+
+```sh
+# 查看帮助信息
+nginx -h
+# 查看Nginx版本
+nginx -v
+# 停用Nginx
+nginx -s stop
+# 优雅的停用Nginx（处理完正在进行中请求后停用）
+nginx -s quit
+# 重新加载配置，并优雅的重启进程
+nginx -s reload
+# 重启日志文件
+nginx -s reopen
+# 杀进程
+tskill nginx
 ```
