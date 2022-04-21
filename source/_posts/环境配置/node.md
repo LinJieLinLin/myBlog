@@ -100,3 +100,12 @@ degit user/repo#v1.2.3
 # commit hash  
 degit user/repo#1234abcd  
 ```
+
+## 修改package.json
+
+```shell
+# 替换并保存文件
+sed -i -r 's/查找文本/替换文本/g' package.json
+# 查找并删除所在行(可多行)
+sed -i -r  '/"b"/d' package.json
+```
