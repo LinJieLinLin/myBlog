@@ -13,7 +13,9 @@ tags:
 
 `slmgr /dlv`
 
-## kms激活
+## kms激活 [win kms key](https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys)
+
+### win
 
 ```shell
 # 卸载旧key
@@ -26,6 +28,28 @@ slmgr /ato
 slmgr –xpr
 # 查看帮助
 slmgr 
+```
+
+### [office](https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks)
+
+```shell
+# set Key
+cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX
+# office path
+cd "C:\Program Files\Microsoft Office\Office16"
+cscript ospp.vbs /sethst:kms.03k.org
+cscript ospp.vbs /act
+```
+
+### 版本转换
+
+```shell
+# //获取当前的映像版本
+dism /online /get-currentedition  
+# //获取当前的映像可以升级的版本 
+dism /online /get-targeteditions   
+# win
+DISM /online /Set-Edition:<edition ID> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula 
 ```
 
 ## echo输入文件

@@ -450,3 +450,60 @@ docker inspect name/id
 ```shell
 docker exec -it [name] /bin/bash
 ```
+
+## centos7 kms
+
+```sh
+#下载包
+wget https://github.com/Wind4/vlmcsd/releases/download/svn1111/binaries.tar.gz
+tar -zxvf binaries.tar.gz
+#进入路径
+cd binaries/Linux/intel/static
+#运行KMS服务
+chmod 777 vlmcsd-x64-musl-static
+./vlmcsd-x64-musl-static
+# 查看
+ps -ef | grep vlmcsd-x64-musl-static
+# 停用
+kill -9 [pid]
+firewall-cmd --zone=public --add-port=1688/tcp --permanent
+firewall-cmd --reload
+```
+
+## centos7 kms2
+
+```sh
+#! /bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+clear
+start() {
+  yum install gcc git make -y
+  mkdir /usr/local/kms
+  cd /usr/local/kms
+  git clone https://github.com/Wind4/vlmcsd.git ./vlmcsdGit
+  cd vlmcsdGit
+  make
+  cd bin
+  mv vlmcsd /usr/local/kms/vlmcsd
+  cd /usr/local/kms/
+  rm -rf ./vlmcsdGit/
+  echo "Succeeded."
+  echo "The executable file lies in /usr/local/kms/"
+  echo "https://github.com/Wind4/vlmcsd"
+}
+echo "This script will automatically download and compile KMS Server program for you."
+echo "For more information, please visit https://github.com/Wind4/vlmcsd"
+read -p "y/n:" choice
+case $choice in
+"y")
+  start
+  ;;
+"n")
+  exit 0
+  ;;
+*)
+  echo "Please enter y or n!"
+  ;;
+esac
+```
