@@ -28,12 +28,26 @@ nvm use 14.15.3
 npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
 # 指定npm源
 npm i nrm --registry=https://registry.npm.taobao.org
+# 获取配置文件路径
+npm config get userconfig
 # 修改package.json script配置
 npm set-script postinstall "npx husky install"
 # 配置npm init 默认属性
 npm set init.license "Apache-2.0"
 npm set init.author.email  "993353454@qq.com"
 npm set init.author.name  "linjielinlin"
+# 设置缓存
+npm config set cache  E:\cache\npm
+```
+
+## yarn配置
+
+```sh
+# yarn配置位置
+**/.yarnrc
+# 设置缓存目录
+yarn cache clean
+yarn config set E:\cache\yarn
 ```
 
 ## [nvs](https://github.com/jasongin/nvs/releases)
