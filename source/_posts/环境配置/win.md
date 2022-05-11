@@ -11,7 +11,9 @@ tags:
 
 ## 查看系统版本、激活状态
 
-`slmgr /dlv`
+```
+slmgr /dlv
+```
 
 ## kms激活 [win kms key](https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys)
 
@@ -55,7 +57,7 @@ DISM /online /Set-Edition:<edition ID> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 ## echo输入文件
 
 ``` Shell
-# 奖内容写入.npmrc中，若不存在文件则生成
+# 将内容写入.npmrc中，若不存在文件则生成
 echo registry= > /root/.npmrc
 # 向文件追加内容,会换行
 echo https://registry.npmmirror.com/ >> /root/.npmrc
@@ -71,6 +73,10 @@ set http_proxy=http://127.0.0.1:7777
 
 ```CMD
 echo %path%
+// 临时添加环境变量
+set path=%path%;D:\
+// 永久环境变量，需要以管理员身份打开cmd
+setx path %path%;路径 /M
 ```
 
 ## 不显示 CMD 窗口运行脚本
