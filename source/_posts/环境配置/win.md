@@ -164,3 +164,12 @@ nginx -s reopen
 # 杀进程
 tskill nginx
 ```
+
+## hyper-v
+
+```shell
+# 管理员身份 关
+bcdedit /set hypervisorlaunchtype off
+# 管理员身份 开
+bcdedit /set hypervisorlaunchtype auto
+```
