@@ -22,7 +22,7 @@ stages:
         artifacts:
           - name: BUILD_ARTIFACT
             path:
-              - ./dist
+              - ./public
         strategy:
           retry: '0'
       - step: publish@general_artifacts
