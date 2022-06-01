@@ -138,13 +138,11 @@ busuanzi:
 
 # 友盟cnzz统计(url填js代码src链接)
 cnzz:
-  enable: true
-  url: https://s9.cnzz.com/z_stat.php?id=1280044797&web_id=1280044797
 
 # Google Analytics
 google_analytics: ''
 # 百度统计
-baidu_analytics: ''
+baidu_analytics: 'e21fe9c423c1c54aa4f3a9abaed45201'
 
 # Mathjax数学公式
 mathjax: false
