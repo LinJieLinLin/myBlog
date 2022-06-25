@@ -173,3 +173,35 @@ bcdedit /set hypervisorlaunchtype off
 # 管理员身份 开
 bcdedit /set hypervisorlaunchtype auto
 ```
+
+## 设置DNS
+  
+```shell
+netsh interface ip set address name="WLAN" source=dhcp
+netsh interface ip set dns name="WLAN" source=static addr=223.6.6.6 register=primary
+netsh interface ip add dns name="WLAN" addr=8.8.8.8 index=2
+# 刷新dns
+ipconfig /flushdns
+```
+
+## wsl2启动不了处理
+
+```shell
+netsh winsock reset
+```
+
+Netsh winsock reset是一个命令提示程序，用于将winsock目录重置为默认设置或清除状态。如有时候上不了网或者网络出现问题经常用到它，简单地理解就是：重置程序通过操作系统链接网络的入口点。
+虽然使用此命令可以恢复网络连接，也应谨慎使用，因为可能需要重新安装LSP
+LSP: layered service privider 分层服务提供商。
+LSP是TCP/IP等协议的接口。
+
+Netsh Winsock解决了哪些问题？
+删除广告软件，间谍软件，病毒，蠕虫，木马等后的网络问题
+
+处理安装广告软件，间谍软件，VPN或防火墙后无法联网。
+无法访问任何网页或只能访问某些网页。
+出现与网络相关问题的弹出错误窗口。
+由于注册表错误，没有网络连接。
+发生DNS查找问题。
+无法续订网络适配器的IP地址或其他一些DHCP错误。
+没有连接消息的网络连接问题。
