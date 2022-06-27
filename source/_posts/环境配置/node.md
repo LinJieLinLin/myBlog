@@ -38,6 +38,8 @@ npm set init.author.email  "993353454@qq.com"
 npm set init.author.name  "linjielinlin"
 # 设置缓存
 npm config set cache  E:\cache\npm
+# 跳过脚本安装
+npm i puppeteer --ignore-scripts
 ```
 
 ## yarn配置
