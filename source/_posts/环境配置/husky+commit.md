@@ -23,7 +23,7 @@ npx husky add .husky/pre-commit "npx lint-staged"
 # 在pre-commit之后运行，会检查commit的内容，做commit规范
 npm i commitlint --save-dev
 npm i @commitlint/config-conventionl --save-dev
-npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+npx husky add .husky/commit-msg "npx --no-install commitlint --edit \"$1\"" 
 # pre-push可以在代码push之前运行一些脚本，目前的实践就是在push行为之前做本地编包、测试
 npx husky add .husky/pre-push "echo before push"
 ```
