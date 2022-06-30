@@ -417,6 +417,15 @@ docker pull mysql
 sudo docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
 
+### 构建容器
+
+```shell
+# 根据DockerFile将当前目录构建镜像
+docker build -t 容器名称:v1.0 .
+# 根据docker-compose.yml
+docker-compose up -d
+```
+
 ### 容器开机启动
 
 ```shell
