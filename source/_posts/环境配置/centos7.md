@@ -417,49 +417,6 @@ docker pull mysql
 sudo docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
 
-### 构建容器
-
-```shell
-# 根据DockerFile将当前目录构建镜像
-docker build -t 容器名称:v1.0 .
-# 根据docker-compose.yml
-docker-compose up -d
-```
-
-### 容器开机启动
-
-```shell
-# 没有使用到 --link的容器使用
-docker update --restart=always xxx
-# 取消启动
-docker update --restart=no xxx
-```
-
-### 导出容器信息
-
-```shell
-docker inspect name/id
-```
-
-### 修改容器 host
-
-```shell
-# 创建容器时添加
---add-host= lj.io:127.0.0.1
-```
-
-### 修改容器时区
-
-```shell
--v /etc/localtime:/etc/localtime
-```
-
-### 进入容器 shell
-
-```shell
-docker exec -it [name] /bin/bash
-```
-
 ## centos7 kms
 
 ```sh
