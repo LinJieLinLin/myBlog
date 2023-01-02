@@ -447,13 +447,17 @@ y y y n y
 set global validate_password_policy=0;
 set global validate_password_length=4;
 # 创建用户
-CREATE USER 'linj'@'localhost' IDENTIFIED BY '123456';
+CREATE USER 'linj'@'%' IDENTIFIED BY '123456';
 # del
-drop user 'linj'@'localhost';
+drop user 'linj'@'%';
 # 全部权限
-grant all on *.* to  'linj'@'localhost' identified by '123456';
-# test数据库全部权限
-grant all on test.* to  'linj'@'localhost' identified by '123456';
+grant all on *.* to  'linj'@'%' identified by '123456';
+# 设置test数据库全部权限
+grant all on test.* to  'linj'@'%' identified by '123456';
+# 修改远程登录
+update mysql.user set host='%' where user='linj';
+# 刷新权限
+flush privileges;
 ```
 
 ## php(arm64 android)
