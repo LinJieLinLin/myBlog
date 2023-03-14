@@ -64,6 +64,7 @@ navicat-keygen -text RegPrivateKey.pem
 - [jenkins](https://jenkins.io/)
 - [go](https://golang.org/dl/)
 - [bt 宝塔](https://www.bt.cn/)
+- [filezilla FTP 软件](https://filezilla-project.org/)
 - [win10 多用户远程(如果显示不支持 not supported，那就说明当前配置文件不支持这个版本的 termsrv.dll，上 RDPWrapper 的 GitHub 去 Issue 里面找,下载 rdpwrap.ini 替换 C:\Program Files\RDP Wrapper/rdpwrap.ini)](https://github.com/stascorp/rdpwrap)
 - [NoteBookFanControl 风扇转速管理（xiaoim 13'有效）](https://github.com/hirschmann/nbfc/releases)
 - [win10 更新策略配置](https://blog.csdn.net/u012318074/article/details/72026670)
@@ -136,6 +137,7 @@ w2 start
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clashX 代理](https://github.com/yichengchen/clashX)
 - [Homebrew 软件包管理](https://brew.sh/index_zh-cn)
+- [filezilla FTP 软件](https://filezilla-project.org/)
 
 ```shell
 brew install wget
