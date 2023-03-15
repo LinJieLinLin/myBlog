@@ -120,6 +120,7 @@ w2 start
 ## mac
 
 - [Snipaste 贴图截图](https://zh.snipaste.com/)
+- [keka 解压缩](https://www.keka.io/zh-cn/)
 - [switchHost](https://github.com/oldj/SwitchHosts/releases)
 - [utools](https://u.tools/)
 - [有道云笔记](http://note.youdao.com/)
