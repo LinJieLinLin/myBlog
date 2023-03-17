@@ -73,3 +73,17 @@ npm version patch
 npm version minor
 npm version major
 ```
+
+## 缓存目录设置
+
+```shell
+# npm/yarn/pnpm
+# get
+npm config get cache
+yarn cache dir
+npm config get store-dir
+# set
+npm config set cache ~/nodeCache/.npm
+yarn config set cache-folder ~/nodeCache/.yarn
+pnpm config set store-dir ~/nodeCache/.pnpm-store
+```
