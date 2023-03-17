@@ -12,7 +12,7 @@ tags:
 <!--more-->
 
 ## 常用命令
-  
+
 ```shell
 # 安装 docker
 curl -fsSL get.docker.com -o get-docker.sh
@@ -68,4 +68,24 @@ docker inspect name/id
 
 ```shell
 docker exec -it [name] /bin/bash
+```
+
+### 容器配置
+
+#### filebrowser 文件管理
+
+```json
+{
+  "port": 80,
+  "baseURL": "",
+  "address": "0.0.0.0",
+  "log": "stdout",
+  "database": "/database/filebrowser.db",
+  "root": "/srv"
+}
+```
+
+```shell
+docker pull filebrowser/filebrowser
+docker run  --name filebrowser   -v  /mnt/shared:/srv     -v /root/app/filebrowser/filebrowser.db:/database.db     -v /root/app/filebrowser/.filebrowser.json:/.filebrowser.json     -u $(id -u):$(id -g)     -p 9001:80     filebrowser/filebrowser
 ```
