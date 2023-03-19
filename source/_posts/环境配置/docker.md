@@ -89,3 +89,16 @@ docker exec -it [name] /bin/bash
 docker pull filebrowser/filebrowser
 docker run  --name filebrowser   -v  /mnt/shared:/srv     -v /root/app/filebrowser/filebrowser.db:/database.db     -v /root/app/filebrowser/.filebrowser.json:/.filebrowser.json     -u $(id -u):$(id -g)     -p 9001:80     filebrowser/filebrowser
 ```
+
+#### nginx
+
+```shell
+docker run \
+-p 80:80 \
+--name nginx \
+-v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \
+-v /home/nginx/conf/conf.d:/etc/nginx/conf.d \
+-v /home/nginx/log:/var/log/nginx \
+-v /home/nginx/html:/usr/share/nginx/html \
+-d nginx:latest
+```
