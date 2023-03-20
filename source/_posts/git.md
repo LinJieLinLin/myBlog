@@ -12,7 +12,7 @@ categories: [GIT]
 
 # [commit 规范](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
 
-```
+```sh
 feat：新功能
 fix：修补 bug
 docs：文档类变动
@@ -33,7 +33,7 @@ PubkeyAcceptedKeyTypes +ssh-rsa
 
 # 忽略变更
 
-```
+```sh
 git update-index --assume-unchanged fileName
 git update-index --no-assume-unchanged fileName
 ```
@@ -42,7 +42,7 @@ git update-index --no-assume-unchanged fileName
 
 > 交时自动地把行结束符 CRLF 转换成 LF，而在检出代码时把 LF 转换成 CRLF。
 
-```
+```sh
 git config --global core.autocrlf true
 ```
 
@@ -50,7 +50,7 @@ git config --global core.autocrlf true
 
 ## 命令行
 
-```
+```sh
 git config credential.helper store
 全局
 git config --global credential.helper store
@@ -58,7 +58,7 @@ git config --global credential.helper store
 
 ## 配置文件加上(.git/config)
 
-```
+```sh
 [credential]
 helper = store
 ```
@@ -67,19 +67,19 @@ helper = store
 
 ## 回滚到上一次 pull 成功的版本
 
-```
+```sh
 git reset --hard FETCH_HEAD
 ```
 
 ## 回滚到服务器版本
 
-```
+```sh
 git reset --hard origin/分支名
 ```
 
 # cherry-pick 把另一个本地分支的 commit 修改应用到当前分支。 (还是[tortoisegit](https://tortoisegit.org/)比较方便 )
 
-```
+```sh
 git cherry-pick <commit id>
 ```
 
@@ -87,29 +87,29 @@ git cherry-pick <commit id>
 
 ## 设置代理 http
 
-```
+```sh
 git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 ```
 
 ## 设置代理 (linux) ssh
 
-```
-~/.ssh/config 文件后面添加几行，没有可以新建一个
+```sh
+# ~/.ssh/config 文件后面添加几行，没有可以新建一个
 Host github.com
 ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
 ```
 
 ## 取消代理
 
-```
+```sh
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
 ## 新建代码库
 
-```
+```sh
 # 在当前目录新建一个Git代码库
 git init
 # 新建一个目录，将其初始化为Git代码库
@@ -120,7 +120,7 @@ git clone [url]
 
 ## Git 的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）
 
-```
+```sh
 # 显示当前的Git配置
 git config --list
 # 编辑Git配置文件
@@ -132,7 +132,7 @@ git config --global user.email "[email address]"
 
 ## 增加/删除文件
 
-```
+```sh
 # 添加指定文件到暂存区
 git add [file1] [file2] ...
 # 添加指定目录到暂存区，包括子目录
@@ -152,7 +152,9 @@ git mv [file-original] [file-renamed]
 
 ## 代码提交
 
-```
+```sh
+# 跳过hook校验
+git commit -m "Some comments" --no-verify
 # 提交暂存区到仓库区
 git commit -m "message"
 # 提交暂存区的指定文件到仓库区
@@ -170,7 +172,7 @@ git commit --amend [file1] [file2] ...
 
 ## 分支
 
-```
+```sh
 # 列出所有本地分支
 git branch
 # 列出所有远程分支
@@ -204,7 +206,7 @@ git branch -dr [remote/branch]
 
 ## 标签
 
-```
+```sh
 # 列出所有tag
 git tag
 # 新建一个tag在当前commit
@@ -227,7 +229,7 @@ git checkout -b [branch] [tag]
 
 ## 查看信息
 
-```
+```sh
 # 显示有变更的文件
 git status
 # 显示当前分支的版本历史
@@ -273,7 +275,7 @@ git reflog
 
 ## 远程同步
 
-```
+```sh
 # 下载远程仓库的所有变动
 git fetch [remote]
 # 显示所有远程仓库
@@ -294,7 +296,7 @@ git push [remote] --all
 
 ## 撤销
 
-```
+```sh
 # 恢复暂存区的指定文件到工作区
 git checkout [file]
 # 恢复某个commit的指定文件到暂存区和工作区

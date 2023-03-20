@@ -1,6 +1,6 @@
 ---
 title: node
-date: 2021-07-02 22:03:54
+date: 2022-04-13 20:05:34
 tags:
   - 配置
   - node
@@ -19,6 +19,37 @@ nvm root
 nvm install v14.15.3
 # 默认版本
 nvm use 14.15.3
+```
+
+## npm 配置
+
+```shell
+# puppeteer下载源
+npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
+# 指定npm源
+npm i nrm --registry=https://registry.npm.taobao.org
+# 获取配置文件路径
+npm config get userconfig
+# 修改package.json script配置
+npm set-script postinstall "npx husky install"
+# 配置npm init 默认属性
+npm set init.license "Apache-2.0"
+npm set init.author.email  "993353454@qq.com"
+npm set init.author.name  "linjielinlin"
+# 设置缓存
+npm config set cache  E:\cache\npm
+# 跳过脚本安装
+npm i puppeteer --ignore-scripts
+```
+
+## yarn 配置
+
+```sh
+# yarn配置位置
+**/.yarnrc
+# 设置缓存目录
+yarn cache clean
+yarn config set E:\cache\yarn
 ```
 
 ## [nvs](https://github.com/jasongin/nvs/releases)
@@ -54,6 +85,34 @@ nvs use 14.15.3
 npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.npm.taobao.org
 ```
 
+## [degit](https://www.npmjs.com/package/degit) 复制 git 仓库代码，非 clone 模式
+
+````sh
+# github
+degit user/repo
+degit github:user/repo
+degit git@github.com:user/repo
+degit https://github.com/user/repo
+# download from GitLab
+degit gitlab:user/repo
+degit git@gitlab.com:user/repo
+degit https://gitlab.com/user/repo
+
+# download from BitBucket
+degit bitbucket:user/repo
+degit git@bitbucket.org:user/repo
+degit https://bitbucket.org/user/repo
+
+# download from Sourcehut
+degit git.sr.ht/user/repo
+degit git@git.sr.ht:user/repo
+degit https://git.sr.ht/user/repo
+# branch
+degit user/repo#dev
+# release tag
+degit user/repo#v1.2.3
+# commit hash
+degit user/repo#1234abcd
 ## npm 配置
 
 ```shell
@@ -72,11 +131,11 @@ npm set init.author.name  "linjielinlin"
 npm version patch
 npm version minor
 npm version major
-```
+````
 
 ## 缓存目录设置
 
-```shell
+````shell
 # npm/yarn/pnpm
 # get
 npm config get cache
@@ -86,4 +145,11 @@ npm config get store-dir
 npm config set cache ~/nodeCache/.npm
 yarn config set cache-folder ~/nodeCache/.yarn
 pnpm config set store-dir ~/nodeCache/.pnpm-store
-```
+## 修改package.json
+
+```shell
+# 替换并保存文件
+sed -i -r 's/查找文本/替换文本/g' package.json
+# 查找并删除所在行(可多行)
+sed -i -r  '/"b"/d' package.json
+````

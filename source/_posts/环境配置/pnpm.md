@@ -54,3 +54,17 @@ pnpm i
 # 从 node_modules 和项目的 package.json 中移除包。
 pnpm rm foo
 ```
+
+## 指定store\registry
+
+```shell
+vim **/.npmrc
+registry=https://registry.npm.taobao.org/
+store-dir=E:\.pnpm-store\v3
+strict-ssl=false
+puppeteer_download_host=https://npm.taobao.org/mirrors
+home=https://npm.taobao.org
+init.license=Apache-2.0
+init.author.email=993353454@qq.com
+init.author.name=linjielinlin
+```

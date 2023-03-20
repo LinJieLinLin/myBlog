@@ -417,36 +417,59 @@ docker pull mysql
 sudo docker run -p 3306:3306 --name mysql -v /opt/docker_v/mysql/conf:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 ```
 
-### 容器开机启动
+## centos7 kms
 
-```shell
-# 没有使用到 --link的容器使用
-docker update --restart=always xxx
-# 取消启动
-docker update --restart=no xxx
+```sh
+#下载包
+wget https://github.com/Wind4/vlmcsd/releases/download/svn1111/binaries.tar.gz
+tar -zxvf binaries.tar.gz
+#进入路径
+cd binaries/Linux/intel/static
+#运行KMS服务
+chmod 777 vlmcsd-x64-musl-static
+./vlmcsd-x64-musl-static
+# 查看
+ps -ef | grep vlmcsd-x64-musl-static
+# 停用
+kill -9 [pid]
+firewall-cmd --zone=public --add-port=1688/tcp --permanent
+firewall-cmd --reload
 ```
 
-### 导出容器信息
+## centos7 kms2
 
-```shell
-docker inspect name/id
-```
-
-### 修改容器 host
-
-```shell
-# 创建容器时添加
---add-host= lj.io:127.0.0.1
-```
-
-### 修改容器时区
-
-```shell
--v /etc/localtime:/etc/localtime
-```
-
-### 进入容器 shell
-
-```shell
-docker exec -it [name] /bin/bash
+```sh
+#! /bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+clear
+start() {
+  yum install gcc git make -y
+  mkdir /usr/local/kms
+  cd /usr/local/kms
+  git clone https://github.com/Wind4/vlmcsd.git ./vlmcsdGit
+  cd vlmcsdGit
+  make
+  cd bin
+  mv vlmcsd /usr/local/kms/vlmcsd
+  cd /usr/local/kms/
+  rm -rf ./vlmcsdGit/
+  echo "Succeeded."
+  echo "The executable file lies in /usr/local/kms/"
+  echo "https://github.com/Wind4/vlmcsd"
+}
+echo "This script will automatically download and compile KMS Server program for you."
+echo "For more information, please visit https://github.com/Wind4/vlmcsd"
+read -p "y/n:" choice
+case $choice in
+"y")
+  start
+  ;;
+"n")
+  exit 0
+  ;;
+*)
+  echo "Please enter y or n!"
+  ;;
+esac
 ```

@@ -10,6 +10,20 @@ categories: [web]
 
 <!--more-->
 
+## 判断元素是否可见
+
+```js
+// 如果元素为隐藏的（该元素或其祖先元素的 style.display 为 "none"），或者该元素的 style.position 被设为 "fixed"，则该属性返回 null。
+// 该方法用来判断当前元素(非fixed)是否被隐藏，包括通过设置父元素为display: none以及自己本身为none的情况。
+if(document.querySelectorAll('.test')[0].offsetParent === null) {
+  // 元素不可见
+} else {
+  // 元素可见
+}
+
+```
+
+```js
 ## 将元素垂直居中
 
 1. CSS3 transform:

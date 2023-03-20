@@ -8,6 +8,22 @@ tags:
 {% blockquote %} nginx配置 {% endblockquote %}
 
 <!--more-->
+## web安全头, [X-Frame-Options](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options),[X-Content-Type-Options](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Content-Type-Options),[Referrer-Policy](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)
+
+```conf
+# 默认访问https协议
+add_header Strict-Transport-Security "max-age=31536000";
+# 禁止iframe引用
+add_header X-Frame-Options "DENY" always;
+# 禁用了客户端的 MIME 类型嗅探行为
+add_header X-Content-Type-Options "nosniff" always;
+# 禁用/启用浏览器api
+add_header Permissions-Policy "fullscreen=(self), geolocation=(self)";
+# 对于同源的请求，会发送完整的URL作为引用地址，但是对于非同源请求仅发送文件的源。
+add_header Referrer-Policy origin-when-cross-origin;
+# csp 已经存在的一个网站，用了太多内联代码修复问题，而且想确保资源只从 https 加载，并且禁止插件：
+add_header Content-Security-Policy "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'";
+```
 
 ## 基本配置
 
