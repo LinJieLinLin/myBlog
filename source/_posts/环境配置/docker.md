@@ -70,25 +70,16 @@ docker inspect name/id
 docker exec -it [name] /bin/bash
 ```
 
+### 复制容器数据
+
+```sh
+# 容器到本机
+docker cp  name:/www /tmp/
+# 本机到容器
+docker cp  /tmp/ name:/www
+```
+
 ### 容器配置
-
-#### filebrowser 文件管理
-
-```json
-{
-  "port": 80,
-  "baseURL": "",
-  "address": "0.0.0.0",
-  "log": "stdout",
-  "database": "/database/filebrowser.db",
-  "root": "/srv"
-}
-```
-
-```shell
-docker pull filebrowser/filebrowser
-docker run  --name filebrowser   -v  /mnt/shared:/srv     -v /root/app/filebrowser/filebrowser.db:/database.db     -v /root/app/filebrowser/.filebrowser.json:/.filebrowser.json     -u $(id -u):$(id -g)     -p 9001:80     filebrowser/filebrowser
-```
 
 #### nginx
 
@@ -101,4 +92,13 @@ docker run \
 -v /home/nginx/log:/var/log/nginx \
 -v /home/nginx/html:/usr/share/nginx/html \
 -d nginx:latest
+```
+
+#### alist
+
+```sh
+docker run -d --restart=always -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
+
+# 查看密码
+docker exec -it alist ./alist admin
 ```
