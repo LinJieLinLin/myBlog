@@ -158,3 +158,43 @@ du -h --max-depth=1
 #  yum install ntp
 ntpdate cn.pool.ntp.org
 ```
+
+## SSL
+
+### 根 CA 证书+域名证书
+
+```sh
+# 创建根密钥
+openssl ecparam -out root.key -name prime256v1 -genkey
+# 生成证书签名请求 (CSR)
+openssl req -new -sha256 -key root.key -out root.csr
+# 根证书
+openssl x509 -req -sha256 -days 3650 -in root.csr -signkey root.key -out root.crt
+# 服务器证书
+# 服务器证书的 CN（公用名）必须与颁发者的域不同。 例如，在本例中，颁发者的 CN 是 root.com，服务器证书的 CN 是 lj.io
+openssl ecparam -out domain.key -name prime256v1 -genkey
+openssl req -new -sha256 -key domain.key -out domain.csr
+openssl x509 -req -in domain.csr -CA  root.crt -CAkey root.key -CAcreateserial -out domain.crt -days 3650 -sha256
+# 验证
+openssl x509 -in domain.crt -text -noout
+## 转换
+# PEM(crt) to DER
+openssl x509 \
+       -in domain.crt \
+       -outform der -out domain.der
+# DER to PEM(crt)
+openssl x509 \
+       -inform der -in domain.der \
+       -out domainDer.crt
+
+# OpenSSL 验证配置(浏览器访问)
+openssl s_client -connect localhost:443 -servername lj.io -showcerts
+```
+
+### 自签名证书
+
+```sh
+openssl genrsa -out domain.key 4096
+openssl req -new -key domain.key -out domain.csr
+openssl x509 -req -days 3650 -in domain.csr -signkey domain.key -out domain.crt
+```
