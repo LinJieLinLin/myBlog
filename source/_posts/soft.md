@@ -138,7 +138,6 @@ w2 start
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clashX 代理](https://github.com/yichengchen/clashX)
 - [Homebrew 软件包管理](https://brew.sh/index_zh-cn)
-- [filezilla FTP 软件](https://filezilla-project.org/)
 
 ```shell
 brew install wget
@@ -149,9 +148,14 @@ brew search # 列出所有可以被安装的软件
 brew search name # 查找所有和 name相关的应用
 brew install name # 下载安装软件
 brew uninstall name # 卸载软件
-brew info app # 列出应用的信息
+brew info name # 列出应用的信息
 brew list # 列出本机按照过的软件列表
 brew cleanup # 清除下载的缓存以及各种链接信息
+brew update # 更新brew本身
+brew upgrade # 更新所有已安装的软件
 ```
+
+- [filezilla FTP 软件](https://filezilla-project.org/)
+- [Karabiner-Elements 按键映射](https://github.com/pqrs-org/Karabiner-Elements)
 
 - [link](https://lj4.top/)
