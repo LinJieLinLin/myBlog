@@ -16,6 +16,8 @@ tags:
 chmod +x ./test.sh
 #执行脚本
 ./test.sh
+# 修改默认终端
+chsh -s /bin/zsh
 ```
 
 ## 变量
