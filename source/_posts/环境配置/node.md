@@ -68,7 +68,7 @@ yarn config set E:\cache\yarn
 ```shell
 # 添加源
 nvs remote taobao https://npm.taobao.org/mirrors/node/
-nvs remote default taotao
+nvs remote default taobao
 # for win
 nvs linkToSystem true
 # 安装最新稳定版
