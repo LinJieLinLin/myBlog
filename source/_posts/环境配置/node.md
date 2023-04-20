@@ -135,7 +135,7 @@ npm version major
 
 ## 缓存目录设置
 
-````shell
+```shell
 # npm/yarn/pnpm
 # get
 npm config get cache
@@ -146,10 +146,15 @@ npm config set cache ~/nodeCache/.npm
 yarn config set cache-folder ~/nodeCache/.yarn
 pnpm config set store-dir ~/nodeCache/.pnpm-store
 ## 修改package.json
-
-```shell
 # 替换并保存文件
 sed -i -r 's/查找文本/替换文本/g' package.json
 # 查找并删除所在行(可多行)
 sed -i -r  '/"b"/d' package.json
-````
+```
+
+## npm ele cdn
+
+```sh
+# npm包cdn链接
+https://npm.elemecdn.com/lj-utils/package.json
+```
