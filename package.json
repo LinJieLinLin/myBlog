@@ -8,6 +8,7 @@
     "deploy": "hexo deploy",
     "update": "yarn upgrade-interactive --latest",
     "postinstall": "npx patch-package",
+    "patches":"npx patch-package hexo-theme-ayer",
     "server": "hexo server"
   },
   "hexo": {
@@ -24,6 +25,6 @@
     "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-ayer": "1.9.5"
+    "hexo-theme-ayer": "1.9.6"
   }
 }

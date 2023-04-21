@@ -768,10 +768,10 @@ hexo-server@^3.0.0:
     picocolors "^1.0.0"
     serve-static "^1.14.1"
 
-hexo-theme-ayer@1.9.5:
-  version "1.9.5"
-  resolved "https://registry.npmmirror.com/hexo-theme-ayer/-/hexo-theme-ayer-1.9.5.tgz#70fdde4acdd045ac1a5d78198afea83a0a495887"
-  integrity sha512-OSDpgVfEcEgGbvXVSTEYAtn9r4L1wUf+0oDcdaO4CYmiF3TGa6ioky2qLGcX+dAAsY3ujONSr7ayKA49yV+AnA==
+hexo-theme-ayer@1.9.6:
+  version "1.9.6"
+  resolved "https://registry.npmmirror.com/hexo-theme-ayer/-/hexo-theme-ayer-1.9.6.tgz#97a07725b06a03acb9a01d2341bad9ac3588ac92"
+  integrity sha512-N/qmvB8041QcaiyVJcpKTDPc8IGHjj0u/D+dukGolqmFnC2jSM4qI9c2miLCku0Q0HZwfN4W+OeBfsqSIilEQw==
 
 hexo-util@^2.0.0, hexo-util@^2.4.0, hexo-util@^2.5.0:
   version "2.6.0"
