@@ -10,17 +10,6 @@ tags:
 
 <!--more-->
 
-## [nvm](https://github.com/coreybutler/nvm-windows)
-
-```shell
-# 安装目录
-nvm root
-# 安装版本
-nvm install v14.15.3
-# 默认版本
-nvm use 14.15.3
-```
-
 ## npm 配置
 
 ```shell
@@ -85,6 +74,17 @@ nvs use 14.15.3
 npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.npm.taobao.org
 ```
 
+## [nvm](https://github.com/coreybutler/nvm-windows)
+
+```shell
+# 安装目录
+nvm root
+# 安装版本
+nvm install v14.15.3
+# 默认版本
+nvm use 14.15.3
+```
+
 ## [degit](https://www.npmjs.com/package/degit) 复制 git 仓库代码，非 clone 模式
 
 ````sh
@@ -136,10 +136,14 @@ npm version major
 ## 缓存目录设置
 
 ```shell
-# npm/yarn/pnpm
+# 默认位置
+# npm: /root/.npm
+# yarn: /usr/local/share/.cache/yarn
+# pnpm: /root/.pnpm-store/v3
 # get
 npm config get cache
 yarn cache dir
+yarn config get cache-folder
 npm config get store-dir
 # set
 npm config set cache ~/nodeCache/.npm
