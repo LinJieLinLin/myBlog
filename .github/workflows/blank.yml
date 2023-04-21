@@ -26,14 +26,15 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: '16.x'
+          cache: 'yarn'
       - name: Setup Hexo Dependencies
         run: |
-          npm install
+          yarn
       - name: Deploy Hexo
         run: |
-          npm run postinstall
-          npm run clean
-          npm run build
+          yarn postinstall
+          yarn clean
+          yarn build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
