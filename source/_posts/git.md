@@ -22,16 +22,26 @@ test：增加测试
 chore：构建过程或辅助工具的变动
 ```
 
-# git ssh pull error: .ssh 报错 Their offer: ssh-rsa fatal: Could not read from remote repository
+## 拉取最后一次提交
 
-```shell
-# .ssh目录添加config文件
-Host *
-HostkeyAlgorithms +ssh-rsa
-PubkeyAcceptedKeyTypes +ssh-rsa
+```sh
+git clone --depth 1 git@github.com:LinJieLinLin/utils.git
+# 更新历史版本
+git pull --unshallow
 ```
 
-# 忽略变更
+## 新版本 git 使用旧 ssh_key
+
+```shell
+# fix: git ssh pull error: .ssh 报错 Their offer: ssh-rsa fatal: Could not read from remote repository
+# 新版本git默认禁用了ssh-rsa
+# .ssh目录添加config文件
+Host *
+  HostkeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
+```
+
+## 忽略变更
 
 ```sh
 git update-index --assume-unchanged fileName
