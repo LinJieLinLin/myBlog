@@ -30,6 +30,17 @@ git clone --depth 1 git@github.com:LinJieLinLin/utils.git
 git pull --unshallow
 ```
 
+## git CRLF
+
+```sh
+# 提交时转换为LF，检出时转换为CRLF
+git config --global core.autocrlf true
+# 提交时转换为LF，检出时不转换
+git config --global core.autocrlf input
+# 提交检出均不转换
+git config --global core.autocrlf false
+```
+
 ## 新版本 git 使用旧 ssh_key
 
 ```shell
