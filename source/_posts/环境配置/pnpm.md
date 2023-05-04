@@ -15,14 +15,14 @@ tags:
 
 ## workspace,一个 workspace 的根目录下必须有 pnpm-workspace.yaml 文件
 
-``` yaml
+```yaml
 packages:
   - 'packages/**'
 ```
 
 ## pnpm link
 
-``` shell
+```shell
 # 在新项目下引用本地包
 pnpm link <要引用包的path>
 # 取消引用
@@ -31,7 +31,7 @@ pnpm unlink <要引用包的path>
 
 ## 更新包
 
-``` shell
+```shell
 # 遵循 package.json 指定的范围更新所有的依赖项
 pnpm up
 # 更新所有依赖项，此操作会忽略 package.json 指定的范围 慎用
@@ -45,7 +45,7 @@ pnpm up "@babel/*"
 ## 安装所有子包依赖
 
 ```shell
-pnpm i 
+pnpm i
 ```
 
 ## 删除依赖
@@ -55,15 +55,15 @@ pnpm i
 pnpm rm foo
 ```
 
-## 指定store\registry
+## 指定 store\registry
 
 ```shell
 vim **/.npmrc
-registry=https://registry.npm.taobao.org/
+registry=https://registry.registry.npmmirror.com/
 store-dir=E:\.pnpm-store\v3
 strict-ssl=false
-puppeteer_download_host=https://npm.taobao.org/mirrors
-home=https://npm.taobao.org
+puppeteer_download_host=https://registry.npmmirror.com/mirrors
+home=https://registry.npmmirror.com
 init.license=Apache-2.0
 init.author.email=993353454@qq.com
 init.author.name=linjielinlin

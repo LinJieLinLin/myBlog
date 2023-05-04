@@ -14,9 +14,9 @@ tags:
 
 ```shell
 # puppeteer下载源
-npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
+npm config set puppeteer_download_host=https://registry.npmmirror.com/mirrors
 # 指定npm源
-npm i nrm --registry=https://registry.npm.taobao.org
+npm i nrm --registry=https://registry.registry.npmmirror.com
 # 获取配置文件路径
 npm config get userconfig
 # 修改package.json script配置
@@ -56,7 +56,7 @@ yarn config set E:\cache\yarn
 
 ```shell
 # 添加源
-nvs remote taobao https://npm.taobao.org/mirrors/node/
+nvs remote taobao https://registry.npmmirror.com/mirrors/node/
 nvs remote default taobao
 # for win
 nvs linkToSystem true
@@ -71,7 +71,7 @@ nvs which
 # 临时使用指定版本，当前窗口生效
 nvs use 14.15.3
 # npm 必装
-npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.npm.taobao.org
+npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.registry.npmmirror.com
 ```
 
 ## [nvm](https://github.com/coreybutler/nvm-windows)
@@ -117,9 +117,9 @@ degit user/repo#1234abcd
 
 ```shell
 # puppeteer下载源
-npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
+npm config set puppeteer_download_host=https://registry.npmmirror.com/mirrors
 # 指定npm源
-npm i nrm --registry=https://registry.npm.taobao.org
+npm i nrm --registry=https://registry.registry.npmmirror.com
 nrm use taobao
 # 修改package.json script配置
 npm set-script postinstall "npx husky install"
@@ -161,4 +161,15 @@ sed -i -r  '/"b"/d' package.json
 ```sh
 # npm包cdn链接
 https://npm.elemecdn.com/lj-utils/package.json
+```
+
+## node-sass
+
+```
+# windows
+npm config set sass-binary-site=http://registry.npmmirror.com/mirrors/node-sass
+手动指定
+npm i node-sass --sass_binary_site=https://registry.npmmirror.com/mirrors/node-sass/
+yarn add node-sass --sass_binary_site=https://registry.npmmirror.com/mirrors/node-sass/
+npm i -D node-sass --sass_binary_path=D:\files\win32-x64-72_binding.node
 ```
