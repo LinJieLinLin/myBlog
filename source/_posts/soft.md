@@ -134,9 +134,10 @@ w2 start
 - [altTab 切换应用](https://lj4.top/)
 - [appGrid 窗口整理](https://github.com/mjolnirapp/AppGrid)
 - [maccy 剪贴板工具](https://github.com/p0deje/Maccy)
-- [cheatSheet 快捷键显示](https://cheatsheet-mac.en.softonic.com/mac?ex=DINS-635.1)
+- [cheatSheet 快捷键显示-禁止联网](https://cheatsheet-mac.en.softonic.com/mac?ex=DINS-635.1)
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clashX 代理](https://github.com/yichengchen/clashX)
+- [filezilla FTP 软件](https://filezilla-project.org/)
 - [Homebrew 软件包管理](https://brew.sh/index_zh-cn)
 
 ```shell
@@ -155,7 +156,9 @@ brew update # 更新brew本身
 brew upgrade # 更新所有已安装的软件
 ```
 
-- [filezilla FTP 软件](https://filezilla-project.org/)
+## mac extra
+
 - [Karabiner-Elements 按键映射](https://github.com/pqrs-org/Karabiner-Elements)
+- [LuLu 防火墙](https://github.com/objective-see/LuLu)
 
 - [link](https://lj4.top/)
