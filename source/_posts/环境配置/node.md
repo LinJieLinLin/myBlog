@@ -120,6 +120,8 @@ degit user/repo#1234abcd
 npm config set puppeteer_download_host=https://registry.npmmirror.com/mirrors
 # 指定npm源
 npm i nrm --registry=https://registry.registry.npmmirror.com
+yarn config get registry
+yarn config set registry https://registry.registry.npmmirror.com
 nrm use taobao
 # 修改package.json script配置
 npm set-script postinstall "npx husky install"
