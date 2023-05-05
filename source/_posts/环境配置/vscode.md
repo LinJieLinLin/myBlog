@@ -7,6 +7,7 @@ tags:
 ---
 
 {% blockquote %} vsCode 相关 {% endblockquote %}
+
 <!--more-->
 
 ## .vscode
@@ -79,6 +80,7 @@ tags:
   "context": "dist/本地目录",
   "ignore": [".vscode", ".git", ".DS_Store", "node_modules"],
   "remotePath": "目标目录",
+  "privateKeyPath": "id_rsa",
   // 多目录处理 SFTP:Set profiles
   "profiles": {
     "a": {
@@ -87,15 +89,13 @@ tags:
       "port": 22,
       "username": "用户名",
       "host": "host",
-      "password": "",
-      "context": "dist/本地目录",
+      "context": "./dist",
       "ignore": [".vscode", ".git", ".DS_Store", "node_modules"],
-      "remotePath": "目标目录",
+      "remotePath": "目标目录"
     },
     "b": {
       "remotePath": "目标目录"
-    },
+    }
   }
 }
-
 ```
