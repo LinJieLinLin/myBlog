@@ -117,6 +117,7 @@ npm i --registry=https://registry.registry.npmmirror.com
 
 ```shell
 npm install whistle -g --registry=https://registry.registry.npmmirror.com
+w2 i whistle.inspect
 w2 start
 ```
 
