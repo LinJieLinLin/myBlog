@@ -130,14 +130,12 @@ w2 start
 - [有道云笔记](http://note.youdao.com/)
 - [nvs](https://github.com/jasongin/nvs/tags)--[使用](/myBlog/2021/07/03/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/node/)--[详细说明](https://zhuanlan.zhihu.com/p/369367869)
 - [vscode](https://code.visualstudio.com/) 加速域名： https://vscode.cdn.azure.cn/
-- [git](https://git-scm.com/downloads)
 - [微云](https://www.weiyun.com/download.html)
 - [微信](https://pc.weixin.qq.com/)
 - [TIM](https://office.qq.com/download.html)
 - [FDM 5bt 下载](http://www.freedownloadmanager.org/landing5.htm)
 - [altTab 切换应用](https://github.com/lwouis/alt-tab-macos)
 - [appGrid 窗口整理](https://github.com/mjolnirapp/AppGrid)
-- [maccy 剪贴板工具](https://github.com/p0deje/Maccy)
 - [cheatSheet 快捷键显示-禁止联网](https://cheatsheet-mac.en.softonic.com/mac?ex=DINS-635.1)
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clashX 代理](https://github.com/yichengchen/clashX)
@@ -158,6 +156,9 @@ brew list # 列出本机按照过的软件列表
 brew cleanup # 清除下载的缓存以及各种链接信息
 brew update # 更新brew本身
 brew upgrade # 更新所有已安装的软件
+
+- [git](https://git-scm.com/downloads)
+- [maccy 剪贴板工具](https://github.com/p0deje/Maccy)
 ```
 
 ## mac extra
