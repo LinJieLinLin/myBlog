@@ -140,9 +140,10 @@ w2 start
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clashX 代理](https://github.com/yichengchen/clashX)
 - [filezilla FTP 软件](https://filezilla-project.org/)
-- [Homebrew 软件包管理](https://brew.sh/index_zh-cn)
+- [Homebrew 软件包管理，安装完自动带 git](https://brew.sh/index_zh-cn)
 
 ```shell
+# 首次安装要复制最后安装提示的代码
 brew install wget
 brew install autojump
 brew cask install cheatsheet
@@ -157,8 +158,13 @@ brew cleanup # 清除下载的缓存以及各种链接信息
 brew update # 更新brew本身
 brew upgrade # 更新所有已安装的软件
 
-- [git](https://git-scm.com/downloads)
-- [maccy 剪贴板工具](https://github.com/p0deje/Maccy)
+git config --global credential.helper store
+git config --global user.name LinJieLinLin
+git config --global user.email 993353454@qq.com
+
+# command + shift + p ,输入shell（选择"install code command in PATH"）,打开终端 进入需要用IDE打开的文件夹 输入"code ."
+# - [maccy 剪贴板工具](https://github.com/p0deje/Maccy)
+brew install maccy
 ```
 
 ## mac extra
