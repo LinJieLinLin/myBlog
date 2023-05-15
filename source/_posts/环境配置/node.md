@@ -16,7 +16,8 @@ tags:
 # puppeteer下载源
 npm config set puppeteer_download_host=https://registry.npmmirror.com/mirrors
 # 指定npm源
-npm i nrm --registry=https://registry.registry.npmmirror.com
+npm i nrm --registry=https://registry.npmmirror.com
+npm config set registry https://registry.npmmirror.com
 # 获取配置文件路径
 npm config get userconfig
 # 修改package.json script配置
@@ -39,6 +40,7 @@ npm i puppeteer --ignore-scripts
 # 设置缓存目录
 yarn cache clean
 yarn config set E:\cache\yarn
+yarn config set registry https://registry.npmmirror.com
 ```
 
 ## [nvs](https://github.com/jasongin/nvs/releases)
@@ -71,7 +73,7 @@ nvs which
 # 临时使用指定版本，当前窗口生效
 nvs use 14.15.3
 # npm 必装
-npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.registry.npmmirror.com
+npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.npmmirror.com
 ```
 
 ## [nvm](https://github.com/coreybutler/nvm-windows)
@@ -119,9 +121,8 @@ degit user/repo#1234abcd
 # puppeteer下载源
 npm config set puppeteer_download_host=https://registry.npmmirror.com/mirrors
 # 指定npm源
-npm i nrm --registry=https://registry.registry.npmmirror.com
+npm i nrm --registry=https://registry.npmmirror.com
 yarn config get registry
-yarn config set registry https://registry.registry.npmmirror.com
 nrm use taobao
 # 修改package.json script配置
 npm set-script postinstall "npx husky install"

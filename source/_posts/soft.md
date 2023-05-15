@@ -104,19 +104,19 @@ ubuntu1804 config --default-user root
 ```shell
 # init
 corepack enable
-npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.registry.npmmirror.com
+npm i nrm  yrm eslint degit prettierrc stylelint   http-server cross-env  -g --registry=https://registry.npmmirror.com
 nrm use taobao
 
 # 下载github包(不含.git),eg: degit user/repo,degit https://github.com/user/repo
 npm i degit -g
 
-npm i --registry=https://registry.registry.npmmirror.com
+npm i --registry=https://registry.npmmirror.com
 ```
 
 ### [whistle Node 实现的跨平台 web 调试代理工具](https://wproxy.org/whistle/)
 
 ```shell
-npm install whistle -g --registry=https://registry.registry.npmmirror.com
+npm install whistle -g --registry=https://registry.npmmirror.com
 w2 i whistle.inspect
 w2 start
 ```

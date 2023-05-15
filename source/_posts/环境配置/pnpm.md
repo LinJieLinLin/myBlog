@@ -59,7 +59,7 @@ pnpm rm foo
 
 ```shell
 vim **/.npmrc
-registry=https://registry.registry.npmmirror.com/
+registry=https://registry.npmmirror.com/
 store-dir=E:\.pnpm-store\v3
 strict-ssl=false
 puppeteer_download_host=https://registry.npmmirror.com/mirrors
