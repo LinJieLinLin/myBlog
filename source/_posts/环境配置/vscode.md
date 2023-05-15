@@ -45,7 +45,27 @@ tags:
       "type": "pwa-chrome",
       "url": "http://localhost:8080",
       "webRoot": "${workspaceFolder}"
-    },
+    }
+  ]
+}
+```
+
+#### umi
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///src/*": "${webRoot}/*",
+        "webpack:///*": "*",
+        "src:///src/*": "${webRoot}/*"
+      }
+    }
+  ]
 }
 ```
 
