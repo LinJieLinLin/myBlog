@@ -171,5 +171,6 @@ brew install maccy
 
 - [Karabiner-Elements 按键映射](https://github.com/pqrs-org/Karabiner-Elements)
 - [LuLu 防火墙](https://github.com/objective-see/LuLu)
+- [appcleaner 卸载工具](http://freemacsoft.net/appcleaner/)
 
 - [link](https://lj4.top/)
