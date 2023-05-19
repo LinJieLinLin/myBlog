@@ -140,6 +140,7 @@ w2 start
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clashX 代理](https://github.com/yichengchen/clashX)
 - [filezilla FTP 软件](https://filezilla-project.org/)
+- [ntfstool-加载 NTFS](https://github.com/ntfstool/ntfstool/releases)
 - [Homebrew 软件包管理，安装完自动带 git](https://brew.sh/index_zh-cn)
 
 ```shell
