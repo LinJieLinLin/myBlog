@@ -142,6 +142,8 @@ w2 start
 - [filezilla FTP 软件](https://filezilla-project.org/)
 - [ntfstool-加载 NTFS](https://github.com/ntfstool/ntfstool/releases)
 - [tiles-窗口管理](https://www.sempliva.com/tiles/index.html#home)
+- [alist-网盘](https://alist.nn.ci/zh/guide/install/docker.html)
+- [BetterDisplay-mac 外接显示器开启 hidpi](https://github.com/waydabber/BetterDisplay/releases)
 - [Homebrew 软件包管理，安装完自动带 git](https://brew.sh/index_zh-cn)
 
 ```shell
