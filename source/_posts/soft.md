@@ -141,9 +141,11 @@ w2 start
 - [clashX 代理](https://github.com/yichengchen/clashX)
 - [filezilla FTP 软件](https://filezilla-project.org/)
 - [ntfstool-加载 NTFS](https://github.com/ntfstool/ntfstool/releases)
-- [tiles-窗口管理](https://www.sempliva.com/tiles/index.html#home)
+- [tiles-窗口管理移到边框触发](https://www.sempliva.com/tiles/index.html#home)
 - [alist-网盘](https://alist.nn.ci/zh/guide/install/docker.html)
 - [BetterDisplay-mac 外接显示器开启 hidpi](https://github.com/waydabber/BetterDisplay/releases)
+- [Hack 字体](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/Hack.zip)
+- [PlayCover mac 运行 ipa](https://github.com/PlayCover/PlayCover/releases)
 - [Homebrew 软件包管理，安装完自动带 git](https://brew.sh/index_zh-cn)
 
 ```shell
