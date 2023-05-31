@@ -154,7 +154,7 @@ w2 start
 brew install wget
 # 可选 长按command 显示快捷键
 brew cask install cheatsheet
-# 搭配 https://github.com/Aloxaf/fzf-tab#configure 使用
+# 搭配 https://github.com/Aloxaf/fzf-tab#configure 使用,按tab显示更多命令
 brew install fzf
 # brew的常用命令
 brew search # 列出所有可以被安装的软件
