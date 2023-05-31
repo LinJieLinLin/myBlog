@@ -41,6 +41,9 @@ npm i puppeteer --ignore-scripts
 yarn cache clean
 yarn config set E:\cache\yarn
 yarn config set registry https://registry.npmmirror.com
+yarn config set sass_binary_site https://registry.npmmirror.com/mirrors/node-sass/
+# 跳过脚本安装
+yarn --ignore-scripts
 ```
 
 ## [nvs](https://github.com/jasongin/nvs/releases)
@@ -168,7 +171,7 @@ https://npm.elemecdn.com/lj-utils/package.json
 
 ## node-sass
 
-```
+```sh
 # windows
 npm config set sass-binary-site=http://registry.npmmirror.com/mirrors/node-sass
 手动指定

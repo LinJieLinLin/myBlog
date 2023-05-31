@@ -150,9 +150,12 @@ w2 start
 
 ```shell
 # 首次安装要复制最后安装提示的代码
+# 可选 默认已有curl
 brew install wget
-brew install autojump
+# 可选 长按command 显示快捷键
 brew cask install cheatsheet
+# 搭配 https://github.com/Aloxaf/fzf-tab#configure 使用
+brew install fzf
 # brew的常用命令
 brew search # 列出所有可以被安装的软件
 brew search name # 查找所有和 name相关的应用
@@ -180,3 +183,7 @@ brew install maccy
 - [appcleaner 卸载工具](http://freemacsoft.net/appcleaner/)
 
 - [link](https://lj4.top/)
+
+## mac 快捷键
+
+> finder: command + shift + . 显示隐藏文件
