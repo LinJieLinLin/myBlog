@@ -182,6 +182,7 @@ brew install maccy
 - [LuLu 防火墙](https://github.com/objective-see/LuLu)
 - [appcleaner 卸载工具](http://freemacsoft.net/appcleaner/)
 
+- [win11Arm](https://blog.csdn.net/weixin_52799373/article/details/129658881)
 - [link](https://lj4.top/)
 
 ## mac 快捷键

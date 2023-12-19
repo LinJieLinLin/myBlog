@@ -200,3 +200,10 @@ openssl genrsa -out domain.key 4096
 openssl req -new -key domain.key -out domain.csr
 openssl x509 -req -days 3650 -in domain.csr -signkey domain.key -out domain.crt
 ```
+
+### curl 批量下载
+
+```sh
+# 批量下载imgList.txt内的每一行链接
+xargs -n 1 curl -O < imgList.txt
+```
