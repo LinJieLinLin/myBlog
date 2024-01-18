@@ -106,19 +106,31 @@ git cherry-pick <commit id>
 
 # 基本命令
 
-## 设置代理 http
+## 设置代理
 
 ```sh
+# socks5
 git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
+# http
+git config --global http.proxy 'http://127.0.0.1:7777'
+git config --global https.proxy 'http://127.0.0.1:7777'
 ```
 
 ## 设置代理 (linux) ssh
 
 ```sh
 # ~/.ssh/config 文件后面添加几行，没有可以新建一个
+# ssh socks5
 Host github.com
-ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+  Hostname ssh.github.com
+  Port 443
+  ProxyCommand nc -X 5 -x 127.0.0.1:1080 %h %p
+# ssh http代理
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  ProxyCommand nc -X connect -x  172.17.144.1:7777 %h %p
 ```
 
 ## 取消代理
@@ -147,8 +159,8 @@ git config --list
 # 编辑Git配置文件
 git config -e --global
 # 设置提交代码时的用户信息
-git config --global user.name "[name]"
-git config --global user.email "[email address]"
+git config --global user.name LinJieLinLin
+git config --global user.email 993353454@qq.com
 ```
 
 ## 增加/删除文件
