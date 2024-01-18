@@ -325,6 +325,8 @@ git push [remote] [branch]
 git push [remote] --force
 # 推送所有分支到远程仓库
 git push [remote] --all
+# 修改远程仓库的url
+git remote set-url origin https/ssh链接
 ```
 
 ## 撤销
