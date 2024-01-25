@@ -133,6 +133,16 @@ Host github.com
   ProxyCommand nc -X connect -x  172.17.144.1:7777 %h %p
 ```
 
+## 设置代理 win ssh
+
+```sh
+# ssh http代理
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  ProxyCommand connect -H  127.0.0.1:7777 %h %p
+```
+
 ## 取消代理
 
 ```sh
