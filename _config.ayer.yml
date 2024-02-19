@@ -187,7 +187,7 @@ friends_link:
     url: https://linjielinlin.github.io/utils/lj-utils/index.html
     img: /images/avatar.png
   aboutMe:
-    url: ../about.html
+    url: /about.html
     img: /images/avatar.png
   Ayer主题: #网站名称
     #网站地址
