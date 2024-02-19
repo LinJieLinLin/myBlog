@@ -186,6 +186,9 @@ friends_link:
   lj-utils:
     url: https://linjielinlin.github.io/utils/lj-utils/index.html
     img: /images/avatar.png
+  aboutMe:
+    url: https://lj4.top/about.html
+    img: /images/avatar.png
   Ayer主题: #网站名称
     #网站地址
     url: https://github.com/Shen-Yu/hexo-theme-ayer
