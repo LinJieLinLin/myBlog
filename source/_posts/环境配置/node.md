@@ -23,9 +23,9 @@ npm config get userconfig
 # 修改package.json script配置
 npm set-script postinstall "npx husky install"
 # 配置npm init 默认属性
-npm set init.license "Apache-2.0"
-npm set init.author.email  "993353454@qq.com"
-npm set init.author.name  "linjielinlin"
+npm set init-license "Apache-2.0"
+npm set init-author-email  "993353454@qq.com"
+npm set init-author-name  "linjielinlin"
 # 设置缓存
 npm config set cache  E:\cache\npm
 # 跳过脚本安装
@@ -61,7 +61,7 @@ yarn --ignore-scripts
 
 ```shell
 # 添加源
-nvs remote taobao https://registry.npmmirror.com/mirrors/node/
+nvs remote taobao https://cdn.npmmirror.com/binaries/node/
 nvs remote default taobao
 # for win
 nvs linkToSystem true
