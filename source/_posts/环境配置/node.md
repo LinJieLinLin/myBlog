@@ -46,6 +46,15 @@ yarn config set sass_binary_site https://registry.npmmirror.com/mirrors/node-sas
 yarn --ignore-scripts
 ```
 
+## pnpm 配置
+
+```sh
+#启用corepack
+corepack enable
+# 安装pnpm指定版本
+corepack prepare pnpm@8.3.1 --activate
+```
+
 ## [nvs](https://github.com/jasongin/nvs/releases)
 
 ### 修改默认源 vim ./settings.json

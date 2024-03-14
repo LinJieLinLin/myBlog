@@ -13,6 +13,14 @@ tags:
 
 # [pnpm](https://pnpm.io/zh/)
 
+## 启用
+
+```shell
+corepack enable
+# 安装pnpm指定版本
+corepack prepare pnpm@8.3.1 --activate
+```
+
 ## workspace,一个 workspace 的根目录下必须有 pnpm-workspace.yaml 文件
 
 ```yaml
@@ -24,9 +32,18 @@ packages:
 
 ```shell
 # 在新项目下引用本地包
-pnpm link <要引用包的path>
+pnpm link <要引用包的完整path>
 # 取消引用
-pnpm unlink <要引用包的path>
+pnpm unlink <要引用包的完整path>
+cd ~/projects/foo
+# install dependencies of foo
+pnpm i
+# link foo globally
+pnpm link --global
+# use
+cd ~/projects/my-project
+# link foo to my-project
+pnpm link --global foo
 ```
 
 ## 更新包
