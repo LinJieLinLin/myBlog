@@ -189,6 +189,12 @@ friends_link:
   aboutMe:
     url: /about.html
     img: /images/avatar.png
+  vue3Component:
+    url: https://ljtool.github.io/component/
+    img: /images/avatar.png
+  umiAntdTool:
+    url: https://linjielinlin.github.io/umi-antd-tool
+    img: /images/avatar.png
   Ayer主题: #网站名称
     #网站地址
     url: https://github.com/Shen-Yu/hexo-theme-ayer
