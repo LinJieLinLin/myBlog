@@ -186,9 +186,9 @@ friends_link:
   lj-utils:
     url: https://linjielinlin.github.io/utils/lj-utils/index.html
     img: /images/avatar.png
-  aboutMe:
-    url: /about.html
-    img: /images/avatar.png
+  # aboutMe:
+  #   url: /about.html
+  #   img: /images/avatar.png
   vue3Component:
     url: https://ljtool.github.io/component/
     img: /images/avatar.png
