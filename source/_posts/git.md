@@ -198,6 +198,8 @@ git mv [file-original] [file-renamed]
 ```sh
 # 跳过hook校验
 git commit -m "Some comments" --no-verify
+# 跳过hook校验 简写
+git commit -m "Some comments" -n
 # 提交暂存区到仓库区
 git commit -m "message"
 # 提交暂存区的指定文件到仓库区
