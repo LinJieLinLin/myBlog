@@ -193,24 +193,29 @@ ipconfig /flushdns
 netsh winsock reset
 ```
 
-Netsh winsock reset 是一个命令提示程序，用于将 winsock 目录重置为默认设置或清除状态。如有时候上不了网或者网络出现问题经常用到它，简单地理解就是：重置程序通过操作系统链接网络的入口点。
-虽然使用此命令可以恢复网络连接，也应谨慎使用，因为可能需要重新安装 LSP
-LSP: layered service privider 分层服务提供商。
-LSP 是 TCP/IP 等协议的接口。
+Netsh winsock reset 是一个命令提示程序，用于将 winsock 目录重置为默认设置或清除状态。如有时候上不了网或者网络出现问题经常用到它，简单地理解就是：重置程序通过操作系统链接网络的入口点。虽然使用此命令可以恢复网络连接，也应谨慎使用，因为可能需要重新安装 LSP LSP: layered service privider 分层服务提供商。 LSP 是 TCP/IP 等协议的接口。
 
-Netsh Winsock 解决了哪些问题？
-删除广告软件，间谍软件，病毒，蠕虫，木马等后的网络问题
+Netsh Winsock 解决了哪些问题？删除广告软件，间谍软件，病毒，蠕虫，木马等后的网络问题
 
-处理安装广告软件，间谍软件，VPN 或防火墙后无法联网。
-无法访问任何网页或只能访问某些网页。
-出现与网络相关问题的弹出错误窗口。
-由于注册表错误，没有网络连接。
-发生 DNS 查找问题。
-无法续订网络适配器的 IP 地址或其他一些 DHCP 错误。
-没有连接消息的网络连接问题。
+处理安装广告软件，间谍软件，VPN 或防火墙后无法联网。无法访问任何网页或只能访问某些网页。出现与网络相关问题的弹出错误窗口。由于注册表错误，没有网络连接。发生 DNS 查找问题。无法续订网络适配器的 IP 地址或其他一些 DHCP 错误。没有连接消息的网络连接问题。
 
 ## win11 匿名共享
 
 ```
 1、网络和internet-高级网络设置-高级共享设置-所有网络-密码保护的共享打开
+```
+
+## [rdpwrap](https://github.com/stascorp/rdpwrap) [最新配置](https://raw.githubusercontent.com/sebaxakerhtc/rdpwrap.ini/master/rdpwrap.ini)
+
+```cmd
+<!-- run -->
+RDPWInst.exe
+<!-- config -->
+C:\Program Files\RDP Wrapper\rdpwrap.ini
+```
+
+## 任务计划程序
+
+```cmd
+schtasks /create /tn "name" /tr "D:\a.cmd" /sc onstart /ru SYSTEM
 ```
