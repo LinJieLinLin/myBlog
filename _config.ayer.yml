@@ -7,6 +7,7 @@ menu:
   GIT: /2018/08/08/git
   lj-utils: https://linjielinlin.github.io/utils/lj-utils/index.html
   友链: /friends
+  uTools: https://u.tools/?c=utczk1kpht
 
 # 站点次标题和打字动效
 # https://github.com/mattboldt/typed.js
@@ -43,7 +44,7 @@ broadcast:
 
 # 文章配置
 # 文章太长，截断按钮文字(在需要截断的行增加此标记：<!--more-->)
-excerpt_link: 阅读更多...
+excerpt_link: 更多...
 # 如果你嫌每篇文章手动加more标记比较麻烦，又不想在首页全文显示，可以把excerpt_all设置成true，这样首页只会显示文章归档
 excerpt_all: false
 
