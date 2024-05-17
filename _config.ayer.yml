@@ -181,7 +181,7 @@ gongan:
 
 # 友情链接
 friends_link:
-  @ljtool/unocss-preset:
+  ljtool/unocss-preset:
     url: https://www.npmjs.com/package/@ljtool/unocss-preset
     img: /images/avatar.png
   uniDemo:
