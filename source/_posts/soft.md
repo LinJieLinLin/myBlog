@@ -117,7 +117,11 @@ npm i --registry=https://registry.npmmirror.com
 
 ```shell
 npm install whistle -g --registry=https://registry.npmmirror.com
+# https://github.com/whistle-plugins/whistle.inspect
 w2 i whistle.inspect
+# https://github.com/liriliri/chii/blob/master/README_CN.md
+# https://github.com/liriliri/whistle.chii 与 weinre 一样的远程调试工具，主要是将 web inspector 替换为最新的 chrome devtools frontend.
+npm install whistle.chii -g
 w2 start
 ```
 
