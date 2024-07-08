@@ -66,3 +66,11 @@ appendWindowsPath = false
 [boot]
 # command = service docker start
 ```
+
+## 设置当前用户使用sudo不用输入密码
+```sh
+sudo visudo
+# 输入密码，在最后一行添加：username为当前用户名
+username ALL=(ALL) NOPASSWD:ALL
+# ctrl+s ctrl+x 保存退出
+```
