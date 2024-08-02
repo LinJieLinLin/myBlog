@@ -188,3 +188,10 @@ npm i node-sass --sass_binary_site=https://registry.npmmirror.com/mirrors/node-s
 yarn add node-sass --sass_binary_site=https://registry.npmmirror.com/mirrors/node-sass/
 npm i -D node-sass --sass_binary_path=D:\files\win32-x64-72_binding.node
 ```
+
+## 发布
+
+```sh
+# 验证 .npmignore
+npm pack
+```
