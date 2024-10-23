@@ -142,7 +142,7 @@ w2 start
 - [appGrid 窗口整理](https://github.com/mjolnirapp/AppGrid)
 - [cheatSheet 快捷键显示-禁止联网](https://cheatsheet-mac.en.softonic.com/mac?ex=DINS-635.1)
 - [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
-- [clashX 代理](https://github.com/yichengchen/clashX)
+- [clash 代理](https://github.com/clash-verge-rev/clash-verge-rev/releases)
 - [filezilla FTP 软件](https://filezilla-project.org/)
 - [ntfstool-加载 NTFS](https://github.com/ntfstool/ntfstool/releases)
 - [tiles-窗口管理移到边框触发](https://www.sempliva.com/tiles/index.html#home)
