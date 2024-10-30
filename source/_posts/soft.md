@@ -141,7 +141,7 @@ w2 start
 - [altTab 切换应用](https://github.com/lwouis/alt-tab-macos)
 - [appGrid 窗口整理](https://github.com/mjolnirapp/AppGrid)
 - [cheatSheet 快捷键显示-禁止联网](https://cheatsheet-mac.en.softonic.com/mac?ex=DINS-635.1)
-- [microsoft remote desktop bate](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
+- [microsoft remote desktop bate,appStore 已上架](https://install.appcenter.ms/orgs/rdmacios-k2vy/apps/microsoft-remote-desktop-for-mac/distribution_groups/all-users-of-microsoft-remote-desktop-for-mac)
 - [clash 代理](https://github.com/clash-verge-rev/clash-verge-rev/releases)
 - [filezilla FTP 软件](https://filezilla-project.org/)
 - [ntfstool-加载 NTFS](https://github.com/ntfstool/ntfstool/releases)
@@ -149,7 +149,8 @@ w2 start
 - [alist-网盘](https://alist.nn.ci/zh/guide/install/docker.html)
 - [BetterDisplay-mac 外接显示器开启 hidpi](https://github.com/waydabber/BetterDisplay/releases)
 - [Hack 字体](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.1/Hack.zip)
-- [PlayCover mac 运行 ipa](https://github.com/PlayCover/PlayCover/releases)
+- [PlayCover mac 运行 ipa（要 M 系列芯片）](https://github.com/PlayCover/PlayCover/releases)
+- [docker](https://docs.docker.com/desktop/install/mac-install/)
 - [Homebrew 软件包管理，安装完自动带 git](https://brew.sh/index_zh-cn)
 
 ```shell
