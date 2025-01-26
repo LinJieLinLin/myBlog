@@ -21,6 +21,28 @@ wsl --set-default-version 2
 # 系统-可选功能-更多windows功能-勾选Hyper-V
 ```
 
+## 常用命令
+
+```bash
+# 运行的WSL
+wsl --list --running
+# 关闭wsl
+wsl --shutdown
+# 已安装的WSL发行版
+wsl --list --verbose
+```
+
+## 默认使用 root
+
+```
+# 设置root密码
+sudo passwd root
+# win设置WSL使用 root
+# powershell
+ubuntu1804.exe -v
+ubuntu1804.exe config --default-user root
+```
+
 ## win 用户文件夹下全局 wsl2 配置.wslconfig
 
 ```bash
