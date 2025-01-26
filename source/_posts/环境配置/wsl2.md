@@ -9,6 +9,18 @@ tags:
 
 <!--more-->
 
+## 启用 WSL
+
+```powershell
+# 管理员运行
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+# 内核更新包 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+# 将 WSL 2 设置为默认版本
+wsl --set-default-version 2
+# 启用虚拟化 hyper
+# 系统-可选功能-更多windows功能-勾选Hyper-V
+```
+
 ## win 用户文件夹下全局 wsl2 配置.wslconfig
 
 ```bash
@@ -67,7 +79,8 @@ appendWindowsPath = false
 # command = service docker start
 ```
 
-## 设置当前用户使用sudo不用输入密码
+## 设置当前用户使用 sudo 不用输入密码
+
 ```sh
 sudo visudo
 # 输入密码，在最后一行添加：username为当前用户名

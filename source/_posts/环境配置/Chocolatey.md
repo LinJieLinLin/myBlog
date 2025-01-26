@@ -12,6 +12,8 @@ tags:
 ## [安装](https://chocolatey.org/install#individual)
 
 ```powershell
+# 将执行策略更改为允许运行未签名的本地脚本
+Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
 # 当前用户运行权限
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # 查看配置文件
