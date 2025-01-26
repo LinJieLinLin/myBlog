@@ -25,6 +25,7 @@ tags:
 - [everyThing](http://www.voidtools.com/downloads/)
 - [FDM 5bt 下载](https://www.freedownloadmanager.org/zh/)
 - [Snipaste 贴图截图](https://zh.snipaste.com/)
+- [PixPin 贴图截图](https://pixpin.cn/)
 - [Bandizip 解压缩](https://cn.bandisoft.com/bandizip/)
 - [MobaXterm_Personal SSH 工具](https://mobaxterm.mobatek.net/download.html)
 - [navicat 数据库连接](https://www.navicat.com.cn/download/direct-download?product=navicat_premium_cs_x64.exe&location=1)--[12keygen](https://github.com/JohnHubcr/navicat-keygen)
