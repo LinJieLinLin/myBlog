@@ -18,32 +18,44 @@
       <title>lerna |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/myBlog/images/favicon.ico" />
        
 <link rel="stylesheet" href="/myBlog/dist/main.css">
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
-      />
+      
+<link rel="stylesheet" href="/myBlog/css/fonts/remixicon.css">
+
       
 <link rel="stylesheet" href="/myBlog/css/custom.css">
  
-      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
        
  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?e21fe9c423c1c54aa4f3a9abaed45201";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
       />
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
+      <script type="text/javascript" src="/myBlog/js/extra.js"></script>
       <!-- mermaid -->
       
       <style>
         .swal2-styled.swal2-confirm {
           font-size: 1.6rem;
+        }
+        body {
+          font-size: 16px;
         }
       </style>
     </head>
@@ -116,13 +128,13 @@
 
 <h2 id="lerna"><a href="#lerna" class="headerlink" title="lerna"></a><a target="_blank" rel="noopener" href="https://github.com/lerna/lerna">lerna</a></h2><h3 id="运行子包命令"><a href="#运行子包命令" class="headerlink" title="运行子包命令"></a>运行子包命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna run --scope 包名 dev</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
+<h3 id="查看包"><a href="#查看包" class="headerlink" title="查看包"></a>查看包</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna ls -a</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">只能查看子包</span></span><br><span class="line">lerna ls</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装所有子包依赖"><a href="#安装所有子包依赖" class="headerlink" title="安装所有子包依赖"></a>安装所有子包依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lerna bootstrap </span><br></pre></td></tr></table></figure>
 
-<h3 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
+<h3 id="为所有子包添加一个-“共同-“的依赖"><a href="#为所有子包添加一个-“共同-“的依赖" class="headerlink" title="为所有子包添加一个 “共同 “的依赖"></a>为所有子包添加一个 “共同 “的依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna add husky --dev </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">把依赖关系添加到工作区根目录</span></span><br><span class="line">lerna add husky --dev -W </span><br></pre></td></tr></table></figure>
 
-<h3 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
+<h3 id="删除依赖"><a href="#删除依赖" class="headerlink" title="删除依赖"></a>删除依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lerna exec -- yarn remove husky</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除所有依赖</span></span><br><span class="line">lerna clean</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -212,6 +224,53 @@
   </nav>
 
    
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "a0czoe7u2K7vGcUyGqStV9qG-9Nh9j0Va",
+    app_key: "IjGDnnRUAbrFsUkXPrZ2RnZt",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
  
    
      
@@ -223,7 +282,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2016-2023
+        2016-2025
         <i class="ri-heart-fill heart_icon"></i> LinJieLinLin
       </li>
     </ul>
@@ -263,8 +322,6 @@
     <ul>
       <li>
         <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1280044797&amp;web_id=1280044797'></script>
         
       </li>
     </ul>
@@ -312,11 +369,15 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://linjielinlin.github.io/utils/lj-utils/index.html">lj-utils</a>
+      <a class="nav-item-link" href="https://lj4.top/utils/lj-utils/index.html">lj-utils</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://u.tools/?c=utczk1kpht">uTools</a>
     </li>
     
   </ul>
@@ -384,12 +445,12 @@
   });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
 />
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/myBlog/dist/main.js"></script>
 
@@ -461,10 +522,10 @@
 
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
 
 <script>
     function viewer_init() {
@@ -519,7 +580,7 @@
 <!-- CodeCopy -->
  
 <link rel="stylesheet" href="/myBlog/css/clipboard.css">
- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
 <script>
   function wait(callback, seconds) {
     var timelag = null;
@@ -575,9 +636,7 @@
 </script>
  
 <!-- CanvasBackground -->
- 
-<script src="/myBlog/js/dz.js"></script>
- 
+
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
