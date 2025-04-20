@@ -490,183 +490,38 @@ sudo apt install fonts-inter fonts-roboto fonts-firacode
 
 # 必应壁纸
 sudo snap install bing-wall
+# 触摸板增强(失败)
+sudo apt update
+sudo apt install libinput-tools
+sudo libinput list-devices | grep -A 10 "Touchpad"
+sudo apt install touchegg
+＃ Elantech 触摸板被重复加载了 psmouse 驱动（对应 ETPS/2 设备），需禁用：
+sudo nano /etc/modprobe.d/blacklist-psmouse.conf
+＃ 添加以下内容保存
+blacklist psmouse
+＃ 保存后更新内核并重启：
+sudo update-initramfs -u
+sudo reboot
+＃ 验证驱动是否禁用
+lsmod | grep psmouse  # 应该无输出
+libinput list-devices | grep -A 10 "Touchpad"  # 应只剩 ETD2303:00
+＃ 如果 ETPS/2 设备仍存在，尝试手动卸载模块：
+sudo modprobe -r psmouse
+＃＃ 方案2
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'fingers'
 ```
 
 ＃＃ 浏览器扩展 GNOME 集成－打开 GNOME 的官网 extensions.gnome.org，在这里我们可以安装受 GNOME Shell Extensions 应用程序管理的插件。为了能够在浏览器中与 GNOME Shell Extensions 应用程序交互，网站要求我们安装 GNOME Shell Integration 插件。我们点击 Click here to install browser extension 来安装插件。
 
 ```
+＃ 打开扩展管理
+gnome-extensions-app
+＃ 扩展列表
 user themes
 Dash to Dock
 Frippery Move Clock
 AppIndicator
+x11-gestures
 ```
 
 ## other
-
-```sh
-# 安装必要工具和主题
-sudo apt install gnome-tweaks gnome-shell-extensions
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
-cd WhiteSur-gtk-theme
-./install.sh  # 安装主题
-./install.sh -c Dark  # 可选深色模式
-
-# 安装 macOS 风格 Dock
-sudo apt install plank
-plank &  # 启动 Dock
-```
-
-```sh
-＃ 卸载
-```
-
-## latte-Dock
-
-以下是安装和配置 **Latte Dock**（一款高度可定制的 macOS 风格 Dock）的详细步骤，适用于 Ubuntu/GNOME 环境：
-
----
-
-### **1. 安装 Latte Dock**
-
-#### **方法 1：通过 PPA 安装（推荐）**
-
-```bash
-# 添加官方 PPA
-sudo add-apt-repository ppa:latte-dock/latte
-sudo apt update
-
-# 安装 Latte Dock
-sudo apt install latte-dock
-```
-
-#### **方法 2：从源码编译（适合最新版）**
-
-```bash
-sudo apt install git cmake extra-cmake-modules qtdeclarative5-dev libqt5x11extras5-dev libkf5plasma-dev
-git clone https://github.com/KDE/latte-dock.git
-cd latte-dock
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-```
-
----
-
-### **2. 启动 Latte Dock**
-
-#### **首次运行**
-
-```bash
-latte-dock &
-```
-
-首次启动时会提示选择布局，推荐选择 **Default** 或 **macOS Layout**。
-
-#### **设置开机自启**
-
-```bash
-mkdir -p ~/.config/autostart
-cp /usr/share/applications/latte-dock.desktop ~/.config/autostart/
-```
-
----
-
-### **3. 基础配置**
-
-#### **1. 调整 Dock 位置和外观**
-
-1. 右键点击 Dock → **Configure Latte Dock**。
-2. **位置**：选择 `底部`。
-3. **行为**：
-   - `自动隐藏`：启用（类似 macOS）。
-   - `悬停延迟`：设为 `300ms`（提升响应速度）。
-4. **外观**：
-   - `主题`：选择 `macOS` 或 `Plasma`。
-   - `图标大小`：建议 `48px`。
-
-#### **2. 添加应用图标**
-
-- 从应用菜单拖拽应用到 Dock。
-- 或右键 Dock → **添加部件** → **应用程序启动器**。
-
-#### **3. 禁用 GNOME 默认 Dock（避免冲突）**
-
-```bash
-gnome-extensions disable ubuntu-dock@ubuntu.com  # Ubuntu
-gnome-extensions disable dash-to-dock@micxgx.gmail.com  # 其他 GNOME
-```
-
----
-
-### **4. 高级定制**
-
-#### **1. 动态背景模糊（类似 macOS Big Sur）**
-
-1. 安装依赖：
-   ```bash
-   sudo apt install kwin-effects
-   ```
-2. 在 Latte 设置中：
-   - **效果** → 启用 `背景模糊`。
-   - 调整 `模糊半径` 和 `透明度`。
-
-#### **2. 全局菜单（需额外插件）**
-
-```bash
-sudo apt install vala-panel-appmenu
-```
-
-然后在 Latte 设置中：
-
-- **添加部件** → `全局菜单`。
-
-#### **3. 工作区指示器**
-
-```bash
-gsettings set org.gnome.shell.extensions.dash-to-dock show-workspaces false  # 禁用默认
-```
-
-在 Latte 中：
-
-- **添加部件** → `工作区切换器`。
-
----
-
-### **5. 主题搭配建议**
-
-| **组件** | **推荐配置** | **安装方法** |
-| --- | --- | --- |
-| **图标包** | [WhiteSur 图标](https://github.com/vinceliuice/WhiteSur-icon-theme) | `./install.sh` |
-| **GTK 主题** | [McMojave](https://github.com/vinceliuice/McMojave-gtk-theme) | `./install.sh` |
-| **光标** | [MacOS Cursors](https://github.com/ful1e5/apple_cursor) | 解压到 `~/.local/share/icons/` |
-
----
-
-### **6. 常见问题**
-
-#### **Q1：Latte Dock 崩溃怎么办？**
-
-- 重置配置：
-  ```bash
-  rm -rf ~/.config/latte
-  ```
-- 检查日志：
-  ```bash
-  latte-dock --replace &> ~/latte.log
-  ```
-
-#### **Q2：如何彻底卸载？**
-
-```bash
-sudo apt purge latte-dock
-sudo add-apt-repository --remove ppa:latte-dock/latte
-```
-
----
-
-### **效果预览**
-
-![Latte Dock 效果](https://i.imgur.com/xyz1234.png)
-
-完成后，你将获得一个高度可定制、类似 macOS 的 Dock，同时保持 GNOME 的稳定性！
