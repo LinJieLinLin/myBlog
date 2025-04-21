@@ -504,7 +504,7 @@ sudo update-initramfs -u
 sudo reboot
 ＃ 验证驱动是否禁用
 lsmod | grep psmouse  # 应该无输出
-libinput list-devices | grep -A 10 "Touchpad"  # 应只剩 ETD2303:00
+sudo libinput list-devices | grep -A 10 "Touchpad"  # 应只剩 ETD2303:00
 ＃ 如果 ETPS/2 设备仍存在，尝试手动卸载模块：
 sudo modprobe -r psmouse
 ＃＃ 方案2
