@@ -541,4 +541,10 @@ MimeType=application/x-ogg;application/ogg;audio/x-vorbis+ogg;audio/vorbis;audio
 Keywords=Audio;Song;MP3;CD;Podcast;MTP;iPod;Playlist;Last.fm;UPnP;DLNA;Radio;
 ```
 
+## synaptic 软件卸载
+
+```sh
+sudo apt install synaptic
+```
+
 ## other
