@@ -524,4 +524,21 @@ AppIndicator
 x11-gestures
 ```
 
+## qq 音乐
+
+```sh
+sudo vim /usr/share/applications/qqmusic.desktop
+[Desktop Entry]
+Name=qqmusic
+Exec=/opt/qqmusic/qqmusic %U --no-sandbox
+Terminal=false
+Type=Application
+Icon=qqmusic
+StartupWMClass=qqmusic
+Comment=Tencent QQMusic
+Categories=AudioVideo;Audio;Player;
+MimeType=application/x-ogg;application/ogg;audio/x-vorbis+ogg;audio/vorbis;audio/x-vorbis;audio/x-scpls;audio/x-mp3;audio/x-mpeg;audio/mpeg;audio/x-mpegurl;audio/x-flac;audio/mp4;audio/x-it;audio/x-mod;audio/x-s3m;audio/x-stm;audio/x-xm;
+Keywords=Audio;Song;MP3;CD;Podcast;MTP;iPod;Playlist;Last.fm;UPnP;DLNA;Radio;
+```
+
 ## other
