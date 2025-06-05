@@ -189,7 +189,7 @@ brew install maccy
 - [appcleaner 卸载工具](http://freemacsoft.net/appcleaner/)
 
 - [win11Arm](https://blog.csdn.net/weixin_52799373/article/details/129658881)
-- [Tracepad-iphone 当 Mac 触控板](https://www.tracepad.site/tracepad/)
+- [Tracepad-iphone 当 Mac g 触控板](https://www.tracepad.site/tracepad/)
 - [link](https://lj4.top/)
 - [link](https://lj4.top/)
 - [link](https://lj4.top/)

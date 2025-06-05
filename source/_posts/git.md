@@ -22,13 +22,27 @@ test：增加测试
 chore：构建过程或辅助工具的变动
 ```
 
+## git 全局配置
+
+````sh
+# 配置git全局自动设置远程分支 启用后，执行`git push`时会自动为本地分支设置对应的远程追踪分支
+git config --global push.autoSetupRemote true
+# 提交时转换为LF，检出时不转换
+git config --global core.autocrlf input
+# 记住 http 方式克隆仓库的密码
+git config --global credential.helper store
+# 设置提交代码时的用户信息
+git config --global user.name LinJieLinLin
+git config --global user.email 993353454@qq.com
+```
+
 ## 拉取最后一次提交
 
 ```sh
 git clone --depth 1 git@github.com:LinJieLinLin/utils.git
 # 更新历史版本
 git pull --unshallow
-```
+````
 
 ## git CRLF
 
@@ -59,21 +73,13 @@ git update-index --assume-unchanged fileName
 git update-index --no-assume-unchanged fileName
 ```
 
-## 格式化与空白
-
-> 交时自动地把行结束符 CRLF 转换成 LF，而在检出代码时把 LF 转换成 CRLF。
-
-```sh
-git config --global core.autocrlf true
-```
-
 # 记住 http 方式克隆仓库的密码
 
 ## 命令行
 
 ```sh
 git config credential.helper store
-全局
+# 全局
 git config --global credential.helper store
 ```
 
