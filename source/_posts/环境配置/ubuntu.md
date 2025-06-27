@@ -456,3 +456,95 @@ flush privileges;
 ## php(arm64 android)
 
 > php 环境下运行 curl get 请求返回 false
+
+# ubuntu24
+
+## [mac 桌面](https://www.cnblogs.com/Undefined443/p/18133703)
+
+```sh
+sudo apt install -y gnome-tweaks gnome-shell-extensions
+mkdir ~/theme
+cd ~/theme
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+cd WhiteSur-gtk-theme  # 进入主题目录
+./install.sh  # 运行安装脚本
+
+git clone --depth 1 https://github.com/vinceliuice/Whitesur-icon-theme.git
+cd Whitesur-icon-theme
+./install.sh
+# 设置图标
+gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur'
+
+git clone --depth 1 https://github.com/vinceliuice/Whitesur-icon-theme.git
+cd Whitesur-icon-theme
+./install.sh
+# 设置图标
+gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur'
+
+sudo apt install breeze-cursor-theme
+gsettings set org.gnome.desktop.interface cursor-theme 'Breeze_Snow'
+
+sudo apt install gnome-shell-extension-dash-to-dock
+＃ 字体
+sudo apt install fonts-inter fonts-roboto fonts-firacode
+
+# 必应壁纸
+sudo snap install bing-wall
+# 触摸板增强(失败)
+sudo apt update
+sudo apt install libinput-tools
+sudo libinput list-devices | grep -A 10 "Touchpad"
+sudo apt install touchegg
+＃ Elantech 触摸板被重复加载了 psmouse 驱动（对应 ETPS/2 设备），需禁用：
+sudo nano /etc/modprobe.d/blacklist-psmouse.conf
+＃ 添加以下内容保存
+blacklist psmouse
+＃ 保存后更新内核并重启：
+sudo update-initramfs -u
+sudo reboot
+＃ 验证驱动是否禁用
+lsmod | grep psmouse  # 应该无输出
+sudo libinput list-devices | grep -A 10 "Touchpad"  # 应只剩 ETD2303:00
+＃ 如果 ETPS/2 设备仍存在，尝试手动卸载模块：
+sudo modprobe -r psmouse
+＃＃ 方案2
+gsettings set org.gnome.desktop.peripherals.touchpad click-method 'fingers'
+```
+
+＃＃ 浏览器扩展 GNOME 集成－打开 GNOME 的官网 extensions.gnome.org，在这里我们可以安装受 GNOME Shell Extensions 应用程序管理的插件。为了能够在浏览器中与 GNOME Shell Extensions 应用程序交互，网站要求我们安装 GNOME Shell Integration 插件。我们点击 Click here to install browser extension 来安装插件。
+
+```
+＃ 打开扩展管理
+gnome-extensions-app
+＃ 扩展列表
+user themes
+Dash to Dock
+Frippery Move Clock
+AppIndicator
+x11-gestures
+```
+
+## qq 音乐
+
+```sh
+sudo vim /usr/share/applications/qqmusic.desktop
+[Desktop Entry]
+Name=qqmusic
+Exec=/opt/qqmusic/qqmusic %U --no-sandbox
+Terminal=false
+Type=Application
+Icon=qqmusic
+StartupWMClass=qqmusic
+Comment=Tencent QQMusic
+Categories=AudioVideo;Audio;Player;
+MimeType=application/x-ogg;application/ogg;audio/x-vorbis+ogg;audio/vorbis;audio/x-vorbis;audio/x-scpls;audio/x-mp3;audio/x-mpeg;audio/mpeg;audio/x-mpegurl;audio/x-flac;audio/mp4;audio/x-it;audio/x-mod;audio/x-s3m;audio/x-stm;audio/x-xm;
+Keywords=Audio;Song;MP3;CD;Podcast;MTP;iPod;Playlist;Last.fm;UPnP;DLNA;Radio;
+```
+
+## synaptic 软件卸载
+
+```sh
+sudo apt install synaptic
+```
+
+## other
