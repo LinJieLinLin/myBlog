@@ -18,32 +18,44 @@
       <title>linux shell |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/myBlog/images/favicon.ico" />
        
 <link rel="stylesheet" href="/myBlog/dist/main.css">
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
-      />
+      
+<link rel="stylesheet" href="/myBlog/css/fonts/remixicon.css">
+
       
 <link rel="stylesheet" href="/myBlog/css/custom.css">
  
-      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
        
  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?e21fe9c423c1c54aa4f3a9abaed45201";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
       />
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
+      <script type="text/javascript" src="/myBlog/js/extra.js"></script>
       <!-- mermaid -->
       
       <style>
         .swal2-styled.swal2-confirm {
           font-size: 1.6rem;
+        }
+        body {
+          font-size: 16px;
         }
       </style>
     </head>
@@ -85,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">861</span>
+            <span class="post-count">1.3k</span>
         </span>
     </span>
 
@@ -94,7 +106,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">5 分钟</span>
         </span>
     </span>
 </div>
@@ -114,33 +126,97 @@
 
 <span id="more"></span>
 
-<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">使脚本具有执行权限</span></span><br><span class="line">chmod +x ./test.sh</span><br><span class="line"><span class="meta">#</span><span class="language-bash">执行脚本</span></span><br><span class="line">./test.sh</span><br></pre></td></tr></table></figure>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">使脚本具有执行权限</span></span><br><span class="line">chmod +x ./test.sh</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">执行脚本</span></span><br><span class="line">./test.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改默认终端</span></span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置最高权限</span></span><br><span class="line">chmod 777 ./test.sh</span><br></pre></td></tr></table></figure>
 
-<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">设置只读</span></span><br><span class="line">hi=&quot;hello world!&quot;</span><br><span class="line">readonly hi</span><br><span class="line">hi=&quot;read only&quot;</span><br><span class="line">echo $&#123;hi&#125;</span><br><span class="line"><span class="meta">#</span><span class="language-bash">hello world!</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">删除</span></span><br><span class="line">del=&quot;del me!&quot;</span><br><span class="line">unset $&#123;del&#125;</span><br><span class="line"><span class="meta"># </span><span class="language-bash"><span class="keyword">for</span>循环</span></span><br><span class="line">for key in a b c d e</span><br><span class="line">do</span><br><span class="line">    echo &quot;now key is $&#123;key&#125;&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>码</th>
+<th>所有者</th>
+<th>组</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>无权限</td>
+<td>无权限</td>
+<td>无权限</td>
+</tr>
+<tr>
+<td>1</td>
+<td>执行权限</td>
+<td>执行权限</td>
+<td>执行权限</td>
+</tr>
+<tr>
+<td>2</td>
+<td>写入权限</td>
+<td>写入权限</td>
+<td>写入权限</td>
+</tr>
+<tr>
+<td>3</td>
+<td>写入权限和执行权限</td>
+<td>写入权限和执行权限</td>
+<td>写入权限和执行权限</td>
+</tr>
+<tr>
+<td>4</td>
+<td>读取权限</td>
+<td>读取权限</td>
+<td>读取权限</td>
+</tr>
+<tr>
+<td>5</td>
+<td>读取权限和执行权限</td>
+<td>读取权限和执行权限</td>
+<td>读取权限和执行权限</td>
+</tr>
+<tr>
+<td>6</td>
+<td>读取权限和写入权限</td>
+<td>读取权限和写入权限</td>
+<td>读取权限和写入权限</td>
+</tr>
+<tr>
+<td>7</td>
+<td>读取、写入和执行权限</td>
+<td>读取、写入和执行权限</td>
+<td>读取、写入和执行权限</td>
+</tr>
+</tbody></table>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置只读</span></span><br><span class="line">hi=&quot;hello world!&quot;</span><br><span class="line">readonly hi</span><br><span class="line">hi=&quot;read only&quot;</span><br><span class="line">echo $&#123;hi&#125;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">hello world!</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除</span></span><br><span class="line">del=&quot;del me!&quot;</span><br><span class="line">unset $&#123;del&#125;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">for</span>循环</span></span><br><span class="line">for key in a b c d e</span><br><span class="line">do</span><br><span class="line">    echo &quot;now key is $&#123;key&#125;&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 
-<h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="language-bash">0  当前脚本的文件名</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">n  传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是<span class="variable">$1</span>，第二个参数是<span class="variable">$2</span>。</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash"><span class="comment">#  传递给脚本或函数的参数个数。</span></span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">*  传递给脚本或函数的所有参数。</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">@  传递给脚本或函数的所有参数。被双引号(<span class="string">&quot; &quot;</span>)包含时，与 $* 稍有不同，下面将会讲到。$* 和 <span class="variable">$@</span> 的区别</span></span><br><span class="line">    $* 和 $@ 都表示传递给函数或脚本的所有参数，不被双引号(&quot; &quot;)包含时，都以&quot;$1&quot;   &quot;$2&quot; … &quot;$n&quot; 的形式输出所有参数。</span><br><span class="line">    但是当它们被双引号(&quot; &quot;)包含时，&quot;$*&quot; 会将所有的参数作为一个整体，以&quot;$1 $2 …  $n&quot;的形式输出所有参数；&quot;$@&quot; 会将各个参数分开，以&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;     的形式输出所有参数。</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">?  上个命令的退出状态，或函数的返回值。</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">$  当前Shell进程ID。对于 Shell 脚本，就是这些脚本所在的进程ID。</span></span><br><span class="line">eg:</span><br><span class="line">vim t.sh</span><br><span class="line">echo &quot;文件名: $&#123;0&#125;&quot;</span><br><span class="line">echo &quot;第一个参数 : $&#123;1&#125;&quot;</span><br><span class="line">echo &quot;第二个参数 : $&#123;2&#125;&quot;</span><br><span class="line">echo &quot;参数: $@&quot;</span><br><span class="line">echo &quot;参数: $*&quot;</span><br><span class="line">echo &quot;参数个数 : $&#123;#&#125;&quot;</span><br><span class="line">ESC :wq</span><br></pre></td></tr></table></figure>
+<h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$</span><span class="language-bash">0  当前脚本的文件名</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">n  传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是<span class="variable">$1</span>，第二个参数是<span class="variable">$2</span>。</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash"><span class="comment">#  传递给脚本或函数的参数个数。</span></span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">*  传递给脚本或函数的所有参数。</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">@  传递给脚本或函数的所有参数。被双引号(<span class="string">&quot; &quot;</span>)包含时，与 $* 稍有不同，下面将会讲到。$* 和 <span class="variable">$@</span> 的区别</span></span><br><span class="line">    $* 和 $@ 都表示传递给函数或脚本的所有参数，不被双引号(&quot; &quot;)包含时，都以&quot;$1&quot;   &quot;$2&quot; … &quot;$n&quot; 的形式输出所有参数。</span><br><span class="line">    但是当它们被双引号(&quot; &quot;)包含时，&quot;$*&quot; 会将所有的参数作为一个整体，以&quot;$1 $2 …  $n&quot;的形式输出所有参数；&quot;$@&quot; 会将各个参数分开，以&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;     的形式输出所有参数。</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">?  上个命令的退出状态，或函数的返回值。</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">$  当前Shell进程ID。对于 Shell 脚本，就是这些脚本所在的进程ID。</span></span><br><span class="line">eg:</span><br><span class="line">vim t.sh</span><br><span class="line">echo &quot;文件名: $&#123;0&#125;&quot;</span><br><span class="line">echo &quot;第一个参数 : $&#123;1&#125;&quot;</span><br><span class="line">echo &quot;第二个参数 : $&#123;2&#125;&quot;</span><br><span class="line">echo &quot;参数: $@&quot;</span><br><span class="line">echo &quot;参数: $*&quot;</span><br><span class="line">echo &quot;参数个数 : $&#123;#&#125;&quot;</span><br><span class="line">ESC :wq</span><br></pre></td></tr></table></figure>
 
-<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">有 -e 表示对转义字符进行替换。如果不使用 -e 选项，将会原样输出</span></span><br><span class="line">echo -e &#x27;***&#x27;</span><br><span class="line">\\  反斜杠</span><br><span class="line">\a  警报，响铃</span><br><span class="line">\b  退格（删除键）</span><br><span class="line">\f  换页(FF)，将当前位置移到下页开头</span><br><span class="line">\n  换行</span><br><span class="line">\r  回车</span><br><span class="line">\t  水平制表符（tab键）</span><br><span class="line">\v  垂直制表符</span><br></pre></td></tr></table></figure>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">有 -e 表示对转义字符进行替换。如果不使用 -e 选项，将会原样输出</span></span><br><span class="line">echo -e &#x27;***&#x27;</span><br><span class="line">\\  反斜杠</span><br><span class="line">\a  警报，响铃</span><br><span class="line">\b  退格（删除键）</span><br><span class="line">\f  换页(FF)，将当前位置移到下页开头</span><br><span class="line">\n  换行</span><br><span class="line">\r  回车</span><br><span class="line">\t  水平制表符（tab键）</span><br><span class="line">\v  垂直制表符</span><br></pre></td></tr></table></figure>
 
-<h3 id="自带命令替换"><a href="#自带命令替换" class="headerlink" title="自带命令替换"></a>自带命令替换</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">不是单引号</span></span><br><span class="line">DATE=`date`</span><br><span class="line">echo &quot;当前时间是： $&#123;DATE&#125;&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="自带命令替换"><a href="#自带命令替换" class="headerlink" title="自带命令替换"></a>自带命令替换</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">不是单引号</span></span><br><span class="line">DATE=`date`</span><br><span class="line">echo &quot;当前时间是： $&#123;DATE&#125;&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="变量替换"><a href="#变量替换" class="headerlink" title="变量替换"></a>变量替换</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="language-bash">&#123;var&#125;  变量本来的值</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">&#123;var:-word&#125;    如果变量 var 为空或已被删除(<span class="built_in">unset</span>)，那么返回 word，但不改变 var 的值。</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">&#123;var:=word&#125;    如果变量 var 为空或已被删除(<span class="built_in">unset</span>)，那么返回 word，并将 var 的值设置为 word。</span></span><br><span class="line"><span class="meta">$</span><span class="language-bash">&#123;var:?message&#125; 如果变量 var 为空或已被删除(<span class="built_in">unset</span>)，那么将消息 message 送到标准错误输出，可以用来检测变量 var 是否可以被正常赋值。</span></span><br><span class="line">若此替换出现在Shell脚本中，那么脚本将停止运行。</span><br><span class="line"><span class="meta">$</span><span class="language-bash">&#123;var:+word&#125;    如果变量 var 被定义，那么返回 word，但不改变 var 的值。</span></span><br></pre></td></tr></table></figure>
+<h3 id="变量替换"><a href="#变量替换" class="headerlink" title="变量替换"></a>变量替换</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&#123;var&#125;  变量本来的值</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&#123;var:-word&#125;    如果变量 var 为空或已被删除(<span class="built_in">unset</span>)，那么返回 word，但不改变 var 的值。</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&#123;var:=word&#125;    如果变量 var 为空或已被删除(<span class="built_in">unset</span>)，那么返回 word，并将 var 的值设置为 word。</span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&#123;var:?message&#125; 如果变量 var 为空或已被删除(<span class="built_in">unset</span>)，那么将消息 message 送到标准错误输出，可以用来检测变量 var 是否可以被正常赋值。</span></span><br><span class="line">若此替换出现在Shell脚本中，那么脚本将停止运行。</span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">&#123;var:+word&#125;    如果变量 var 被定义，那么返回 word，但不改变 var 的值。</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp|grep 80</span><br></pre></td></tr></table></figure>
 
-<h3 id="更改文件-x2F-文件夹所有者"><a href="#更改文件-x2F-文件夹所有者" class="headerlink" title="更改文件&#x2F;文件夹所有者"></a>更改文件&#x2F;文件夹所有者</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R root:root dirname/filename</span><br><span class="line"><span class="meta"># </span><span class="language-bash">-R 为递归操作</span></span><br><span class="line">sudo chown -R username dirname/filename</span><br><span class="line"><span class="meta"># </span><span class="language-bash">-R 为递归操作</span></span><br><span class="line">sudo chgrp -R groupname dirname</span><br></pre></td></tr></table></figure>
+<h3 id="更改文件-文件夹所有者"><a href="#更改文件-文件夹所有者" class="headerlink" title="更改文件&#x2F;文件夹所有者"></a>更改文件&#x2F;文件夹所有者</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R root:root dirname/filename</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-R 为递归操作</span></span><br><span class="line">sudo chown -R username dirname/filename</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">-R 为递归操作</span></span><br><span class="line">sudo chgrp -R groupname dirname</span><br></pre></td></tr></table></figure>
 
 <h3 id="建立软连接"><a href="#建立软连接" class="headerlink" title="建立软连接"></a>建立软连接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s 源目录 目标目录（绝对路径）</span><br></pre></td></tr></table></figure>
 
 <h3 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd usrname</span><br></pre></td></tr></table></figure>
 
-<h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adduser linj</span><br><span class="line"><span class="meta"># </span><span class="language-bash">输入密码，然后一路回车，按y</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">添加root权限</span></span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
+<h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adduser linj</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输入密码，然后一路回车，按y</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">添加root权限</span></span><br><span class="line">vim /etc/sudoers</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看用户-x2F-用户组"><a href="#查看用户-x2F-用户组" class="headerlink" title="查看用户&#x2F;用户组"></a>查看用户&#x2F;用户组</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/passwd #查看用户</span><br><span class="line">cat /etc/group #查看用户组</span><br></pre></td></tr></table></figure>
+<h3 id="查看用户-用户组"><a href="#查看用户-用户组" class="headerlink" title="查看用户&#x2F;用户组"></a>查看用户&#x2F;用户组</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/passwd #查看用户</span><br><span class="line">cat /etc/group #查看用户组</span><br></pre></td></tr></table></figure>
 
-<h3 id="显示磁盘空间"><a href="#显示磁盘空间" class="headerlink" title="显示磁盘空间"></a>显示磁盘空间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df -hl</span><br><span class="line"><span class="meta"># </span><span class="language-bash">查看当前目录文件大小，max-depth为目录层数</span></span><br><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
+<h3 id="显示磁盘空间"><a href="#显示磁盘空间" class="headerlink" title="显示磁盘空间"></a>显示磁盘空间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df -hl</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前目录文件大小，max-depth为目录层数</span></span><br><span class="line">du -h --max-depth=1</span><br></pre></td></tr></table></figure>
 
-<h3 id="同步时间"><a href="#同步时间" class="headerlink" title="同步时间"></a>同步时间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">apt-get install ntpdate</span></span><br><span class="line"><span class="meta"># </span><span class="language-bash"> yum install ntp</span></span><br><span class="line">ntpdate cn.pool.ntp.org</span><br></pre></td></tr></table></figure>
+<h3 id="同步时间"><a href="#同步时间" class="headerlink" title="同步时间"></a>同步时间</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">apt-get install ntpdate</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> yum install ntp</span></span><br><span class="line">ntpdate cn.pool.ntp.org</span><br></pre></td></tr></table></figure>
+
+<h2 id="SSL"><a href="#SSL" class="headerlink" title="SSL"></a>SSL</h2><h3 id="根-CA-证书-域名证书"><a href="#根-CA-证书-域名证书" class="headerlink" title="根 CA 证书+域名证书"></a>根 CA 证书+域名证书</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建根密钥</span></span><br><span class="line">openssl ecparam -out root.key -name prime256v1 -genkey</span><br><span class="line"><span class="comment"># 生成证书签名请求 (CSR)</span></span><br><span class="line">openssl req -new -sha256 -key root.key -out root.csr</span><br><span class="line"><span class="comment"># 根证书</span></span><br><span class="line">openssl x509 -req -sha256 -days 3650 -<span class="keyword">in</span> root.csr -signkey root.key -out root.crt</span><br><span class="line"><span class="comment"># 服务器证书</span></span><br><span class="line"><span class="comment"># 服务器证书的 CN（公用名）必须与颁发者的域不同。 例如，在本例中，颁发者的 CN 是 root.com，服务器证书的 CN 是 lj.io</span></span><br><span class="line">openssl ecparam -out domain.key -name prime256v1 -genkey</span><br><span class="line">openssl req -new -sha256 -key domain.key -out domain.csr</span><br><span class="line">openssl x509 -req -<span class="keyword">in</span> domain.csr -CA  root.crt -CAkey root.key -CAcreateserial -out domain.crt -days 3650 -sha256</span><br><span class="line"><span class="comment"># 验证</span></span><br><span class="line">openssl x509 -<span class="keyword">in</span> domain.crt -text -noout</span><br><span class="line"><span class="comment">## 转换</span></span><br><span class="line"><span class="comment"># PEM(crt) to DER</span></span><br><span class="line">openssl x509 \</span><br><span class="line">       -<span class="keyword">in</span> domain.crt \</span><br><span class="line">       -outform der -out domain.der</span><br><span class="line"><span class="comment"># DER to PEM(crt)</span></span><br><span class="line">openssl x509 \</span><br><span class="line">       -inform der -<span class="keyword">in</span> domain.der \</span><br><span class="line">       -out domainDer.crt</span><br><span class="line"></span><br><span class="line"><span class="comment"># OpenSSL 验证配置(浏览器访问)</span></span><br><span class="line">openssl s_client -connect localhost:443 -servername lj.io -showcerts</span><br></pre></td></tr></table></figure>
+
+<h3 id="自签名证书"><a href="#自签名证书" class="headerlink" title="自签名证书"></a>自签名证书</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -out domain.key 4096</span><br><span class="line">openssl req -new -key domain.key -out domain.csr</span><br><span class="line">openssl x509 -req -days 3650 -<span class="keyword">in</span> domain.csr -signkey domain.key -out domain.crt</span><br></pre></td></tr></table></figure>
+
+<h3 id="curl-批量下载"><a href="#curl-批量下载" class="headerlink" title="curl 批量下载"></a>curl 批量下载</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 批量下载imgList.txt内的每一行链接</span></span><br><span class="line">xargs -n 1 curl -O &lt; imgList.txt</span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -230,6 +306,53 @@
   </nav>
 
    
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "a0czoe7u2K7vGcUyGqStV9qG-9Nh9j0Va",
+    app_key: "IjGDnnRUAbrFsUkXPrZ2RnZt",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
  
    
      
@@ -241,7 +364,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2016-2023
+        2016-2025
         <i class="ri-heart-fill heart_icon"></i> LinJieLinLin
       </li>
     </ul>
@@ -281,8 +404,6 @@
     <ul>
       <li>
         <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1280044797&amp;web_id=1280044797'></script>
         
       </li>
     </ul>
@@ -330,11 +451,15 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://linjielinlin.github.io/utils/lj-utils/index.html">lj-utils</a>
+      <a class="nav-item-link" href="https://lj4.top/utils/lj-utils/index.html">lj-utils</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://u.tools/?c=utczk1kpht">uTools</a>
     </li>
     
   </ul>
@@ -402,12 +527,12 @@
   });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
 />
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/myBlog/dist/main.js"></script>
 
@@ -479,10 +604,10 @@
 
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
 
 <script>
     function viewer_init() {
@@ -537,7 +662,7 @@
 <!-- CodeCopy -->
  
 <link rel="stylesheet" href="/myBlog/css/clipboard.css">
- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
 <script>
   function wait(callback, seconds) {
     var timelag = null;
@@ -593,9 +718,7 @@
 </script>
  
 <!-- CanvasBackground -->
- 
-<script src="/myBlog/js/dz.js"></script>
- 
+
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });

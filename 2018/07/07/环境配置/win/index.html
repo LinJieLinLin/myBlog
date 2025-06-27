@@ -18,32 +18,44 @@
       <title>win CMD |  LinJieLinLin</title>
   <meta name="generator" content="hexo-theme-ayer">
       
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="shortcut icon" href="/myBlog/images/favicon.ico" />
        
 <link rel="stylesheet" href="/myBlog/dist/main.css">
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
-      />
+      
+<link rel="stylesheet" href="/myBlog/css/fonts/remixicon.css">
+
       
 <link rel="stylesheet" href="/myBlog/css/custom.css">
  
-      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
        
  
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?e21fe9c423c1c54aa4f3a9abaed45201";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
       />
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
-
+      <script type="text/javascript" src="/myBlog/js/extra.js"></script>
       <!-- mermaid -->
       
       <style>
         .swal2-styled.swal2-confirm {
           font-size: 1.6rem;
+        }
+        body {
+          font-size: 16px;
         }
       </style>
     </head>
@@ -85,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">286</span>
+            <span class="post-count">1.1k</span>
         </span>
     </span>
 
@@ -94,7 +106,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">4 分钟</span>
         </span>
     </span>
 </div>
@@ -114,16 +126,23 @@
 
 <span id="more"></span>
 
-<h2 id="查看系统版本、激活状态"><a href="#查看系统版本、激活状态" class="headerlink" title="查看系统版本、激活状态"></a>查看系统版本、激活状态</h2><p><code>slmgr /dlv</code></p>
-<h2 id="kms激活"><a href="#kms激活" class="headerlink" title="kms激活"></a>kms激活</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">卸载旧key</span></span><br><span class="line">slmgr /upk</span><br><span class="line"><span class="meta"># </span><span class="language-bash">安装key</span></span><br><span class="line">slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx</span><br><span class="line">slmgr /skms kms.03k.org</span><br><span class="line">slmgr /ato</span><br><span class="line"><span class="meta"># </span><span class="language-bash">查看激活过期时间</span></span><br><span class="line">slmgr –xpr</span><br><span class="line"><span class="meta"># </span><span class="language-bash">查看帮助</span></span><br><span class="line">slmgr </span><br></pre></td></tr></table></figure>
+<h2 id="查看系统版本、激活状态"><a href="#查看系统版本、激活状态" class="headerlink" title="查看系统版本、激活状态"></a>查看系统版本、激活状态</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /dlv</span><br></pre></td></tr></table></figure>
 
-<h2 id="echo输入文件"><a href="#echo输入文件" class="headerlink" title="echo输入文件"></a>echo输入文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">奖内容写入.npmrc中，若不存在文件则生成</span></span><br><span class="line">echo registry= &gt; /root/.npmrc</span><br><span class="line"><span class="meta"># </span><span class="language-bash">向文件追加内容,会换行</span></span><br><span class="line">echo https://registry.npmmirror.com/ &gt;&gt; /root/.npmrc</span><br></pre></td></tr></table></figure>
+<h2 id="kms-激活-win-kms-key"><a href="#kms-激活-win-kms-key" class="headerlink" title="kms 激活 win kms key"></a>kms 激活 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys">win kms key</a></h2><h3 id="win"><a href="#win" class="headerlink" title="win"></a>win</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">卸载旧key</span></span><br><span class="line">slmgr /upk</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装key</span></span><br><span class="line">slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx</span><br><span class="line">slmgr /skms kms.03k.org</span><br><span class="line">slmgr /ato</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看激活过期时间</span></span><br><span class="line">slmgr –xpr</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看帮助</span></span><br><span class="line">slmgr</span><br></pre></td></tr></table></figure>
+
+<h3 id="office"><a href="#office" class="headerlink" title="office"></a><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/DeployOffice/vlactivation/gvlks">office</a></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">set</span> Key</span></span><br><span class="line">cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">office path</span></span><br><span class="line">cd &quot;C:\Program Files\Microsoft Office\Office16&quot;</span><br><span class="line">cscript ospp.vbs /sethst:kms.03k.org</span><br><span class="line">cscript ospp.vbs /act</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本转换"><a href="#版本转换" class="headerlink" title="版本转换"></a>版本转换</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">//获取当前的映像版本</span></span><br><span class="line">dism /online /get-currentedition</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">//获取当前的映像可以升级的版本</span></span><br><span class="line">dism /online /get-targeteditions</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">win</span></span><br><span class="line">DISM /online /Set-Edition:&lt;edition ID&gt; /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula</span><br></pre></td></tr></table></figure>
+
+<h2 id="echo-输入文件"><a href="#echo-输入文件" class="headerlink" title="echo 输入文件"></a>echo 输入文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将内容写入.npmrc中，若不存在文件则生成</span></span><br><span class="line">echo registry= &gt; /root/.npmrc</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">向文件追加内容,会换行</span></span><br><span class="line">echo https://registry.npmmirror.com/ &gt;&gt; /root/.npmrc</span><br></pre></td></tr></table></figure>
 
 <h2 id="设置代理"><a href="#设置代理" class="headerlink" title="设置代理"></a>设置代理</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set http_proxy=http://127.0.0.1:7777</span><br></pre></td></tr></table></figure>
 
-<h2 id="不显示-CMD-窗口运行脚本"><a href="#不显示-CMD-窗口运行脚本" class="headerlink" title="不显示 CMD 窗口运行脚本"></a>不显示 CMD 窗口运行脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CreateObject(&quot;WScript.Shell&quot;).Run &quot;CMD脚本&quot;,0</span><br></pre></td></tr></table></figure>
+<h2 id="使用环境变量"><a href="#使用环境变量" class="headerlink" title="使用环境变量"></a>使用环境变量</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">%path%</span></span><br><span class="line">// 临时添加环境变量</span><br><span class="line"><span class="built_in">set</span> <span class="built_in">path</span>=<span class="variable">%path%</span>;D:\</span><br><span class="line">// 永久环境变量，需要以管理员身份打开<span class="built_in">cmd</span></span><br><span class="line">setx <span class="built_in">path</span> <span class="variable">%path%</span>;路径 /M</span><br></pre></td></tr></table></figure>
 
-<h2 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;1119&quot;</span> LISTENING 后面即为PID</span><br></pre></td></tr></table></figure>
+<h2 id="不显示-CMD-窗口运行脚本"><a href="#不显示-CMD-窗口运行脚本" class="headerlink" title="不显示 CMD 窗口运行脚本"></a>不显示 CMD 窗口运行脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">0后台 1普通 2最小化 3最大化</span></span><br><span class="line">CreateObject(&quot;WScript.Shell&quot;).Run &quot;&quot;&quot;CMD脚本&quot;&quot;&quot;,0</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看端口占用"><a href="#查看端口占用" class="headerlink" title="查看端口占用"></a>查看端口占用</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 后面即为PID</span></span><br><span class="line">netstat -aon|findstr <span class="string">&quot;1119&quot;</span></span><br><span class="line">netstat -ano|findstr <span class="string">&quot;443&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="查看-PID-对应-exe"><a href="#查看-PID-对应-exe" class="headerlink" title="查看 PID 对应 exe"></a>查看 PID 对应 exe</h2><p><code>tasklist|findstr &quot;PID&quot;</code></p>
 <h2 id="暂停-10-秒"><a href="#暂停-10-秒" class="headerlink" title="暂停 10 秒"></a>暂停 10 秒</h2><p><code>ping localhost -n 10 &gt; nul</code></p>
@@ -134,6 +153,31 @@
 <p>mklink 只能在命令提示符 “CMD” 中使用。</p>
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mklink [[/d] | [/h] | [/j]] Link Target</span><br><span class="line">/d　　　创建目录符号链接。黙认为文件符号链接。</span><br><span class="line">/h　　　创建硬链接，而不是符号链接。</span><br><span class="line">/h　　　创建目录联接。</span><br><span class="line">Link　　指定新的符号链接名称。</span><br><span class="line">Target　指定新链接引用的路径(相对或绝对)。</span><br><span class="line">eg: mklink /d 新路径 源路径</span><br></pre></td></tr></table></figure>
+
+<h2 id="cmd-脚本中文乱码（使用-ANSI-编码保存即可）"><a href="#cmd-脚本中文乱码（使用-ANSI-编码保存即可）" class="headerlink" title="cmd 脚本中文乱码（使用 ANSI 编码保存即可）"></a>cmd 脚本中文乱码（使用 ANSI 编码保存即可）</h2><h2 id="smba-共享设置"><a href="#smba-共享设置" class="headerlink" title="smba 共享设置"></a>smba 共享设置</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除smba共享连接</span></span><br><span class="line">net use \\192.168.2.1 /delete</span><br><span class="line"><span class="comment"># 创建smba共享连接</span></span><br><span class="line">net use \\192.168.2.1 <span class="string">&quot;password&quot;</span> /user:userName</span><br><span class="line"><span class="comment"># 打开共享文件夹，带中文时，使用ANSI编码保存</span></span><br><span class="line">explorer <span class="string">&quot;\\192.168.2.1\分享&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><h3 id="nginx-服务"><a href="#nginx-服务" class="headerlink" title="nginx 服务"></a>nginx 服务</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看帮助信息</span></span><br><span class="line">nginx -h</span><br><span class="line"><span class="comment"># 查看Nginx版本</span></span><br><span class="line">nginx -v</span><br><span class="line"><span class="comment"># 停用Nginx</span></span><br><span class="line">nginx -s stop</span><br><span class="line"><span class="comment"># 优雅的停用Nginx（处理完正在进行中请求后停用）</span></span><br><span class="line">nginx -s quit</span><br><span class="line"><span class="comment"># 重新加载配置，并优雅的重启进程</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="comment"># 重启日志文件</span></span><br><span class="line">nginx -s reopen</span><br><span class="line"><span class="comment"># 杀进程</span></span><br><span class="line">tskill nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="hyper-v"><a href="#hyper-v" class="headerlink" title="hyper-v"></a>hyper-v</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">管理员身份 关</span></span><br><span class="line">bcdedit /set hypervisorlaunchtype off</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">管理员身份 开</span></span><br><span class="line">bcdedit /set hypervisorlaunchtype auto</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置-DNS"><a href="#设置-DNS" class="headerlink" title="设置 DNS"></a>设置 DNS</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netsh interface ip set address name=&quot;WLAN&quot; source=dhcp</span><br><span class="line">netsh interface ip set dns name=&quot;WLAN&quot; source=static addr=223.6.6.6 register=primary</span><br><span class="line">netsh interface ip add dns name=&quot;WLAN&quot; addr=8.8.8.8 index=2</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">刷新dns</span></span><br><span class="line">ipconfig /flushdns</span><br></pre></td></tr></table></figure>
+
+<h2 id="wsl2-启动不了处理"><a href="#wsl2-启动不了处理" class="headerlink" title="wsl2 启动不了处理"></a>wsl2 启动不了处理</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh winsock reset</span><br></pre></td></tr></table></figure>
+
+<p>Netsh winsock reset 是一个命令提示程序，用于将 winsock 目录重置为默认设置或清除状态。如有时候上不了网或者网络出现问题经常用到它，简单地理解就是：重置程序通过操作系统链接网络的入口点。虽然使用此命令可以恢复网络连接，也应谨慎使用，因为可能需要重新安装 LSP LSP: layered service privider 分层服务提供商。 LSP 是 TCP&#x2F;IP 等协议的接口。</p>
+<p>Netsh Winsock 解决了哪些问题？删除广告软件，间谍软件，病毒，蠕虫，木马等后的网络问题</p>
+<p>处理安装广告软件，间谍软件，VPN 或防火墙后无法联网。无法访问任何网页或只能访问某些网页。出现与网络相关问题的弹出错误窗口。由于注册表错误，没有网络连接。发生 DNS 查找问题。无法续订网络适配器的 IP 地址或其他一些 DHCP 错误。没有连接消息的网络连接问题。</p>
+<h2 id="win11-匿名共享"><a href="#win11-匿名共享" class="headerlink" title="win11 匿名共享"></a>win11 匿名共享</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、网络和internet-高级网络设置-高级共享设置-所有网络-密码保护的共享打开</span><br></pre></td></tr></table></figure>
+
+<h2 id="rdpwrap-最新配置"><a href="#rdpwrap-最新配置" class="headerlink" title="rdpwrap 最新配置"></a><a target="_blank" rel="noopener" href="https://github.com/stascorp/rdpwrap">rdpwrap</a> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/sebaxakerhtc/rdpwrap.ini/master/rdpwrap.ini">最新配置</a></h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- run --&gt;</span><br><span class="line">RDPWInst.exe</span><br><span class="line">&lt;!-- config --&gt;</span><br><span class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span>\<span class="title">RDP</span> <span class="title">Wrapper</span>\<span class="title">rdpwrap.ini</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="任务计划程序"><a href="#任务计划程序" class="headerlink" title="任务计划程序"></a>任务计划程序</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks /create /tn &quot;name&quot; /tr &quot;D:\a.<span class="built_in">cmd</span>&quot; /sc onstart /ru SYSTEM</span><br></pre></td></tr></table></figure>
+
+<h2 id="chrome-启动参数"><a href="#chrome-启动参数" class="headerlink" title="chrome 启动参数"></a>chrome 启动参数</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不遵守同源策略。</span></span><br><span class="line">--disable-web-security</span><br><span class="line"><span class="comment"># window edge demo: 快捷方式-目标</span></span><br><span class="line"><span class="comment"># &quot;C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe&quot; --disable-web-security --user-data-dir=D:\linj\tmp\edge</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/bigcarp/article/details/121142873">Chrome 浏览器启动参数大全（命令行参数）</a></p>
  
       <!-- reward -->
       
@@ -223,6 +267,53 @@
   </nav>
 
    
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "a0czoe7u2K7vGcUyGqStV9qG-9Nh9j0Va",
+    app_key: "IjGDnnRUAbrFsUkXPrZ2RnZt",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
  
    
      
@@ -234,7 +325,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2016-2023
+        2016-2025
         <i class="ri-heart-fill heart_icon"></i> LinJieLinLin
       </li>
     </ul>
@@ -274,8 +365,6 @@
     <ul>
       <li>
         <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1280044797&amp;web_id=1280044797'></script>
         
       </li>
     </ul>
@@ -323,11 +412,15 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://linjielinlin.github.io/utils/lj-utils/index.html">lj-utils</a>
+      <a class="nav-item-link" href="https://lj4.top/utils/lj-utils/index.html">lj-utils</a>
     </li>
     
     <li class="nav-item">
       <a class="nav-item-link" href="/myBlog/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="https://u.tools/?c=utczk1kpht">uTools</a>
     </li>
     
   </ul>
@@ -395,12 +488,12 @@
   });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
 />
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
 
 <script src="/myBlog/dist/main.js"></script>
 
@@ -472,10 +565,10 @@
 
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
 
 <script>
     function viewer_init() {
@@ -530,7 +623,7 @@
 <!-- CodeCopy -->
  
 <link rel="stylesheet" href="/myBlog/css/clipboard.css">
- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
 <script>
   function wait(callback, seconds) {
     var timelag = null;
@@ -586,9 +679,7 @@
 </script>
  
 <!-- CanvasBackground -->
- 
-<script src="/myBlog/js/dz.js"></script>
- 
+
 <script>
   if (window.mermaid) {
     mermaid.initialize({ theme: "forest" });
