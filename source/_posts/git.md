@@ -60,9 +60,13 @@ git config --global core.autocrlf false
 ```shell
 # fix: git ssh pull error: .ssh 报错 Their offer: ssh-rsa fatal: Could not read from remote repository
 # 新版本git默认禁用了ssh-rsa
-# .ssh目录添加config文件
+# .ssh目录添加config文件，允许所有域名
 Host *
   HostkeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes +ssh-rsa
+# .ssh目录添加config文件，允许指定域名（工蜂，只支持ssh-rsa）
+Host git.code.tencent.com
+  HostKeyAlgorithms +ssh-rsa
   PubkeyAcceptedKeyTypes +ssh-rsa
 ```
 
