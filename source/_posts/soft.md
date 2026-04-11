@@ -57,6 +57,7 @@ navicat-keygen -text RegPrivateKey.pem
 - [utools](https://u.tools/)
 - [Bulk-Crap-Uninstaller 卸载软件](https://github.com/Klocman/Bulk-Crap-Uninstaller)
 - [reNamer](https://www.advancedrenamer.com/)
+- [SVGTextEditor](https://github.com/wiiiteek/SVGTextEditor)
 - [link](http://note.youdao.com/)
 
 ## win extra
